@@ -35,7 +35,6 @@ category: Basics   // The category/page it is relevent to
 <div class="icon-twitter"></div>
 ```
 ```
-```
 To use these icons just add the class to the relevent div, e.g:
 
 A full list of icons can be seen in <span class="orange">RegisShop/skin/frontend/enterprise/shopRegis/scss/_icons.scss</span>
