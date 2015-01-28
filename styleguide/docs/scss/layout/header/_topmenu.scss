@@ -1,0 +1,305 @@
+.top-nav-container {
+    @include pie-clearfix;
+}
+
+// Global Menu
+
+nav[role="navigation"] {
+    display: none;
+    clear: both;
+    z-index: 10;
+    width: 100%;
+
+    @include breakpoint("baby-bear") {
+        display: block !important; // Override inlin display: none from Js
+        position: static;
+        padding:  0 1.428571429em; // 20 / 14
+    }
+
+    @include breakpoint("mama-bear") {
+        padding: 0;
+    }
+}
+
+.global-nav {
+    @include pie-clearfix;
+    position: relative;
+    clear: both;
+    margin-bottom: 0;
+
+    @include breakpoint("baby-bear") {
+        width: 100%;
+        display: table;
+        position: relative;
+        border-top: 1px solid #ddd;
+        border-bottom: 1px solid #ddd;
+        z-index: 60;
+        background: #fff;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+
+    // Top Level List Items
+
+    .main-nav-item {
+        @media only screen and (max-width: 750px) {
+            width: 100%;
+        }
+
+        @include breakpoint("baby-bear") {
+            float: left;
+        }
+    }
+
+    // Show the dropdown menu
+    // Class added via Js
+
+    .main-nav-item-active {
+        .main-nav-dd {
+            @include breakpoint("baby-bear") {
+                @include font-size(1.4);
+                display: block;
+                max-height: 55em;
+                padding: 1.428571429em; // 20 / 14
+                border-bottom: 1px solid #999999;
+
+            }
+        }
+    }
+
+
+    // Home Link Only
+
+    .nav-home {
+        color: $black;
+
+        .main-nav-tab {
+            // display: block;
+            padding-top: 14px;
+            padding-bottom: 17px;
+            width: 100%;
+            height: 100%;
+            color: $black;
+
+            @include breakpoint("mama-bear") {
+                padding-bottom: 18px;
+            }
+        }
+
+        .icon-home {
+            position: relative;
+            @include font-size(2.2);
+
+            @media only screen and (min-width: 750px) and (max-width: 1000px) {
+                // 750 to 999
+                @include font-size(1.8);
+            }
+        }
+    }
+
+
+    // Top Level Link Specific
+
+    .main-nav-tab {
+        font-family: $swiss-roman;
+        padding: .857142857em; // 12 / 14
+        display: block;
+        border-bottom: 1px solid #fff;
+        text-transform: uppercase;
+        text-align: center;
+        position: relative;
+        background: $shade-colour;
+        color: $black;
+
+        @media only screen and (min-width: 750px) {
+            // 750 and up
+            &:hover {
+                background: $black;
+                color: white;
+            }
+        }
+
+        @include breakpoint("baby-bear") {
+            font-family: $swiss-light;
+            @include font-size(1.1);
+            border-bottom: 0;
+            position: relative;
+            display: block;
+            padding: 17px 0;
+            background: #fff;
+        }
+
+        @include breakpoint("mama-bear") {
+            @include font-size(1.4);
+        }
+    }
+}
+
+
+// Apply individual widths to top nav items so nav fits perfectly across the screen...
+
+.nav-home           { width: 5.3%; }
+.cat-brands         { width: 9.7%; }
+.cat-hair           { width: 11.3%; }
+.cat-styling        { width: 9.5%; }
+.cat-electrical     { width: 12%; }
+.cat-accessories    { width: 13.4%; }
+.cat-mens           { width: 7.9%; }
+.cat-offers         { width: 9.4%; }
+.cat-beauty         { width: 9.3%; }
+.cat-clearance      { width: 12.2%; }
+.cat-gifts      { width: 12.2%; }
+
+// Top Level Hover State
+
+.main-nav-tab a:hover,
+.main-nav-item:hover .main-nav-tab {
+    @include breakpoint("baby-bear") {
+        background: #f06803;
+        color: #fff;
+    }
+}
+
+
+// If menu item has dropdown, show arrow on hover
+
+.has-sub {
+    @include breakpoint('baby-bear') {
+        &:after {
+            content: '';
+            display: block;
+            position: absolute;
+            z-index: 10;
+            margin-left: -1em;
+            bottom: -.857142857em; // -12 / 14
+            left: 50%;
+
+            // Make Arrow Shape
+            width: 0;
+            height: 0;
+            border-left: .928571429em solid transparent; // 13 / 14
+            border-right: .928571429em solid transparent; // 13 / 14
+            border-top: 1em solid #f06803;
+        }
+    }
+}
+
+
+// Menu Dropdown
+
+.main-nav-dd {
+    overflow: hidden;
+    max-height: 0;
+
+    @include breakpoint("baby-bear") {
+        &.over {
+            max-height: 55em;
+        }
+
+        background: #fff;
+        position: absolute;
+        width: 100%;
+        left: 0;
+        top: 50px;
+    }
+
+    @include breakpoint("mama-bear") {
+        top: 55px;
+    }
+}
+
+
+// Dropdown Only
+
+.main-nav-dd {
+    .col-title {
+        color: #ff5500;
+        position: relative;
+        text-transform: uppercase;
+
+        @include breakpoint("baby-bear") {
+            font-family: 'Swiss721BT-Bold', Arial, Helvetica, sans-serif;
+            line-height: 1;
+            margin-bottom: .857142857em; // 12 / 14
+        }
+    }
+
+    .col {
+        @include breakpoint("baby-bear") {
+            float: left;
+            width: 25%;
+
+            a {
+                display: block;
+                padding: 0 .357142857em; // 5 / 14
+            }
+
+            ul {
+                a:hover {
+                    background: black;
+                    color: white;
+                }
+            }
+        }
+
+        @include breakpoint("mama-bear") {
+            width: 16.5%; // 165 / 1000
+            margin-right:  .785714286em; // 11 / 14
+        }
+    }
+
+    ul {
+        @include breakpoint("baby-bear") {
+            line-height: 1.857142857;
+            text-transform: none;
+
+            a {
+                color: $black;
+            }
+        }
+    }
+
+    // Column within a column...
+
+    .col-sub {
+        @include breakpoint("baby-bear") {
+            margin-top: 1.5em;
+        }
+    }
+
+    .col-promo {
+        display: none;
+
+        @include breakpoint("mama-bear") {
+            float: right;
+            display: block;
+            width: 27%; // 270 / 1000
+        }
+    }
+}
+
+
+// Menu Fade Panel
+
+.menu-fade-panel {
+    // Only show the fade panel for tablet sized viewports and above
+    @include breakpoint('baby-bear') {
+        background: rgba(255,255,255, .75);
+        display: none;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        z-index: 10; // Less than global nav!
+    }
+}
+
+.lt-ie9 {
+    .menu-fade-panel {
+        background: image-url("white-bg-opacity-70.png");
+    }
+}

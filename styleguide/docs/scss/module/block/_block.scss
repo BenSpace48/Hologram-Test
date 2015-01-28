@@ -1,0 +1,49 @@
+.block {
+    margin: 0 0 10px;
+
+    .block-title {
+        border: none;
+        padding: 0;
+        color: $orange;
+        font-family: 'Swiss721BT-Bold', Arial, Helvetica, sans-serif;
+        text-decoration: none;
+        text-transform: uppercase;
+        @include font-size(1.4);
+        padding: 1.2em 0 0.5em 0;
+        display: block;
+    }
+
+    .block-subtitle {
+        @include font-size(1.3);
+    }
+
+    .block-content {
+        padding: 0;
+
+        li.item {
+            padding: 5px 0
+        }
+    }
+
+    .btn-remove,
+    .btn-edit {
+        float: right;
+    }
+
+    .actions {
+        text-align: right;
+
+        a {
+            float: left;
+        }
+    }
+
+    .empty {
+    }
+
+    li.odd {
+    }
+
+    li.even {
+    }
+}

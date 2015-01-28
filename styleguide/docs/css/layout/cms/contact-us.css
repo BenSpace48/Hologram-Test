@@ -1,0 +1,578 @@
+/*
+*	Site Wide Defaults
+*/
+/*doc
+---
+title: Variables
+name: variables
+category: Basics
+---
+
+Instead of remembering or copy/pasting the colour codes we use variables.
+
+```
+$orange: #f06803;      // Set the variable
+
+.variable-element {
+    color: $orange;    // Use the variable
+}
+
+<div class="variable-element">This is some orange text</div>
+
+```
+
+<div class="variable-element">This is some orange text</div>
+
+A full list of variables can be seen in <span class="orange">RegisShop/skin/frontend/enterprise/shopRegis/scss/_variables.scss</span>
+
+*/
+/*
+ *  Global Variables
+ */
+/*doc
+
+
+---
+title: Font size
+name: font-size
+category: Mixins
+---
+
+These mixins are used to keep your code DRY (Don't repeat yourself) and save yourself typing out prefixes and doing repetative calculations
+
+```
+<div class="my-element"></div>
+
+.my-element {
+    @include font-size(2);       // Compiles to 20px which is 2rem
+    @include font-size(1.5);     // Compiles to 15px which is 1.5rem
+}
+```
+
+<p class="font-size-example-2">This is font-size(2)</p>
+<p class="font-size-example-1-5">This is font-size(1.5)</p>
+
+*/
+@font-face {
+  font-family: "Swiss721BT-Light";
+  src: url('../../../fonts/29B170_0_0.eot?1414400187');
+  src: url('../../../fonts/29B170_0_0.eot?&1414400187#iefix') format('embedded-opentype'), url('../../../fonts/29B170_0_0.woff?1414400187') format('woff'), url('../../../fonts/29B170_0_0.ttf?1414400187') format('truetype'); }
+@font-face {
+  font-family: "Swiss721BT-Roman";
+  src: url('../../../fonts/29B170_1_0.eot?1414400187');
+  src: url('../../../fonts/29B170_1_0.eot?&1414400187#iefix') format('embedded-opentype'), url('../../../fonts/29B170_1_0.woff?1414400187') format('woff'), url('../../../fonts/29B170_1_0.ttf?1414400187') format('truetype'); }
+@font-face {
+  font-family: "Swiss721BT-Bold";
+  src: url('../../../fonts/29B170_2_0.eot?1414400187');
+  src: url('../../../fonts/29B170_2_0.eot?&1414400187#iefix') format('embedded-opentype'), url('../../../fonts/29B170_2_0.woff?1414400187') format('woff'), url('../../../fonts/29B170_2_0.ttf?1414400187') format('truetype'); }
+@font-face {
+  font-family: "Swiss721BT-Thin";
+  src: url('../../../fonts/29B170_3_0.eot?1414400187');
+  src: url('../../../fonts/29B170_3_0.eot?&1414400187#iefix') format('embedded-opentype'), url('../../../fonts/29B170_3_0.woff?1414400187') format('woff'), url('../../../fonts/29B170_3_0.ttf?1414400187') format('truetype'); }
+/*doc
+---
+title: Icons
+name: Icons
+category: Basics
+---
+
+```html_example
+
+<div class="icon-basket"></div>
+<div class="icon-account"></div>
+<div class="icon-youtube"></div>
+<div class="icon-facebook"></div>
+<div class="icon-twitter"></div>
+
+```
+
+<p>To use these icons just add the class to the relevent div, e.g:</p>
+
+<p>A full list of icons can be seen in <span class="orange">RegisShop/skin/frontend/enterprise/shopRegis/scss/_icons.scss</span></p>
+*/
+@font-face {
+  font-family: "Shop-Regis-Icons";
+  src: url('../../../fonts/shop-regis-icons.eot?1414400187');
+  src: url('../../../fonts/shop-regis-icons.eot?&1414400187#iefix') format('embedded-opentype'), url('../../../fonts/shop-regis-icons.woff?1414400187') format('woff'), url('../../../fonts/shop-regis-icons.ttf?1414400187') format('truetype'), url('../../../fonts/shop-regis-icons.svg?1414400187') format('svg'); }
+/* line 28, ../../../scss/_icons.scss */
+[class^="icon-"], [class*=" icon-"] {
+  font-family: 'Shop-Regis-Icons';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+/* line 43, ../../../scss/_icons.scss */
+.icon-basket:before {
+  content: "\e600"; }
+
+/* line 46, ../../../scss/_icons.scss */
+.icon-youtube:before {
+  content: "\e601"; }
+
+/* line 49, ../../../scss/_icons.scss */
+.icon-facebook:before {
+  content: "\e602"; }
+
+/* line 52, ../../../scss/_icons.scss */
+.icon-twitter:before {
+  content: "\e603"; }
+
+/* line 55, ../../../scss/_icons.scss */
+.icon-search:before {
+  content: "\e604"; }
+
+/* line 58, ../../../scss/_icons.scss */
+.icon-pinterest:before {
+  content: "\e605"; }
+
+/* line 61, ../../../scss/_icons.scss */
+.icon-pin-full:before {
+  content: "\e606"; }
+
+/* line 64, ../../../scss/_icons.scss */
+.icon-pin-empty:before {
+  content: "\e607"; }
+
+/* line 67, ../../../scss/_icons.scss */
+.icon-phone:before {
+  content: "\e608"; }
+
+/* line 70, ../../../scss/_icons.scss */
+.icon-menu:before {
+  content: "\e609"; }
+
+/* line 73, ../../../scss/_icons.scss */
+.icon-home:before {
+  content: "\e60a"; }
+
+/* line 76, ../../../scss/_icons.scss */
+.icon-gplus:before {
+  content: "\e60b"; }
+
+/* line 79, ../../../scss/_icons.scss */
+.icon-email:before {
+  content: "\e60c"; }
+
+/* line 82, ../../../scss/_icons.scss */
+.icon-edit:before {
+  content: "\e60d"; }
+
+/* line 85, ../../../scss/_icons.scss */
+.icon-account:before {
+  content: "\e60e"; }
+
+/* line 6, ../../../scss/layout/_utilities.scss */
+.ir {
+  display: block;
+  text-indent: -999em;
+  overflow: hidden;
+  font-size: 0;
+  line-height: 0;
+  background-position: 0 0;
+  background-repeat: no-repeat; }
+
+/* line 18, ../../../scss/layout/_utilities.scss */
+.hidden {
+  display: block !important;
+  border: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  font-size: 0 !important;
+  line-height: 0 !important;
+  width: 0 !important;
+  height: 0 !important;
+  overflow: hidden !important; }
+
+/* line 31, ../../../scss/layout/_utilities.scss */
+.hide-on-mob {
+  display: none;
+  visibility: hidden; }
+  @media only screen and (min-width: 750px) {
+    /* line 31, ../../../scss/layout/_utilities.scss */
+    .hide-on-mob {
+      display: inline-block;
+      vertical-align: middle;
+      *vertical-align: auto;
+      *zoom: 1;
+      *display: inline;
+      visibility: visible; } }
+
+@media only screen and (min-width: 750px) {
+  /* line 41, ../../../scss/layout/_utilities.scss */
+  .hide-on-tablet {
+    display: none !important;
+    visibility: hidden; } }
+
+@media only screen and (min-width: 1000px) {
+  /* line 48, ../../../scss/layout/_utilities.scss */
+  .hide-on-desktop {
+    display: none !important;
+    visibility: hidden; } }
+
+/* line 55, ../../../scss/layout/_utilities.scss */
+.nobr {
+  white-space: nowrap !important; }
+
+/* line 59, ../../../scss/layout/_utilities.scss */
+.wrap {
+  white-space: normal !important; }
+
+/* line 63, ../../../scss/layout/_utilities.scss */
+.a-left {
+  text-align: left !important; }
+
+/* line 67, ../../../scss/layout/_utilities.scss */
+.a-center {
+  text-align: center !important; }
+
+/* line 71, ../../../scss/layout/_utilities.scss */
+.a-right {
+  text-align: right !important; }
+
+/* line 75, ../../../scss/layout/_utilities.scss */
+.v-top {
+  vertical-align: top; }
+
+/* line 79, ../../../scss/layout/_utilities.scss */
+.v-middle {
+  vertical-align: middle; }
+
+/* line 83, ../../../scss/layout/_utilities.scss */
+.v-fix {
+  float: left; }
+
+/* line 87, ../../../scss/layout/_utilities.scss */
+.v-fix .validation-advice {
+  display: block;
+  width: 12em;
+  margin-right: -12em;
+  position: relative; }
+
+/* line 94, ../../../scss/layout/_utilities.scss */
+.f-left,
+.left {
+  float: left !important; }
+
+/* line 99, ../../../scss/layout/_utilities.scss */
+.f-right,
+.right {
+  float: right !important; }
+
+/* line 104, ../../../scss/layout/_utilities.scss */
+.f-none {
+  float: none !important; }
+
+/* line 108, ../../../scss/layout/_utilities.scss */
+.f-fix {
+  float: left;
+  width: 100%; }
+
+/* line 113, ../../../scss/layout/_utilities.scss */
+.no-display {
+  display: none; }
+
+/* line 117, ../../../scss/layout/_utilities.scss */
+.no-margin {
+  margin: 0 !important; }
+
+/* line 121, ../../../scss/layout/_utilities.scss */
+.no-padding {
+  padding: 0 !important; }
+
+/* line 125, ../../../scss/layout/_utilities.scss */
+.no-bg {
+  background: none !important; }
+
+/* line 129, ../../../scss/layout/_utilities.scss */
+.links li {
+  display: inline; }
+
+/* line 133, ../../../scss/layout/_utilities.scss */
+.links li.first {
+  padding-left: 0; }
+
+/* line 137, ../../../scss/layout/_utilities.scss */
+.links li.last {
+  background: none !important;
+  padding-right: 0 !important; }
+
+/* line 142, ../../../scss/layout/_utilities.scss */
+.separator {
+  margin: 0 3px; }
+
+/* line 146, ../../../scss/layout/_utilities.scss */
+.divider {
+  clear: both;
+  display: block;
+  font-size: 0;
+  line-height: 0;
+  height: 1px;
+  margin: 10px 0;
+  background: #ddd;
+  text-indent: -999em;
+  overflow: hidden; }
+
+/* line 158, ../../../scss/layout/_utilities.scss */
+.window-overlay {
+  background: rgba(0, 0, 0, 0.35);
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 990; }
+
+/* line 174, ../../../scss/layout/_utilities.scss */
+.media {
+  *zoom: 1;
+  position: relative; }
+  /* line 38, ../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/utilities/general/_clearfix.scss */
+  .media:after {
+    content: "";
+    display: table;
+    clear: both; }
+  /* line 178, ../../../scss/layout/_utilities.scss */
+  .media .bd {
+    overflow: hidden;
+    _overflow: visible;
+    zoom: 1; }
+  /* line 184, ../../../scss/layout/_utilities.scss */
+  .media .img {
+    position: relative;
+    float: left;
+    margin-right: 10px; }
+    /* line 189, ../../../scss/layout/_utilities.scss */
+    .media .img > img {
+      display: block; }
+  /* line 194, ../../../scss/layout/_utilities.scss */
+  .media .imgExt {
+    position: relative;
+    float: right;
+    margin-left: 10px; }
+    /* line 199, ../../../scss/layout/_utilities.scss */
+    .media .imgExt > img {
+      display: block; }
+
+/*
+*   Default Global Button Styles
+*   Don't edit these styles - use the mixin defined below to extend the styles to create the button theme
+*
+*/
+/* line 7, ../../../scss/module/_buttons.scss */
+.button,
+button {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  background: #f06803;
+  line-height: 2.142857143;
+  padding: 0 1.285714286em;
+  font-family: 'Swiss721BT-Light', Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-decoration: none; }
+  /* line 21, ../../../scss/module/_buttons.scss */
+  .button:hover,
+  button:hover {
+    background: #000; }
+
+/* line 46, ../../../scss/module/_buttons.scss */
+.black {
+  background-color: #000;
+  color: #fff; }
+  /* line 49, ../../../scss/module/_buttons.scss */
+  .black:hover {
+    background: #f06803;
+    color: #fff; }
+
+/* line 55, ../../../scss/module/_buttons.scss */
+.lgrey {
+  background-color: #e5e5e5;
+  color: #fff; }
+
+/* line 59, ../../../scss/module/_buttons.scss */
+.mgrey {
+  background-color: #dcdcdc;
+  color: #fff; }
+
+/* line 63, ../../../scss/module/_buttons.scss */
+.dgrey {
+  background-color: #888888;
+  color: #fff; }
+
+/* line 67, ../../../scss/module/_buttons.scss */
+.hpink {
+  background-color: #fff;
+  color: #ed1465; }
+
+/* line 4, ../../../scss/layout/cms/contact-us.scss */
+.cms-contact-us .std h3, .contacts-index-index .col-main h3 {
+  font-size: 28px;
+  font-size: 2.8rem;
+  color: #b9b9b9;
+  font-family: "Swiss721BT-Thin", Arial, Helvetica, sans-serif;
+  line-height: 1;
+  margin: 0.5em 0 0 0;
+  padding-bottom: 1em;
+  float: left;
+  width: 100%; }
+  /* line 15, ../../../scss/layout/cms/contact-us.scss */
+  .cms-contact-us .std h3 a, .contacts-index-index .col-main h3 a {
+    text-decoration: none;
+    background: url('../../../img/sprite.png?1414400187') no-repeat 165px -198px;
+    padding-right: 1em; }
+    @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-resolution: 240dpi) {
+      /* line 15, ../../../scss/layout/cms/contact-us.scss */
+      .cms-contact-us .std h3 a, .contacts-index-index .col-main h3 a {
+        background-image: url('../../../img/sprite@2x.png?1414400187');
+        background-size: 200px 500px; } }
+    /* line 27, ../../../scss/layout/cms/contact-us.scss */
+    .cms-contact-us .std h3 a:hover, .contacts-index-index .col-main h3 a:hover {
+      text-decoration: underline; }
+/* line 33, ../../../scss/layout/cms/contact-us.scss */
+.cms-contact-us .std p, .contacts-index-index .col-main p {
+  font-family: "Swiss721BT-Light", Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  font-size: 1.4rem;
+  line-height: 1.8; }
+/* line 39, ../../../scss/layout/cms/contact-us.scss */
+.cms-contact-us .std a, .contacts-index-index .col-main a {
+  text-decoration: underline; }
+/* line 43, ../../../scss/layout/cms/contact-us.scss */
+.cms-contact-us .std .contact-details, .contacts-index-index .col-main .contact-details {
+  margin: 0 0 2em 0;
+  padding: 0;
+  border-bottom: #e5e5e5 solid 1px;
+  float: left;
+  width: 100%; }
+  /* line 50, ../../../scss/layout/cms/contact-us.scss */
+  .cms-contact-us .std .contact-details li, .contacts-index-index .col-main .contact-details li {
+    font-size: 14px;
+    font-size: 1.4rem;
+    list-style: none;
+    color: #888888;
+    line-height: 1.6;
+    padding: 1em 0;
+    text-transform: uppercase;
+    margin: 0;
+    border-top: #e5e5e5 solid 1px; }
+    /* line 60, ../../../scss/layout/cms/contact-us.scss */
+    .cms-contact-us .std .contact-details li a, .contacts-index-index .col-main .contact-details li a {
+      text-decoration: none; }
+      /* line 63, ../../../scss/layout/cms/contact-us.scss */
+      .cms-contact-us .std .contact-details li a:hover, .contacts-index-index .col-main .contact-details li a:hover {
+        text-decoration: underline; }
+    /* line 68, ../../../scss/layout/cms/contact-us.scss */
+    .cms-contact-us .std .contact-details li span, .contacts-index-index .col-main .contact-details li span {
+      font-size: 20px;
+      font-size: 2rem;
+      color: #e5e5e5;
+      padding-right: 1em;
+      float: left; }
+    /* line 75, ../../../scss/layout/cms/contact-us.scss */
+    .cms-contact-us .std .contact-details li address, .contacts-index-index .col-main .contact-details li address {
+      margin-bottom: 0;
+      line-height: 1.6; }
+      @media screen and (max-width: 420px) {
+        /* line 75, ../../../scss/layout/cms/contact-us.scss */
+        .cms-contact-us .std .contact-details li address, .contacts-index-index .col-main .contact-details li address {
+          float: right;
+          margin-bottom: 0.8em;
+          line-height: 1.2;
+          width: 86%; } }
+/* line 90, ../../../scss/layout/cms/contact-us.scss */
+.cms-contact-us .std form, .contacts-index-index .col-main form {
+  width: 100%;
+  float: left;
+  padding: 1em 0; }
+  @media only screen and (min-width: 1000px) {
+    /* line 90, ../../../scss/layout/cms/contact-us.scss */
+    .cms-contact-us .std form, .contacts-index-index .col-main form {
+      width: 94%; } }
+  /* line 99, ../../../scss/layout/cms/contact-us.scss */
+  .cms-contact-us .std form .form-list, .contacts-index-index .col-main form .form-list {
+    float: left;
+    width: 100%; }
+    @media only screen and (min-width: 1000px) {
+      /* line 99, ../../../scss/layout/cms/contact-us.scss */
+      .cms-contact-us .std form .form-list, .contacts-index-index .col-main form .form-list {
+        width: 94%;
+        float: left; } }
+    @media only screen and (min-width: 1000px) {
+      /* line 110, ../../../scss/layout/cms/contact-us.scss */
+      .cms-contact-us .std form .form-list .field.fl, .contacts-index-index .col-main form .form-list .field.fl {
+        float: left;
+        width: 32%;
+        margin-right: 0.4em; } }
+    /* line 118, ../../../scss/layout/cms/contact-us.scss */
+    .cms-contact-us .std form .form-list .input-box, .contacts-index-index .col-main form .form-list .input-box {
+      margin: 0 0 0.5em 0;
+      width: 100%; }
+      @media only screen and (min-width: 1000px) {
+        /* line 118, ../../../scss/layout/cms/contact-us.scss */
+        .cms-contact-us .std form .form-list .input-box, .contacts-index-index .col-main form .form-list .input-box {
+          margin: 0; }
+          /* line 123, ../../../scss/layout/cms/contact-us.scss */
+          .cms-contact-us .std form .form-list .input-box textarea, .contacts-index-index .col-main form .form-list .input-box textarea {
+            width: 98%; } }
+  /* line 129, ../../../scss/layout/cms/contact-us.scss */
+  .cms-contact-us .std form .form-buttons,
+  .cms-contact-us .std form .required, .contacts-index-index .col-main form .form-buttons,
+  .contacts-index-index .col-main form .required {
+    width: 100%;
+    float: left; }
+    @media only screen and (min-width: 1000px) {
+      /* line 129, ../../../scss/layout/cms/contact-us.scss */
+      .cms-contact-us .std form .form-buttons,
+      .cms-contact-us .std form .required, .contacts-index-index .col-main form .form-buttons,
+      .contacts-index-index .col-main form .required {
+        width: 94%; } }
+    /* line 138, ../../../scss/layout/cms/contact-us.scss */
+    .cms-contact-us .std form .form-buttons .button,
+    .cms-contact-us .std form .required .button, .contacts-index-index .col-main form .form-buttons .button,
+    .contacts-index-index .col-main form .required .button {
+      padding: 0.6em 2.4em;
+      font-family: "Swiss721BT-Light", Arial, Helvetica, sans-serif; }
+  /* line 144, ../../../scss/layout/cms/contact-us.scss */
+  .cms-contact-us .std form .required, .contacts-index-index .col-main form .required {
+    padding: 0.5em 0;
+    font-size: 11px;
+    font-size: 1.1rem;
+    color: #C3151E; }
+  /* line 150, ../../../scss/layout/cms/contact-us.scss */
+  .cms-contact-us .std form .validation-advice, .contacts-index-index .col-main form .validation-advice {
+    padding-bottom: 1em; }
+  @media only screen and (min-width: 1000px) {
+    /* line 154, ../../../scss/layout/cms/contact-us.scss */
+    .cms-contact-us .std form .selectricWrapper, .contacts-index-index .col-main form .selectricWrapper {
+      width: 98%; } }
+  /* line 159, ../../../scss/layout/cms/contact-us.scss */
+  .cms-contact-us .std form .selectricWrapper .selectric .label, .contacts-index-index .col-main form .selectricWrapper .selectric .label {
+    padding: 0.9em 1.3em;
+    background: #e5e5e5; }
+  /* line 161, ../../../scss/layout/cms/contact-us.scss */
+  .cms-contact-us .std form .selectricWrapper .selectric .button, .cms-contact-us .std form .selectricWrapper .selectric .button:hover, .contacts-index-index .col-main form .selectricWrapper .selectric .button, .contacts-index-index .col-main form .selectricWrapper .selectric .button:hover {
+    background: url('../../../img/customSelect-arrow-blk.png?1414400187') no-repeat center right #e5e5e5;
+    width: 50px;
+    height: 50px; }
+/* line 169, ../../../scss/layout/cms/contact-us.scss */
+.cms-contact-us .std .messages li, .contacts-index-index .col-main .messages li {
+  margin: 0; }

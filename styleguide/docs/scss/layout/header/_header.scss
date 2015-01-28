@@ -1,0 +1,135 @@
+.header {
+    @include pie-clearfix;
+
+    @include breakpoint("baby-bear") {
+        padding: 2.142857143em 1.428571429em; // 30, 20 / 14
+    }
+
+    .logo-wrap {
+        float: left;
+        margin-bottom: 0;
+        max-width: 16.785714286em; // 235 / 14
+    }
+
+    .logo {
+        float: left;
+        @include replace-text-with-dimensions("logo-small.png", 0, 0);
+        @include image-2x("logo-small-2x.png", 140px, 19px);
+
+        @include breakpoint("baby-bear") {
+            @include replace-text-with-dimensions("logo.png", 0, 0);
+            @include image-2x("logo-2x.png", 235px, 52px);
+        }
+    }
+}
+
+
+// Header Checkout
+
+.header-branding-wrap {
+    clear: both;
+    @include pie-clearfix;
+    padding: 1.428571429em 1.142857143em; // 20, 16 / 14
+
+    @include breakpoint("baby-bear") {
+        clear: none;
+        float: left;
+        max-width: 235px;
+        padding: 0;
+        width: 235px;
+    }
+}
+
+.header-checkout {
+    float: right;
+    @include pie-clearfix;
+    width: 46.875%; // 150 / 320
+
+    @include breakpoint("baby-bear") {
+        display: block;
+        line-height: 4.285714286; // 60 / 14
+        width: 14%;
+        margin-right: 1.428571429em; // 20 / 14
+    }
+
+    @include breakpoint("mama-bear") {
+        width: 25%;
+        margin-right: 0;
+    }
+
+
+    .button-checkout {
+        @include font-size(1.4);
+        padding: 0 .928571429em;  // 13 / 14
+        display: none;
+
+        @include breakpoint("mama-bear") {
+            display: block;
+            float: right;
+            margin-top: 1.15em;
+            margin-right: 1.428571429em; // 20 / 14
+        }
+    }
+
+}
+
+.cart-header {
+    cursor: pointer;
+    float: left;
+    padding: 0;
+
+    .cart-items {
+        color: $orange;
+        font-weight: bold;
+    }
+}
+
+
+// Global Promotion Ticker
+
+.global-promos {
+    clear: both;
+    margin: 0;
+    padding: 1.428571429em 0; // 20 / 14
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+    width: 100%;
+
+    @include breakpoint("baby-bear") {
+        display: none;
+    }
+
+    @include breakpoint("mama-bear") {
+        text-transform: none;
+        @include font-size(1.4);
+        top: .714285714em; // 10 / 14
+        display: block;
+        clear: none;
+        float: left;
+        width: 50%;
+        width: 440px;
+        padding: 0;
+        left: 20px;
+    }
+
+    a {
+        text-decoration: none;
+        display: block;
+        color: $black;
+    }
+
+    b {
+        display: block;
+        color: $orange;
+        text-transform: uppercase;
+        font-weight: normal;
+
+        @include breakpoint("baby-bear") {
+            display: inline;
+        }
+    }
+}
+
+@import "navmini",
+        "topmenu";

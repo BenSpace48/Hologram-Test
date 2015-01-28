@@ -1,0 +1,97 @@
+/*doc
+ ---
+ title: Row Title
+ name: Row-Title
+ category: Base CSS
+ ---
+ 
+ ```html_example
+<h2 class="row-title"><span> A Random <i class="highlight">Row Title</i></span></h2>
+
+<div class="blue-title">
+     <h2 class="row-title"><span> A Random <i class="highlight">Blue Title</i></span></h2>
+</div>
+
+<style>
+    .blue-title .row-title:after {
+        background: blue;
+    }
+
+    .blue-title .highlight {
+        color: blue;
+    }
+</style>
+ ``` */
+
+
+.row-title,
+.std .row-title {
+    text-transform: uppercase;
+    text-align: center;
+    display: block;
+    letter-spacing: -0.02em;
+    line-height: 1;
+    position: relative;
+    @include font-size(1.6);
+    margin: 1.5625em 0; // 25 / 16
+    font-family: 'Swiss721BT-Roman', Arial, Helvetica, sans-serif;
+
+
+    @include breakpoint("baby-bear") {
+    @include font-size(2.4);
+        margin: 1.458333333em 0; // 35 / 24
+        font-family: 'Swiss721BT-Light', Arial, Helvetica, sans-serif;
+    }
+
+   &:after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        top: 50%;
+        left: 0;
+        z-index: 1;
+        margin-top: -.083333333em; // 2 / 24
+        height: .083333333em; // 2 / 24
+        background-color: $lightGrey;
+    }
+
+    .highlight {
+        font-style: normal;
+    }
+
+    span {
+        position: relative;
+        @include inline-block;
+        padding: 0 1em;
+        background: #fff;
+        z-index: 2;
+    }
+}
+
+
+
+// View More
+
+
+.view-more,
+.std .view-more {
+    display: none;
+    text-decoration: none;
+    position: absolute;
+    background: #fff;
+    padding-left: 1em;
+    color: $black;
+
+    @include breakpoint("baby-bear") {
+        @include font-size(1.4);
+        display: block;
+        top: 0;
+        right: 0;
+        z-index: 3;
+        line-height: 25px; // 25 / 14
+    }
+
+    &:hover {
+        text-decoration: underline;
+    }
+}

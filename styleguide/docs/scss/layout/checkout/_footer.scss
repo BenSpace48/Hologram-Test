@@ -1,0 +1,48 @@
+.footer.checkout  {
+    .wrap {
+        padding: 2em 0;
+        border-top: $lightGrey solid 1px;
+
+        @media only screen and (min-width:720px) {
+            padding: 3em 0;
+        }
+
+        .col-title {
+            margin: 1em 0;
+            padding: 0;
+            text-align: center;
+            float: left;
+            @include font-size(1.4);
+            font-family: $swiss-roman;
+            margin: 0;
+            padding: 0.6em 1.5em 0.6em 1em;
+        }
+
+        .payment-methods {
+            float: left;
+            text-align: center;
+            text-indent: -1999px;
+            overflow: hidden;
+            width:165px;
+            height: 35px;
+            @include replace-text-with-dimensions("payment-methods.jpg", 0, 0);
+            @include image-2x("payment-methods-2x.jpg", 165px, 35px);
+            text-align: left;
+            padding-right: 2em;
+
+            @media screen and (max-width:720px) {
+                margin-bottom: 1em;
+            }
+
+            img {
+                margin: 0 auto;
+            }
+        }
+
+         .payment-methods.verified {
+            width:132px;
+            @include replace-text-with-dimensions("verified.png", 0, 0);
+            @include image-2x("verified-2x.png", 132px, 35px);
+        }
+    }
+}

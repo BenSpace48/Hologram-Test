@@ -1,0 +1,69 @@
+/*
+*   Default Global Button Styles
+*   Don't edit these styles - use the mixin defined below to extend the styles to create the button theme
+*
+*/
+
+.button,
+button {
+    @include inline-block;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    background: $orange;
+    line-height: 2.142857143; // 30 / 14
+    padding: 0 1.285714286em; // 18 / 14
+    font-family: 'Swiss721BT-Light', Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    text-decoration: none;
+
+    &:hover {
+        background: $black;
+    }
+
+    text: {
+        transform: uppercase;
+        decoration: none;
+    }
+}
+
+
+
+// Button Themes
+// Use existing colours in variables.scss for reference
+
+@mixin btn-theme($btn-colour, $text-colour: #fff) {
+    background-color: $btn-colour;
+    color: $text-colour;
+}
+
+// Button Theme Colours
+// If you need to create your own button theme, create it below
+// and use the mixin provided above
+
+
+.black {
+    @include btn-theme($black);
+
+    &:hover {
+        background: $orange;
+        color: #fff;
+    }
+}
+
+.lgrey {
+    @include btn-theme($lightGrey);
+}
+
+.mgrey {
+    @include btn-theme($mediumGrey);
+}
+
+.dgrey {
+    @include btn-theme($darkGrey);
+}
+
+.hpink {
+    @include btn-theme(#fff, $hotPink);
+}

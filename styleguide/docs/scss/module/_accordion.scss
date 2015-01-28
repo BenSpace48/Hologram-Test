@@ -1,0 +1,70 @@
+.col-main .accordion {
+    margin-bottom: 2em;
+    border-bottom: 1px solid $lightGrey;
+
+    dt,
+    dd {
+        padding: 0.5em 0;
+        border-top: 1px solid $lightGrey;
+        border-bottom: 1px solid $lightGrey;
+        border-bottom: 0;
+        @include font-size(1.4);
+        line-height: 1.8;
+        margin: 0;
+
+        a {
+            color: #000;
+            text-decoration: underline;
+        }
+    }
+
+    dt {
+        cursor: pointer;
+        color: #6d6d6d;
+        line-height: 2;
+
+        padding-left: 3em;
+        background: image-url('sprite.png') no-repeat 0 10px;
+
+        b {
+            color: #000;
+        }
+
+        &.accordion-active {
+          background: image-url('sprite.png') no-repeat 0 -86px;
+          color: #000;
+        }
+    }
+
+    @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+        only screen and (min--moz-device-pixel-ratio: 1.5),
+        only screen and (min-resolution: 240dpi) {
+
+        dt {
+            background-image: image-url('sprite@2x.png');
+            background-size: 200px 500px;
+        }
+    }
+
+    dd {
+        border-top: 0;
+        padding-left: 3em;
+        padding-top: 0;
+        padding-bottom: 0;
+
+        p {
+            @include font-size(1.2);
+            line-height: 1.8;
+            color: #000;
+        }
+
+        h2 {
+            text-transform: none;
+        }
+
+        &:last-of-type {
+            position: relative;
+            top: -1px;
+        }
+    }
+}

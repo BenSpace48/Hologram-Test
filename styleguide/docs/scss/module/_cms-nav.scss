@@ -1,0 +1,59 @@
+.cms-page-view .col-left, .contacts-index-index .col-left {
+    h3 {
+        @include font-size(3);
+        color:#B9B9B9;
+        font-family: $swiss-thin;
+        margin: 0.2em 0.1em;
+        float: left;
+        width: 100%;
+
+        @include breakpoint("mama-bear") {
+            @include font-size(4.2);
+        }
+    }
+
+    .cms-menu,
+    .external-cms-menu {
+        margin-bottom: 0;
+        padding-bottom: 0;
+
+        a,
+        .heading {
+            padding: 1em 0.5em 0.2em;
+            color: $orange;
+            font-family: $swiss-bold;
+            text-decoration: none;
+            text-transform: uppercase;
+            @include font-size(1.4);
+            display: block;
+        }
+
+        ul li {
+            a,
+            strong {
+                color: $black;
+                padding: 0.2em 0.5em;
+                text-decoration: none;
+                text-transform: none;
+                font-family: $swiss-roman;
+                font-weight: normal;
+                font-style: normal;
+                display: block;
+
+                &:hover {
+                    background: #000;
+                    color: #fff;
+                }
+            }
+
+            strong {
+                background: #000;
+                color: #fff;
+            }
+        }
+    }
+
+    .external-cms-menu {
+        margin-bottom: 2em;
+    }
+}

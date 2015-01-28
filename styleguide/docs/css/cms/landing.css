@@ -1,0 +1,164 @@
+/*doc
+
+
+---
+title: Font size
+name: font-size
+category: Mixins
+---
+
+These mixins are used to keep your code DRY (Don't repeat yourself) and save yourself typing out prefixes and doing repetative calculations
+
+```
+<div class="my-element"></div>
+
+.my-element {
+    @include font-size(2);       // Compiles to 20px which is 2rem
+    @include font-size(1.5);     // Compiles to 15px which is 1.5rem
+}
+```
+
+<p class="font-size-example-2">This is font-size(2)</p>
+<p class="font-size-example-1-5">This is font-size(1.5)</p>
+
+*/
+/* line 5, ../../scss/cms/landing.scss */
+.cms-landing ul {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0; }
+/* line 10, ../../scss/cms/landing.scss */
+.cms-landing .col-main {
+  padding: 0; }
+/* line 13, ../../scss/cms/landing.scss */
+.cms-landing .to-lower-case {
+  text-transform: lowercase; }
+/* line 16, ../../scss/cms/landing.scss */
+.cms-landing .row .row-title:after {
+  background-color: #000; }
+/* line 21, ../../scss/cms/landing.scss */
+.cms-landing .flexslider img {
+  width: 100%; }
+/* line 24, ../../scss/cms/landing.scss */
+.cms-landing .flexslider + .row a {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: block; }
+  /* line 30, ../../scss/cms/landing.scss */
+  .cms-landing .flexslider + .row a > .name {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: #000;
+    padding: 5px 10px;
+    color: #fff;
+    text-transform: uppercase; }
+/* line 43, ../../scss/cms/landing.scss */
+.cms-landing .best-sellers > li {
+  float: left;
+  width: 25%;
+  border-top: 1px solid #d9d9d9;
+  border-left: 1px solid #d9d9d9;
+  border-bottom: 1px solid #d9d9d9; }
+  /* line 49, ../../scss/cms/landing.scss */
+  .cms-landing .best-sellers > li:last-child {
+    border-right: 1px solid #d9d9d9; }
+  /* line 53, ../../scss/cms/landing.scss */
+  .cms-landing .best-sellers > li.lastChild {
+    border-right: 1px solid #d9d9d9; }
+  /* line 56, ../../scss/cms/landing.scss */
+  .cms-landing .best-sellers > li ul {
+    list-style-type: none; }
+/* line 60, ../../scss/cms/landing.scss */
+.cms-landing .best-sellers .product-name {
+  position: absolute;
+  bottom: 1em;
+  left: 1em;
+  width: 68%; }
+/* line 66, ../../scss/cms/landing.scss */
+.cms-landing .best-sellers .price-box {
+  position: absolute;
+  bottom: 1em;
+  right: 1em;
+  width: 20%; }
+@media only screen and (max-width: 750px) {
+  /* line 73, ../../scss/cms/landing.scss */
+  .cms-landing .best-sellers > li {
+    width: 50%;
+    border: 1px solid #d9d9d9; }
+    /* line 76, ../../scss/cms/landing.scss */
+    .cms-landing .best-sellers > li:nth-child(1), .cms-landing .best-sellers > li:nth-child(2) {
+      border-bottom: none; }
+    /* line 80, ../../scss/cms/landing.scss */
+    .cms-landing .best-sellers > li:nth-child(2), .cms-landing .best-sellers > li:nth-child(4) {
+      border-left: none; }
+    /* line 85, ../../scss/cms/landing.scss */
+    .cms-landing .best-sellers > li.secondChild, .cms-landing .best-sellers > li.lastChild {
+      border-left: none; }
+    /* line 89, ../../scss/cms/landing.scss */
+    .cms-landing .best-sellers > li.firstChild, .cms-landing .best-sellers > li.secondChild {
+      border-bottom: none; } }
+/* line 98, ../../scss/cms/landing.scss */
+.cms-landing .re-edit li {
+  float: left;
+  width: 50%; }
+/* line 102, ../../scss/cms/landing.scss */
+.cms-landing .re-edit a {
+  position: relative;
+  top: 0;
+  left: 0;
+  display: block; }
+/* line 108, ../../scss/cms/landing.scss */
+.cms-landing .re-edit img {
+  max-width: 100%;
+  width: 100%; }
+/* line 112, ../../scss/cms/landing.scss */
+.cms-landing .re-edit .title {
+  background-color: #000;
+  bottom: 0;
+  color: #fff;
+  display: inline-block;
+  padding: 5px 10px;
+  position: absolute;
+  right: 0;
+  text-transform: uppercase; }
+@media only screen and (max-width: 750px) {
+  /* line 123, ../../scss/cms/landing.scss */
+  .cms-landing .re-edit li {
+    width: 100%;
+    float: none;
+    margin-bottom: 10px; } }
+/* line 132, ../../scss/cms/landing.scss */
+.cms-landing .about-the-brand img {
+  display: block;
+  margin: 0 auto 1.458333333em; }
+/* line 136, ../../scss/cms/landing.scss */
+.cms-landing .about-the-brand p,
+.cms-landing .about-the-brand a {
+  color: #000; }
+@media only screen and (max-width: 750px) {
+  /* line 131, ../../scss/cms/landing.scss */
+  .cms-landing .about-the-brand {
+    margin: 0 15px; }
+    /* line 143, ../../scss/cms/landing.scss */
+    .cms-landing .about-the-brand img {
+      margin: 30px auto; } }
+/* line 149, ../../scss/cms/landing.scss */
+.cms-landing .about-the-brand p {
+  font-size: 14px;
+  font-size: 1.4rem; }
+/* line 156, ../../scss/cms/landing.scss */
+.cms-landing .products img,
+.cms-landing .best-sellers img,
+.cms-landing .re-edit img {
+  width: 100%; }
+@media only screen and (max-width: 750px) {
+  /* line 162, ../../scss/cms/landing.scss */
+  .cms-landing .col-main .std {
+    margin: 0 auto;
+    width: 98%; } }
+/* line 169, ../../scss/cms/landing.scss */
+.cms-landing .footer-container {
+  margin-top: 1.458333333em; }

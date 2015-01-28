@@ -1,0 +1,35 @@
+.block-cart {
+    .summary {
+    }
+
+    .amount {
+    }
+
+    .subtotal {
+        text-align:center;
+    }
+
+    .actions {
+        .paypal-logo {
+            float:left;
+            width:100%;
+            margin:3px 0 0;
+            text-align:right;
+
+            .paypal-or {
+                clear:both;
+                display:block;
+                padding:0 55px 5px 0;
+            }
+        }
+    }
+}
+
+.block-cart .mini-products-list .product-details .product-name,
+.block-cart .mini-products-list .product-details .nobr small {
+    word-wrap:break-word;
+}
+
+.block-cart .mini-products-list .product-details .nobr {
+    white-space:normal!important;
+}

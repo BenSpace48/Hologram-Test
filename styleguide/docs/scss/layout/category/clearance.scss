@@ -1,0 +1,27 @@
+@import "bootstrap";
+
+.clearance, .clearance-main {
+    .category-info {
+        h1 { color: #f6606a;}
+    }
+
+
+    .cat-quick-links {
+        a {
+            color: #f6606a;
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+}
+
+.clearance {
+    .category-info {
+        background:#fff;
+        border-bottom: 1px solid #ccc;
+    }
+}

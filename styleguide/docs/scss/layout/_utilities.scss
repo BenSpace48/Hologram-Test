@@ -1,0 +1,203 @@
+
+// Layout Classes
+
+// Image Replacement
+
+%ir,
+.ir {
+    display:block;
+    text-indent:-999em;
+    overflow:hidden;
+    font-size:0;
+    line-height:0;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+}
+
+
+.hidden,
+%hidden {
+    display: block!important;
+    border: 0!important;
+    margin: 0!important;
+    padding: 0!important;
+    font-size: 0!important;
+    line-height: 0!important;
+    width: 0!important;
+    height: 0!important;
+    overflow: hidden!important;
+}
+
+.hide-on-mob {
+    display: none;
+    visibility: hidden;
+
+    @include breakpoint("baby-bear") {
+        @include inline-block;
+        visibility: visible;
+    }
+}
+
+.hide-on-tablet {
+     @include breakpoint("baby-bear") {
+        display: none !important;
+        visibility: hidden;
+    }
+}
+
+.hide-on-desktop {
+     @include breakpoint("mama-bear") {
+        display: none !important;
+        visibility: hidden;
+    }
+}
+
+.nobr {
+    white-space: nowrap!important;
+}
+
+.wrap {
+    white-space: normal!important;
+}
+
+.a-left {
+    text-align: left!important;
+}
+
+.a-center {
+    text-align: center!important;
+}
+
+.a-right {
+    text-align: right!important;
+}
+
+.v-top {
+    vertical-align: top;
+}
+
+.v-middle {
+    vertical-align: middle;
+}
+
+.v-fix {
+    float: left;
+}
+
+.v-fix .validation-advice {
+    display: block;
+    width: 12em;
+    margin-right: -12em;
+    position: relative;
+}
+
+.f-left,
+.left {
+    float: left!important;
+}
+
+.f-right,
+.right {
+    float: right!important;
+}
+
+.f-none {
+    float: none!important;
+}
+
+.f-fix {
+    float: left;
+    width: 100%;
+}
+
+.no-display {
+    display: none;
+}
+
+.no-margin {
+    margin: 0!important;
+}
+
+.no-padding {
+    padding: 0!important;
+}
+
+.no-bg {
+    background: none!important;
+}
+
+.links li {
+    display:inline
+}
+
+.links li.first {
+    padding-left: 0;
+}
+
+.links li.last {
+    background:none!important;
+    padding-right:0!important
+}
+
+.separator {
+    margin:0 3px
+}
+
+.divider {
+    clear:both;
+    display:block;
+    font-size:0;
+    line-height:0;
+    height:1px;
+    margin:10px 0;
+    background:#ddd;
+    text-indent:-999em;
+    overflow:hidden
+}
+
+.window-overlay {
+    background:rgba(0,0,0,0.35);
+    position:absolute;
+    top:0;
+    left:0;
+    height:100%;
+    width:100%;
+    z-index:990
+}
+
+
+// Media Object
+// The media object saves hundreds of lines of code -
+// http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/
+
+
+.media {
+    @include pie-clearfix;
+    position: relative;
+
+    .bd {
+        overflow:hidden;
+        _overflow:visible;
+        zoom:1;
+    }
+
+    .img {
+        position: relative;
+        float: left;
+        margin-right: 10px;
+
+        > img {
+            display: block;
+        }
+    }
+
+    .imgExt {
+        position: relative;
+        float: right;
+        margin-left: 10px;
+
+        > img {
+            display: block;
+        }
+    }
+}

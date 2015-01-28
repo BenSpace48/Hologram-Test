@@ -1,0 +1,220 @@
+.toolbar {
+    clear: both;
+    @include pie-clearfix;
+    // text-transform: uppercase;
+    padding: 20px;
+    border-bottom: 1px solid $lightGrey;
+
+    @include breakpoint("baby-bear") {
+        padding: 20px 15px;
+        padding: 1.428571429em; // 20 / 14
+    }
+
+
+    label {
+        text-transform: uppercase;
+        padding-right: 0.5em;
+        float: left;
+
+        @include breakpoint("mama-bear") {
+            padding-right: 0.7em;
+        }
+    }
+
+
+    .link-show-all {
+        text-transform: uppercase;
+        padding-left: 0.8em;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+
+    // Hide for phone-sized viewports and show for tablet  sized viewports
+
+    .no-mob {
+        display: none;
+
+        @include breakpoint("mama-bear") {
+            display: inline;
+        }
+    }
+
+
+    // Pager
+
+    .pager {
+        @include pie-clearfix;
+
+        @media only screen and (min-width: 650px) {
+            float: right;
+            width: 47%;
+        }
+
+        @include breakpoint("baby-bear") {
+            width: 40%;
+        }
+
+        @include breakpoint("mama-bear") {
+            width: 37.5%;
+        }
+    }
+
+    .pages {
+        @include pie-clearfix;
+
+        ol {
+            margin: 0 auto;
+
+            @media only screen and (min-width: 650px) {
+                float: right;
+            }
+
+            @include breakpoint("baby-bear") {
+                margin: 0;
+            }
+        }
+
+        li {
+            float: left;
+            background: $mediumGrey;
+            text-align: center;
+            text-transform: uppercase;
+            @include font-size(1.3);
+            line-height: 30px;
+            width: 30px; // 30 / 13
+            margin-right: 4px; // 6 / 14
+
+
+            @media only screen and (min-width: 830px) {
+                // 830 and up
+                @include font-size(1.4);
+                width: 2.142857143em; // 30 / 14
+                margin-right: .428571429em; // 6 / 14
+            }
+
+            a {
+                text-decoration: none;
+                display: block;
+            }
+        }
+
+        .label {
+            @extend %hidden;
+        }
+
+        .current {
+            background: $black;
+            color: #fff;
+        }
+
+        .pager-next {
+            margin-right: 0;
+        }
+
+        .pager-next,
+        .pager-prev {
+            padding: 0;
+            background: none;
+            width: auto;
+
+            @media only screen and (max-width: 1000px) {
+                width: 50px;
+            }
+
+            a {
+                display: block;
+                @extend .button;
+
+                @media only screen and (max-width: 1000px) {
+                    line-height: 30px;
+                    padding: 0;
+                }
+            }
+        }
+    }
+
+
+    // Sorter
+
+    .sorter {
+        @include font-size(1.2);
+        width: 100%;
+        @include pie-clearfix;
+        margin-bottom: 20px;
+        height: 30px;
+        line-height: 30px;
+
+        @media only screen and (min-width: 650px) {
+            max-width: 300px;
+            float: left;
+            line-height: 2.5; // 30 / 12
+            margin-bottom: 0;
+        }
+
+        @include breakpoint("baby-bear") {
+            max-width: none;
+            width: 56%;
+        }
+
+        @include breakpoint("mama-bear") {
+            width: 60%;
+        }
+    }
+
+
+   .limiter,
+   .sort-by {
+        float: left;
+
+        label {
+            font-family: 'Swiss721BT-Bold', Arial, Helvetica, sans-serif;
+        }
+    }
+
+    .limiter {
+        width: 57%;
+
+        @include breakpoint("baby-bear") {
+            width: 55%;
+        }
+
+        a {
+            text-decoration: none;
+            color: $black;
+        }
+    }
+
+    .sort-by {
+        width: 43%;
+
+        @include breakpoint("baby-bear") {
+            width: 40%;
+        }
+    }
+}
+
+
+// Bottom toolbar
+
+.toolbar-bottom {
+    // Hide for mobile devices
+    display: none;
+
+    @include breakpoint('baby-bear') {
+        display: block;
+    }
+}
+
+
+.lt-ie9 {
+    .pages li {
+        margin-right: 4px;
+    }
+
+    .pager-next {
+
+    }
+}

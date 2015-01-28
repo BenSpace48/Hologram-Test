@@ -1,0 +1,30 @@
+@import "bootstrap";
+
+/* Custom inline styles */
+.col1-layout h3 {width:100%; text-align:center; text-transform:uppercase; color:#000; font-size:50px; line-height:50px; padding-bottom:30px; margin:0; letter-spacing:-1px; text-align:center; font-family: 'Swiss721BT-Thin'; font-weight:normal;}
+.editorial-one {width:100%; display:inline-block; margin-bottom:50px;}
+.editorial-one .pageHead {background:#000; float:left; width:100%; }
+.editorial-one .colHead {width:50%; float:left;}
+.editorial-one .colHead img {width:100%; display:block;}
+.editorial-one .colHead h1 {font-size:46px; line-height:46px; color:#FFF; margin:0; padding:0 0 7%; text-transform:uppercase; letter-spacing:-1px; text-align:center; font-family: 'Swiss721BT-Thin'; font-weight:normal;}
+.editorial-one .colHead span {padding:25% 10% 0; display:block;}
+.editorial-one p {font-size:14px; line-height:22px; color:#FFF; margin:0; padding:0 0 20px; font-family: 'Swiss721BT-Light'; text-align:center; width:90%; margin:0 auto;}
+.editorial-one .colHead p.intro {font-size:24px; line-height:28px; text-align:center; font-family: 'Swiss721BT-Thin'}
+
+@media all and (max-width: 900px) {
+.editorial-one .colHead span {padding:15% 10%;}
+.editorial-one .colHead h1, .col1-layout h3 {padding-bottom:20px; font-size:30px; line-height:30px;}
+}
+
+@media all and (max-width: 600px) {
+iframe {height:850px;}
+.editorial-one .pageHead {height:auto; max-height:100%; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;}
+.editorial-one .colHead.col1 {display:none;}
+.editorial-one .colHead.col2 {width:100%;}
+.editorial-one .colHead span {padding:40px 20px 30px;}
+.editorial-one .colHead h1, .col1-layout h3 {padding-bottom:20px; font-size:30px; line-height:30px;}
+}
+
+@media all and (max-width: 1000px) {
+.editorial-one .colHead span {padding:15% 10%;}
+}

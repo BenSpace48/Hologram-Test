@@ -1,0 +1,61 @@
+.product-view {
+    // Product Image
+
+    .product-img-box {
+        margin-bottom: 15px;
+        position: relative;
+
+        @media only screen and (max-width: 750px) {
+            max-width: 500px;
+        }
+
+        @include breakpoint("mama-bear") {
+            float: left;
+        }
+
+        .product-image {
+            @media only screen and (max-width: 750px) {
+                max-width: 500px;
+                border: 1px solid $lightGrey;
+                padding: 5px;
+            }
+
+            @include breakpoint("baby-bear") {
+                border-right: 1px solid $lightGrey;
+                border-bottom: 1px solid $lightGrey;
+            }
+        }
+    }
+
+
+    // More Views
+
+    .more-views {
+        max-width: 500px;
+        margin-bottom: 20px;
+
+        @include breakpoint("baby-bear") {
+            margin-bottom: 30px;
+        }
+
+        @media only screen and (max-width: 750px) {
+            display: none;
+        }
+
+        ul {
+            margin: 0;
+            @include pie-clearfix;
+            border-bottom: 1px solid $lightGrey;
+        }
+
+        li {
+            float: left;
+            width: 25%;
+        }
+
+        a {
+            display: block;
+            border-right: 1px solid $lightGrey;
+        }
+    }
+}

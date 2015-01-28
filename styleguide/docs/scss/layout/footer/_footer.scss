@@ -1,0 +1,290 @@
+.footer {
+    clear: both;
+
+    address {
+    }
+
+    ul {
+    }
+}
+
+.footer-container {
+    .bottom-container {
+        text-align:center;
+    }
+}
+
+.footer-top {
+    @include breakpoint("baby-bear") {
+        padding: 3.214285714em 0 2.142857143em; // 45 0 30 / 14
+    }
+}
+
+
+// Footer Links
+
+.footer-links {
+    .col {
+        clear: both;
+        width: 100%;
+        @include font-size(1.4);
+
+        @include breakpoint("baby-bear") {
+            clear: none;
+            float: left;
+        }
+
+        @include breakpoint("baby-bear") {
+            width: 33.33%;
+            padding-left: 1.428571429em; // 20 / 14
+        }
+    }
+
+    .link-head {
+        font-family: $swiss-roman;
+
+        @include breakpoint("baby-bear") {
+            @include font-size(1.4);
+            margin-bottom: 1.428571429em; // 20 / 14
+            padding-top: 0;
+
+        }
+    }
+}
+
+
+.site-security {
+    padding: 1.142857143em; // 16 / 14
+    @include pie-clearfix;
+    width: 100%; // override defaulty grid value
+    text-align: center;
+
+    @media only screen and (min-width: 440px) {
+        // 440 and up
+        width: 95%; // 380 / 440
+        max-width: 31.428571429em;
+        margin: 0 auto;
+        float: none;
+        clear: left;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    @include breakpoint("baby-bear") {
+        padding: 0 1.428571429em; // 20 / 14
+        width: 25%;
+        float: left;
+        clear: none;
+    }
+
+    @include breakpoint("mama-bear") {
+        padding-right: 0;
+    }
+
+    .col-title {
+        @include font-size(1.6);
+        font-family: $swiss-roman;
+        @include inline-block;
+        margin: 0;
+        text-align: left;
+        vertical-align: bottom;
+        line-height: 1;
+        width: 34.375%;
+
+        @media screen and (min-width: 430px) {
+            // 430 and up
+            width: auto;
+            vertical-align: middle;
+        }
+
+        @include breakpoint("baby-bear") {
+            @include font-size(1.4);
+            display: block;
+            width: 100%;
+            line-height: 1;
+            margin-bottom: 1.428571429em; // 20 / 14
+        }
+    }
+
+    .payment-methods {
+        @include inline-block;
+        width: 62.5%;
+        text-indent: -1999px;
+        overflow: hidden;
+        width:165px;
+        height: 35px;
+        @include replace-text-with-dimensions("payment-methods.jpg", 0, 0);
+        @include image-2x("payment-methods-2x.jpg", 165px, 35px);
+
+        @include breakpoint("baby-bear") {
+            float: left;
+        }
+    }
+}
+
+
+.footer-copyright {
+    font-family: $swiss-roman;
+    @include font-size(1.2);
+    text-align: center;
+    line-height: 1.5;
+    margin-bottom: 1.3em; // 16 / 12
+    padding: 0 1.333em; // 16 / 12
+
+
+    @include breakpoint("baby-bear") {
+        @include font-size(1.3);
+        text-align: left;
+        letter-spacing: -0.05em;
+        width: 53.333333333%; // 400 / 750
+        height: 4.153846154em; // 54 / 13
+        line-height: 4.153846154; // 54 / 13
+        margin-bottom: 0;
+        padding: 0 0 0 1.538461538em; // 20 / 13
+    }
+
+    @include breakpoint("mama-bear") {
+        @include font-size(1.4);
+        width: 62.5%;
+        line-height: 4.642857143; // 65 / 14
+        height: 4.642857143em; // 65 / 14
+        padding-left: 1.428571429em; // 20 / 14
+    }
+
+    a {
+        color: $black;
+    }
+
+    .made-by {
+        margin-left: .416666667em; // 5 / 12
+
+        @media screen and (min-width: 750px) and (max-width: 1000px) {
+            // Hide between 750 - 1000 pixels only
+            display: none;
+        }
+
+        @include breakpoint("mama-bear") {
+            margin-left: 1.428571429em; // 20 / 14
+        }
+    }
+}
+
+
+.footer-bottom {
+    @include breakpoint("baby-bear") {
+        border-top: 1px solid #D4D4D4;
+    }
+}
+
+
+.stay-connected {
+    @include breakpoint("baby-bear") {
+        width: 46.6%;
+    }
+
+    @include breakpoint("mama-bear") {
+        // Reset back to original grid width
+        width: 37.5%;
+    }
+
+    .social-links {
+        border-top: 1px solid #D4D4D4;
+        display: table;
+        width: 100%;
+        margin-bottom: 0;
+
+        @include breakpoint("baby-bear") {
+            border-width: 0;
+        }
+
+        li {
+            display: table-cell;
+            width: 15.625%; // 50 / 320
+            vertical-align: middle;
+
+            @include breakpoint("mama-bear") {
+                width: 16.533333333%; // 62 / 375
+            }
+        }
+
+        .label {
+            font-family: $swiss-roman;
+            @include font-size(1.2);
+            text-transform: none;
+            text-align: left;
+            letter-spacing: -0.05em;
+            width: 33.333333%;
+            padding-left: 1.666666667em; // 20 / 12
+
+            @media only screen and (min-width: 36.25em) {
+                // 580 and up
+                @include font-size(1.3);
+            }
+
+            @media only screen and (min-width: 890px) and (max-width: 1000px ) {
+                // 890 - 1000
+                text-align: right;
+                padding-right: 2.692307692em; // 35 / 13
+            }
+
+            @include breakpoint("baby-bear") {
+                padding-left: 0;
+            }
+
+            @include breakpoint("mama-bear") {
+                @include font-size(1.4);
+            }
+        }
+
+        a {
+            @include font-size(2);
+            display: block;
+            border-left: 1px solid #D4D4D4;
+            text-align: center;
+            color: $black;
+            vertical-align: middle;
+            height: 2.25em; // 54 / 24
+            line-height: 2.25; // 54 / 24
+
+            @media only screen and (min-width: 580px) {
+                // 580 and up
+                @include font-size(2.4);
+                color: #B2B2B2;
+
+                &:hover {
+                    color: $black;
+                }
+            }
+
+            @include breakpoint("mama-bear") {
+                height: 2.708333333em; // 65 / 24
+                line-height: 2.708333333; // 65 / 24
+            }
+        }
+
+        // Make YouTube icon slightly larger
+        .icon-youtube {
+            @include font-size(2.6);
+            padding-top: .076923077em; // 2 / 26
+
+            @include breakpoint("baby-bear") {
+                @include font-size(2.8);
+                padding-top: 0;
+            }
+        }
+    }
+}
+
+
+// Back to top link
+
+.back-top {
+    display: none;
+    z-index: 100;
+    position: fixed;
+    bottom: 1.428571429em; // 20 / 14
+    right: 1.428571429em; // 20 / 14
+    text-align: center;
+    @include replace-text-with-dimensions("back-to-top.png", 0, 0);
+    @include image-2x("back-to-top-2x.png", 62px, 62px);
+}

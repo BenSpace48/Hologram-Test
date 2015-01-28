@@ -1,0 +1,23 @@
+.block-related {
+    li {
+        padding:5px 0;
+    }
+
+    input.checkbox {
+        float:left;
+        margin-right:-20px;
+    }
+
+    .product {
+        margin-left:20px;
+
+        .product-image {
+            float:left;
+            margin-right:-65px
+        }
+
+        .product-details {
+            margin-left:65px
+        }
+    }
+}

@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+    <title>ShopRegis Styleguide</title>
+    <link rel="stylesheet" href="css/styleguide.css">
+    <link rel="stylesheet" href="css/local.css">
+    <link rel="stylesheet" href="css/styleguide-examples.css">
+
+    <script type="text/javascript" src="js/js/scriptaculous/slider.js"></script>
+    <script type="text/javascript" src="js/js/jquery/jquery.noConflict.js"></script>
+    <script type="text/javascript" src="js/js/scripts.js"></script>
+    <script type="text/javascript" src="js/customselect.js"></script>
+    <script type="text/javascript" src="js/accordiontofull.js"></script>
+    <script type="text/javascript" src="js/global.js"></script>
+    <script type="text/javascript" src="js/libs/jquery.flexslider.js"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <div>
+            <nav>
+                <ul>
+                    
+                    <li><a href="mixins.html">Mixins</a></li>
+                    
+                    <li><a href="messages.html">Messages</a></li>
+                    
+                    <li><a href="basics.html">Basics</a></li>
+                    
+                    <li><a href="base_css.html">Base CSS</a></li>
+                    
+                    <li><a href="sliders.html">Sliders</a></li>
+                    
+                </ul>
+            </nav>
+            
+            <div class="styleguide-title">
+                <h1>ShopRegis Styleguide</h1>
+            </div><!-- end styleguide-title -->
+            <section class="content">
+                <ul class="categories">
+                    
+                    <li><a href="#font-size">Font size</a></li>
+                    
+                </ul>
+<h1 id="font-size" class="styleguide">Font size</h1>
+<p class="styleguide">These mixins are used to keep your code DRY (Don&#39;t repeat yourself) and save yourself typing out prefixes and doing repetative calculations</p><div class="codeBlock">
+  <div class="highlight">
+    <pre>&lt;div class="my-element"&gt;&lt;/div&gt;
+
+.my-element {
+    @include font-size(2);       // Compiles to 20px which is 2rem
+    @include font-size(1.5);     // Compiles to 15px which is 1.5rem
+}</pre>
+  </div>
+</div>
+<p class="font-size-example-2">This is font-size(2)</p>
+
+<p class="font-size-example-1-5">This is font-size(1.5)</p>
+        </section>
+        </div>
+    </div><!--end wrapper -->
+</body>
+</html>

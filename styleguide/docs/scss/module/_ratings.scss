@@ -1,0 +1,40 @@
+/**
+ *
+ *  Ratings
+ *
+ */
+
+
+.ratings {
+    @include font-size(1.1);
+    line-height: 1.25;
+    margin: 7px 0
+}
+
+.rating-label {
+    display: none;
+}
+
+.rating-box {
+    width: 85px;
+    height: 13px;
+    font-size: 0;
+    line-height: 0;
+    background: image-url("bkg_rating.png") 0 0 repeat-x;
+    text-indent: -999em;
+    overflow: hidden
+}
+
+.rating-box .rating {
+    float: left;
+    height: 13px;
+    background: image-url("bkg_rating.png") 0 100% repeat-x;
+}
+
+.ratings .rating-box {
+    float: left;
+    margin-right: 3px
+}
+
+.ratings .amount {
+}

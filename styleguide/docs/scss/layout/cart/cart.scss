@@ -1,0 +1,484 @@
+@import "bootstrap";
+
+.cart {
+    h1 {
+        color: #b9b9b9;
+        margin: 0em;
+        padding-top: 0.1em;
+        padding-bottom: 0.5em;
+        text-align:left;
+        padding-right: 0.5em;
+    }
+
+    button {
+        padding: 0.5em 1.5em;
+    }
+
+    .title-buttons .checkout-types {
+        li {
+            float:left;
+            margin:0 0 5px 5px
+        }
+    }
+
+    .checkout-types {
+        float:right;
+        text-align:right;
+
+        @media screen and (max-width:660px) {
+            width: 100%;
+        }
+    }
+
+    .checkout-types .paypal-or {
+        margin:0 8px;
+        line-height:2.3
+    }
+
+    .totals .checkout-types .paypal-or {
+        clear:both;
+        display:block;
+        padding:3px 55px 8px 0;
+        line-height:1;
+        @include font-size(1.1);
+    }
+
+    input {
+        background: $lightGrey;
+        border: none;
+        padding: 0.95em;
+    }
+
+    .btn-proceed-checkout {
+        padding-right: 3.5em;
+        margin-bottom: 1em;
+        position: relative;
+
+        @media screen and (max-width:400px) {
+            width: 100%;
+            padding: 0.5em 1.5em;
+        }
+
+        &:after {
+            content: '';
+            background: image-url('sprite.png') no-repeat -190px -200px;
+            width: 12px;
+            height: 22px;
+            display: block;
+            position: absolute;
+            right: 20px;
+            top: 10px;
+
+            @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+            only screen and (min--moz-device-pixel-ratio: 1.5),
+            only screen and (min-resolution: 240dpi) {
+                background-image: image-url('sprite@2x.png');
+                background-size: 200px 500px;
+            }
+        }
+    }
+}
+
+
+// Shopping Cart Table
+
+.cart form {
+    float: left;
+    width: 100%;
+
+    .data-table, .stackable {
+        @include font-size(1.4);
+    }
+
+    fieldset {
+        padding: 0;
+        margin: 0;
+
+        th {
+            color: $orange;
+            text-transform: uppercase;
+            border: none;
+            border-bottom: 1px solid $lightGrey;
+
+            &.last { padding: 0;}
+
+             @media screen and (max-width:720px) {
+                padding: 0.5em;
+             }
+        }
+
+        td, .odd td {
+            border: none;
+            vertical-align: middle;
+            border-bottom: 1px solid $lightGrey;
+
+            &.last {
+                padding: 0;
+                text-align: center;
+            }
+        }
+
+        tr.even {
+            background: none;
+        }
+
+        .product-image {
+            float:left;
+            width: 130px;
+            height: 130px;
+        }
+
+        .brand-name {
+            text-transform: uppercase;
+            text-decoration: underline;
+            line-height: 1;
+        }
+
+        .product-name {
+            line-height: 1;
+
+            a {
+                color: #000;
+                @include font-size(1.4);
+
+                @media screen and (max-width:800px) {
+                    line-height: 1.6;
+                }
+
+                &:hover { text-decoration: underline;}
+            }
+        }
+
+        .qty {
+            width: 50px;
+            text-align: center;
+        }
+
+        .btn-remove {
+            background: image-url('sprite.png') no-repeat -90px -382px;
+            text-indent: -9999px;
+            overflow: hidden;
+            display: block;
+            width: 40px;
+            height: 20px;
+
+            @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+              only screen and (min--moz-device-pixel-ratio: 1.5),
+              only screen and (min-resolution: 240dpi) {
+                    background-image: image-url('sprite@2x.png');
+                    background-size: 200px 500px;
+            }
+        }
+
+        //responsive
+
+        .st-key {
+            @include font-size(1.4);
+            color: $orange;
+            text-transform: uppercase;
+            border: none;
+            font-family: $swiss-bold;
+            background: none;
+            border-bottom: 1px solid $lightGrey;
+        }
+
+        .st-val {
+            @include font-size(1.4);
+            vertical-align: middle;
+
+            .product-name {
+                margin: 0;
+                @include font-size(1.4);
+            }
+        }
+    }
+}
+
+.cart-table .item-msg {
+    @include font-size(1);
+}
+
+
+// Shopping Cart Collateral boxes
+
+.cart .cart-collaterals {
+    width: 100%;
+    float: left;
+
+    // Discount Codes & Estimate Shipping and Tax Boxes
+
+    .discount,
+    .shipping {
+        float: right;
+        width: 100%;
+        @include font-size(1.4);
+
+        form {
+            float: right;
+        }
+    }
+
+    .discount {
+        border-bottom: 1px solid $lightGrey;
+        border-top: 1px solid $lightGrey;
+        margin-bottom: 2em;
+        padding: 1em 0;
+        text-align: left;
+
+        @media screen and (min-width:650px) {
+            text-align: right;
+        }
+
+        .input-box {
+            margin-right: 1em;
+            display: inline-block;
+            width: 128px;
+
+            @media screen and (max-width:650px) {
+                width: 100%;
+                margin: 1em 0;
+            }
+
+            input {
+                width: 100%;
+            }
+        }
+
+        @media screen and (max-width:650px) {
+            button {
+                width: 100%;
+            }
+        }
+
+        .validation-advice {
+            float: left;
+        }
+
+        label {
+            padding-right: 1em;
+            @include font-size(1.4);
+
+            @media screen and (max-width:650px) {
+                padding-right: 0;
+            }
+        }
+
+        .cancel-btn {
+            background: none;
+            outline: none;
+            color: #000;
+            text-decoration: none;
+            float: right;
+            line-height: 1;
+            text-align: right;
+            padding: 0 1em;
+
+            @include breakpoint("baby-bear") {
+                padding: 1em;
+            }
+
+
+            &:hover,
+            &:focus {
+                text-decoration: underline;
+            }
+
+            &:after {
+                content: '';
+                @include inline-block;
+                width: 14px;
+                height: 14px;
+                // float: right;
+                margin-top: -1px;
+                margin-left: 15px;
+                background: image-url('sprite.png') no-repeat -101px -386px;
+            }
+        }
+    }
+}
+
+
+// Shopping Cart Totals
+
+.cart .totals {
+    float: right;
+    width: 275px;
+    padding: 1em .5em;
+
+    .price {
+        display: block;
+        white-space: nowrap;
+        text-align: right;
+    }
+
+    @media screen and (max-width:400px) {
+        width: 95%;
+        padding-top: 0;
+    }
+
+    // Hack to style totals left instead of right
+
+    .a-right {
+        text-align: left !important;
+    }
+
+    .discount {
+        color: #f00;
+        font-family: $swiss-bold;
+    }
+
+    .order-total {
+        font-family: $swiss-bold;
+    }
+}
+
+.cart .totals table {
+    width:100%;
+}
+
+.cart .totals table th,
+.cart .totals table td {
+    padding: 5px;
+}
+
+.cart .totals table th {
+    font-weight:700;
+}
+
+.cart .totals table tfoot th {
+}
+
+
+// Shopping Cart Buttons
+
+.cart-buttons, .cart-proceed {
+    float: left;
+    width: 100%;
+    padding: 1em 0;
+
+    @media screen and (max-width:400px) {
+        button {
+            width: 100%;
+            margin-bottom: 0.5em;
+        }
+    }
+
+    .btn-continue {
+        margin-right: 1em;
+        padding-left: 3em;
+        background: image-url('sprite.png') no-repeat -85px -290px #000;
+
+        @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+          only screen and (min--moz-device-pixel-ratio: 1.5),
+          only screen and (min-resolution: 240dpi) {
+                background-image: image-url('sprite@2x.png');
+                background-size: 200px 500px;
+        }
+
+        &:hover {
+            background: image-url('sprite.png') no-repeat -85px -290px $orange;
+        }
+    }
+}
+
+
+// Shopping cart total summary row expandable to details
+
+tr.summary-total {
+    cursor:default;
+}
+
+tr.summary-total td {
+}
+
+tr.summary-total .summary-collapse {
+    float:left;
+    text-align:right;
+    cursor:default;
+}
+
+tr.show-details .summary-collapse {
+    background-position:0 -53px
+}
+
+tr.show-details td {
+}
+
+tr.summary-details td {
+    @include font-size(1.1);
+    background-color:#dae1e4;
+    color:#626465
+}
+
+tr.summary-details-first td {
+    border-top:1px solid #d2d8db
+}
+
+tr.summary-details-excluded {
+    font-style:italic
+}
+
+
+// Shopping cart tax info
+
+.cart-tax-info {
+    display:block
+}
+
+.cart-tax-info,
+.cart-tax-info .cart-price {
+    padding-right:20px
+}
+
+.cart-tax-total {
+    display:block;
+    padding-right:20px;
+    // background: image-url('bkg_collapse.gif') 100% 4px no-repeat;
+    cursor:pointer
+}
+
+.cart-tax-info .price,
+.cart-tax-total .price {
+    display:inline!important;
+    font-weight:400!important
+}
+
+.cart-tax-total-expanded {
+    background-position:100% -53px
+}
+
+
+// Free shipping
+
+#cart-freeshipping-promo {
+    float: left;
+    background: #f5f5f5;
+    text-transform: uppercase;
+    text-align:center;
+    color: #000;
+    @include inline-block;
+    width: 45%;
+    height: 44px;
+    padding: 1em 2em;
+    @include font-size(1.4);
+    line-height: 1.4;
+
+    @media screen and (max-width:1000px) {
+        width: 100%;
+        margin-left: 0;
+        margin-bottom: 1em;
+    }
+
+    @media screen and (max-width:400px) {
+        height: 60px;
+    }
+
+    span {
+        color: $orange;
+        font-family: $swiss-bold;
+    }
+}
+
+.lt-ie9 #cart-freeshipping-promo {
+    width: 39%;
+}

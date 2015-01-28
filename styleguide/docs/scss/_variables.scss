@@ -1,0 +1,49 @@
+/*doc
+---
+title: Variables
+name: variables
+category: Basics
+---
+
+Instead of remembering or copy/pasting the colour codes we use variables.
+
+```
+$orange: #f06803;      // Set the variable
+
+.variable-element {
+    color: $orange;    // Use the variable
+}
+
+<div class="variable-element">This is some orange text</div>
+
+```
+
+<div class="variable-element">This is some orange text</div>
+
+A full list of variables can be seen in <span class="orange">RegisShop/skin/frontend/enterprise/shopRegis/scss/_variables.scss</span>
+
+*/
+
+
+/*
+ *  Global Variables
+ */
+
+
+// Descriptive Variables (Brand Colours)
+
+$orange:        #f06803;
+$lightGrey:     #e5e5e5;
+$mediumGrey:    #dcdcdc;
+$darkGrey:      #888888;
+$hotPink:       #ed1465;
+$black:         #000;
+$red:           #f60325;
+
+
+// Functional Variables (what we apply descriptive variables to)
+
+$text-colour:   $black;
+$link-colour:   $darkGrey;
+$shade-colour:  $lightGrey;
+$alert-colour:  $red;

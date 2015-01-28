@@ -1,0 +1,51 @@
+// mobile Navigation
+
+.nav-mini {
+    @include pie-clearfix;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 0;
+    border-top: 1px solid #D5D5D5;
+    border-bottom: 1px solid #D5D5D5;
+    clear: both;
+
+    a {
+        @include inline-block;
+        text-align: center;
+        color: $black;
+        text-decoration: none;
+    }
+
+    li {
+        @include font-size(2.6);
+        float: left;
+        width: 20%;
+        line-height: 55px;
+
+        a {
+            display: block;
+            width: 100%;
+            text-align: center;
+
+            &:hover,
+            &.active {
+                background: $orange;
+                color: #fff;
+            }
+        }
+    }
+
+    .icon-account {
+        @include font-size(3);
+    }
+}
+
+
+// Navigation container
+
+.nav-mob {
+    @media only screen and  (max-width: 750px) {
+        // Max-width: 750px;
+        clear: both;
+    }
+}

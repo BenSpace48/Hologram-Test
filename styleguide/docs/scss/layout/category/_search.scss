@@ -1,0 +1,93 @@
+.catalogsearch-result-index {
+    .page-title h1 {
+        margin: 0.2em 0;
+
+        padding: 0 20px;
+
+        @include breakpoint("baby-bear") {
+            padding: 0;
+        }
+    }
+    .recommendations {
+        padding-bottom: 1em;
+        padding: 0 20px 1em 20px;
+
+        @include breakpoint("baby-bear") {
+            padding: 0 0 1em 0;
+        }
+
+        a { color: #000;
+            &:hover {text-decoration: underline;}
+        }
+    }
+
+    .results-view .toolbar {
+
+        padding: 20px;
+
+        @include breakpoint("baby-bear") {
+            padding: 1.428571429em 0; // 20 / 14
+        }
+
+        // Pager
+
+        .pager {
+            @include breakpoint("mama-bear") {
+                width: 29.5%;
+            }
+        }
+
+        .link-show-all {
+            @media screen and (max-width: 800px) and (min-width: 650px) {
+                padding-left: 0.3em;
+            }
+        }
+
+        .sorter {
+            @include breakpoint("mama-bear") {
+                width: 70%;
+            }
+
+            .limiter {
+                width: 52%;
+
+                @include breakpoint("baby-bear") {
+                    width: 54%;
+                }
+            }
+
+            .sort-by {
+                width: 43%;
+
+                @include breakpoint("baby-bear") {
+                    width: 46%;
+                }
+            }
+        }
+    }
+
+    .col-left {
+
+        @include breakpoint("baby-bear") {
+            padding: 1.428571429em 0 1.428571429em 1.428571429em; // 20 / 14
+            width: 25%;
+        }
+
+        .block-layered-nav {
+
+            margin-top: 1.5em;
+
+            @include breakpoint("baby-bear") {
+                margin-top: 0;
+            }
+
+            .currently {
+                @include breakpoint("baby-bear") {
+                    border-bottom: 1px solid $mediumGrey;
+                    margin-bottom: 3.571428571em; // 50 / 14
+                    padding: 0 1.5em 2.857142857em 0; // 20, 40 / 14
+                }
+            }
+        }
+    }
+}

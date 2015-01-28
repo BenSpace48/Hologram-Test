@@ -1,0 +1,176 @@
+.catalog-category-view {
+    .global-promos {
+        @media only screen and (max-width: 750px) {
+            // Up to 750
+            display: none;
+        }
+    }
+
+    .sidebar,
+    .col-main {
+        padding: 2.857142857em 0 0; // 40 / 14
+    }
+
+    .col-main {
+        border-left: 0;
+        padding-top: 0;
+    }
+
+    .sidebar {
+        .block-content {
+            clear: both;
+            padding: 0 1.428571429em; // 20 / 14
+        }
+    }
+}
+
+.lt-ie9 {
+    .catalog-category-view {
+        .sidebar {
+            .block-content {
+                padding-left: 0;
+            }
+        }
+    }
+}
+
+.category-info {
+    @include pie-clearfix;
+    padding: 20px 20px 0;
+    background: #F1F1F1;
+
+    @include breakpoint("baby-bear") {
+        position: relative;
+        height: 200px;
+        padding: 35px 20px 30px;
+    }
+}
+
+.category-title {
+    padding: 0 !important;
+    margin: 0 0 20px;
+
+    @include breakpoint("baby-bear") {
+        width: 40%;
+        float: left;
+        margin-bottom: 16px;
+    }
+
+    h1 {
+        margin: 0;
+        color: $black;
+    }
+}
+
+.cat-quick-links {
+    @include font-size(1.1);
+    text-transform: uppercase;
+    line-height: 1;
+    position: absolute;
+    bottom: 33px;
+    left: 20px;
+    width: 40%;
+
+    @include breakpoint("mama-bear") {
+        width: 32%;
+    }
+
+    ul {
+        margin-bottom: 0;
+        padding-right: 1em;
+    }
+
+    li {
+        margin-bottom: 8px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    a {
+        color: $black;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+
+// Category description
+
+.category-description {
+    @include font-size(1.4);
+    font-family: $swiss-thin;
+    color: #767676;
+    width: 50%;
+    line-height: 22px;
+    position: absolute;
+    bottom: 30px;
+    right: 20px;
+}
+
+
+.catalog-category-view,
+.customlandingpage-index-brand {
+    // Target the first item of the first list only....
+    .products-grid.first {
+        li.item.first {
+            width: 100%;
+            @include min-height(400px);
+
+            @media only screen and (min-width: 800px) {
+                width: 66.6%;
+                @include min-height(500px);
+                padding: 0 2.857142857em 2.857142857em; // 40 / 14
+            }
+
+            @media only screen and (min-width: 750px) and (max-width: 800px)  {
+                width: 66.6%;
+                @include min-height(386px);
+                padding: 0 2.857142857em 2.857142857em; // 40 / 14
+            }
+
+            .product-details {
+                @include font-size(1.4);
+                width: 70%;
+                bottom: 1.07142857em; // 15 / 14
+
+                @include breakpoint("baby-bear") {
+                    bottom: 2.857142857em; // 40 / 14
+                }
+            }
+
+            .product-name {
+                font-family: $swiss-light;
+                @include font-size(1.4);
+            }
+
+
+            .price-box {
+                @include font-size(1.4);
+                bottom: 1.07142857em; // 15 / 14
+
+                @include breakpoint("baby-bear") {
+                    right: 2.857142857em; // 40 / 14
+                    bottom: 2.857142857em; // 40 / 14
+                }
+
+                p {
+                    @include breakpoint("baby-bear") {
+                        @include inline-block;
+                        margin-left: .357142857em; // 5 / 14
+                    }
+                }
+            }
+
+            .product-image {
+                img {
+                    width: 98%;
+                }
+            }
+        }
+    }
+}

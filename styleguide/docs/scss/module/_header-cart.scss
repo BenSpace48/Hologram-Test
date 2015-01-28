@@ -1,0 +1,180 @@
+.top-cart-container {
+    clear: both;
+}
+
+.top-cart {
+    position: relative;
+    @include pie-clearfix;
+
+    @include breakpoint("baby-bear") {
+        @include font-size(1.4);
+        line-height: 4.285714286em; // 60 / 14
+        width: 100%;
+        float: right;
+    }
+
+    @include breakpoint("mama-bear") {
+        width: 47%;
+        float: left;
+        margin-right: 0;
+    }
+
+    .block-title {
+        margin-top: 0;
+        @include pie-clearfix;
+        text-align: right;
+
+        &.expanded {
+            background: #fff;
+        }
+    }
+
+    .cart-header {
+        @include font-size(1.4);
+        display: block;
+        width: 100%;
+        line-height: 1.357142857; // 19 / 14
+        position: relative;
+
+        &:after {
+            content: '';
+            max-width: 9px;
+            height: 5px;
+            margin: -2px 0 0 5px;
+            @include inline-block;
+            @include replace-text-with-dimensions("cart-dd-arrow.png", 0, 0);
+            @include image-2x("cart-dd-arrow-2x.png", 9px, 5px);
+        }
+
+        @include breakpoint("baby-bear") {
+            text-align: center;
+            line-height: 4.285714286;
+        }
+
+        .cart-subtotal {
+            font-family: $swiss-roman;
+            margin-left: .357142857em; // 5 / 14
+        }
+    }
+
+    .top-cart-products-list {
+        margin-left: 0;
+        padding-left: 0;
+        width: 75%;
+    }
+
+    .item {
+        line-height: 1;
+        display: block;
+        @include legacy-pie-clearfix;
+        padding: 0 0 1em 0;
+
+        .product-details {
+            .product-name,
+            .brand-name,
+            .qty {
+                @include font-size(1.2);
+                text-transform: uppercase;
+                color: #000;
+                margin: 0;
+                padding: 0;
+
+                a {
+                    color: #000;
+                    text-decoration: none;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+
+            .qty {
+                padding: 1em 0;
+            }
+
+            .price {
+                font-family: $swiss-roman;
+                @include font-size(1.4);
+            }
+
+            .buttons {
+                color: #8d8d8d;
+
+                .btn-edit,
+                .btn-remove {
+                    @include font-size(1.2);
+                    text-transform: uppercase;
+                    color: #8d8d8d;
+                    text-decoration: none;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+
+                .btn-remove  {
+                    background: image-url('sprite.png') no-repeat right -390px;
+                    padding-right: 1.5em;
+
+                    @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+                      only screen and (min--moz-device-pixel-ratio: 1.5),
+                      only screen and (min-resolution: 240dpi) {
+                            background-image: image-url('sprite@2x.png');
+                            background-size: 200px 500px;
+                    }
+                }
+            }
+        }
+    }
+
+    .block-content {
+        line-height: 1;
+        position: absolute;
+        right: -5px;
+        background: #fff;
+        padding: 20px;
+        border: 1px solid #E5E5E5;
+        border-top: 0;
+        width: 285px;
+        top: 40px;
+
+        p {
+            margin: 0;
+        }
+
+        .subtotal {
+            @include font-size(1.2);
+            text-transform: uppercase;
+            color: #000;
+            padding-left: 9.2em;
+            font-family: $swiss-roman;
+            padding-bottom: 2em;
+
+            .price {
+                float: right;
+            }
+        }
+
+        .checkout {
+            float: right;
+        }
+
+        @include breakpoint("baby-bear") {
+            right: 0;
+            width: 300px;
+            top: 60px;
+        }
+
+        @include breakpoint("mama-bear") {
+            left: -58.5%;
+        }
+    }
+
+    .icon-basket {
+        @include font-size(2);
+        color: $orange;
+        position: relative;
+        top: -2px;
+    }
+}

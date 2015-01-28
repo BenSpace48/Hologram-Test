@@ -1,0 +1,28 @@
+.block-poll {
+    input.radio {
+        float:left;
+        margin:1px -18px 0 0
+    }
+
+    .label {
+        display:block;
+        margin-left:18px
+    }
+
+    li {
+        padding:3px 9px
+    }
+
+    .actions {
+        margin:5px 0 0
+    }
+
+    .answer {
+        font-weight:700
+    }
+
+    .votes {
+        float:right;
+        margin-left:10px
+    }
+}

@@ -1,0 +1,170 @@
+@import "bootstrap";
+
+.cms-contact-us .std, .contacts-index-index .col-main {
+    h3 {
+        @include font-size(2.8);
+        color:#b9b9b9;
+        font-family: $swiss-thin;
+        line-height: 1;
+        margin: 0.5em 0 0 0;
+        padding-bottom: 1em;
+        float: left;
+        width: 100%;
+
+
+        a {
+            text-decoration: none;
+            background: image-url('sprite.png') no-repeat 165px -198px;
+            padding-right: 1em;
+
+        @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+          only screen and (min--moz-device-pixel-ratio: 1.5),
+          only screen and (min-resolution: 240dpi) {
+                background-image: image-url('sprite@2x.png');
+                background-size: 200px 500px;
+            }
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    p {
+        font-family: $swiss-light;
+        @include font-size(1.4);
+        line-height: 1.8;
+    }
+
+    a {
+        text-decoration: underline;
+    }
+
+    .contact-details {
+        margin: 0 0 2em 0;
+        padding: 0;
+        border-bottom: $lightGrey solid 1px;
+        float: left;
+        width: 100%;
+
+        li {
+            @include font-size(1.4);
+            list-style: none;
+            color: $darkGrey;
+            line-height: 1.6;
+            padding: 1em 0;
+            text-transform: uppercase;
+            margin: 0;
+            border-top: $lightGrey solid 1px;
+
+            a {
+                text-decoration: none;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+
+            span {
+                @include font-size(2);
+                color: $lightGrey;
+                padding-right: 1em;
+                float: left;
+            }
+
+            address {
+
+                margin-bottom: 0;
+                line-height: 1.6;
+
+                @media screen and (max-width:420px) {
+                    float: right;
+                    margin-bottom: 0.8em;
+                    line-height: 1.2;
+                    width: 86%;
+                }
+            }
+        }
+    }
+
+    form {
+        width: 100%;
+        float: left;
+        padding: 1em 0;
+
+        @include breakpoint("mama-bear") {
+            width: 94%;
+        }
+
+        .form-list {
+            float: left;
+            width: 100%;
+
+            @include breakpoint("mama-bear") {
+                width: 94%;
+                float: left;
+            }
+
+            .field {
+                @include breakpoint("mama-bear") {
+                    &.fl {
+                        float: left;
+                        width: 32%;
+                        margin-right: 0.4em;
+                    }
+                }
+            }
+
+            .input-box {
+                margin: 0 0 0.5em 0;
+                width: 100%;
+
+                @include breakpoint("mama-bear") {
+                    textarea { width: 98%}
+                    margin: 0;
+                }
+            }
+        }
+
+        .form-buttons,
+        .required {
+            width: 100%;
+            float: left;
+
+            @include breakpoint("mama-bear") {
+                width: 94%;
+            }
+
+           .button {
+                padding: 0.6em 2.4em;
+                font-family: $swiss-light;
+           }
+        }
+
+        .required {
+            padding: 0.5em 0;
+            @include font-size(1.1);
+            color: #C3151E;
+        }
+
+        .validation-advice {
+            padding-bottom: 1em;
+        }
+
+        .selectricWrapper {
+            @include breakpoint("mama-bear") {
+            width: 98%;
+            }
+
+            .selectric .label { padding: 0.9em 1.3em; background: #e5e5e5;}
+
+            .selectric .button, .selectric .button:hover {
+              background: image-url('customSelect-arrow-blk.png') no-repeat center right #e5e5e5;
+              width: 50px;
+              height: 50px;
+            }
+        }
+    }
+
+    .messages li  { margin: 0;}
+}

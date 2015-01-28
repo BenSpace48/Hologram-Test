@@ -1,0 +1,36 @@
+.breadcrumbs {
+    display: none;
+
+    & > ul {
+        @extend %nav;
+    }
+
+    @include breakpoint("baby-bear") {
+        @include font-size(1.4);
+        display: block;
+        margin: 0;
+        line-height: 1;
+        padding: 23px 16px;
+        border:none;
+        background: #f1f1f1;
+        text-transform: uppercase;
+
+        a {
+            text-decoration: none;
+            color: #767676;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        .separator {
+            @include replace-text-with-dimensions("breadcrumb-separator.png", center, 1px);
+            @include image-2x("breadcrumb-separator-2x.png", 5px, 9px);
+            @include inline-block();
+            width: 9px;
+            height: 14px;
+            margin: 0 8px;
+        }
+    }
+}

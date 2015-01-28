@@ -1,0 +1,738 @@
+@import "bootstrap";
+
+// My Account
+
+.my-account {
+    .title-buttons {
+        text-align: left;
+        padding-bottom: 1em;
+
+        @media screen and (min-width:420px) {
+            button {
+                text-align: right;
+                float: right;
+            }
+        }
+    }
+
+    .form-list {
+        margin: 0;
+
+        .fieldset {
+            margin-bottom: 1em;
+            float: left;
+            width: 100%;
+        }
+        .control { padding: 1em 0 0 0;
+
+            input { cursor: pointer;}
+        }
+        .add-field .input-box {
+            @media only screen and (min-width: 540px) {
+                margin-left: 12.9em;
+            }
+        }
+    }
+
+    .page-title {
+        @include pie-clearfix;
+
+        button {
+            margin-top: 1em;
+        }
+    }
+
+    h2 {
+        line-height: 1;
+        float: left;
+        width: 100%;
+        @include font-size(1.4);
+        color: $orange;
+        font-family: $swiss-bold;
+        text-transform: uppercase;
+        margin: 1em 0;
+
+        .separator {
+            @include font-size(1.2);
+            font-weight: normal;
+            color: #000;
+        }
+
+        a {
+            margin:0 0 10px;
+            font-family: $swiss-light;
+            @include font-size(1.2);
+            text-decoration: underline;
+            text-transform: none;
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+
+    a {
+        @include font-size(1.2);
+        color: #000;
+        text-decoration: underline;
+        text-transform: none;
+    }
+}
+
+.info-box, #my_recent_reviews {
+    @include font-size(1.3);
+    border: 1px solid $lightGrey;
+    float: left;
+    width: 100%;
+    padding: 1em;
+    margin: 0 0 2em 0;
+    line-height: 1.5;
+    @include min-height(210px);
+
+    address {
+        padding-bottom: 1em;
+    }
+
+    .box-content {
+        margin-bottom: 0;
+
+        a[href^=tel] { display: inline; }
+
+        a {
+            padding: 5px 0 0 0;
+            display: block;
+        }
+    }
+
+    .box-title {
+        @include font-size(1.4);
+        margin-top: 0;
+
+        a {
+            display: block;
+        }
+    }
+
+    .box-title,
+    .sub-title {
+        a,
+        .separator {
+            @include font-size(1.2);
+            font-weight: normal;
+            color: #000;
+        }
+    }
+}
+
+.my-account .pager {
+    padding: 10px 0;
+    float: left;
+    width: 100%;
+    border: none;
+    text-transform: uppercase;
+
+    .amount {
+        margin: 0;
+        float: left;
+
+        strong {
+            font-weight: normal !important;
+        }
+    }
+
+    .limiter { float: right;}
+}
+
+
+// Address Book
+
+.addresses-list {
+    address.box-content a[href^=tel] {
+        display: inline;
+    }
+}
+
+.addresses-additional li.item {
+    @extend .info-box;
+}
+
+.customer-address-form .form-list .control label {
+    width: 93%;
+}
+
+
+// Order View
+
+.order-info {
+    border:1px solid #ddd;
+    padding:5px;
+
+    dt, dd, ul, li {
+        display:inline;
+    }
+}
+
+.order-date {
+    margin:10px 0
+}
+
+.order-info-box {
+}
+
+.order-items {
+    width:100%;
+    overflow-x:auto
+}
+
+.order-additional {
+    margin:15px 0
+}
+
+
+// Order Gift Message
+
+.gift-message dt strong {
+    color:#666
+}
+
+.gift-message dd {
+    @include font-size(1.3);
+    margin:5px 0 0
+}
+
+
+// Order Comments
+
+.order-about dt {
+    font-weight:700
+}
+
+.order-about dd {
+    @include font-size(1.3);
+    margin:0 0 7px;
+}
+
+.tracking-table {
+    margin:0 0 15px;
+
+    th {
+        font-weight:700;
+        white-space:nowrap
+    }
+}
+
+.tracking-table-popup {
+    width:100%;
+
+    th {
+        font-weight:bold;
+        white-space:nowrap;
+    }
+}
+
+.tracking-table-popup th,
+.tracking-table-popup td {
+    padding:1px 8px
+}
+
+
+// Order Print Pages
+
+.page-print .print-head {
+    img {
+        float: left;
+    }
+}
+
+.page-print .print-head address {
+    float:left;
+    margin-left:15px
+}
+
+
+// Price Rewrites
+
+.page-print .gift-message-link {
+    display:none
+}
+
+.page-print .price-excl-tax,
+.page-print .price-incl-tax {
+    display:block;
+    white-space:nowrap
+}
+
+.page-print .cart-price,
+.page-print .price-excl-tax .label,
+.page-print .price-incl-tax .label,
+.page-print .price-excl-tax .price,
+.page-print .price-incl-tax .price {
+    display:inline
+}
+
+
+// My Reviews
+
+#my-reviews-table{
+    border: 1px solid #ddd;
+    border-right: 0;
+    border-left: 0;
+
+    .product-name { margin: 0;
+        a {text-transform: uppercase;}
+    }
+}
+
+.product-review .product-img-box {
+    float:left;
+    width:295px;
+}
+
+.product-review .product-img-box .product-image {
+    display:block;
+    width:285px;
+    height:285px;
+}
+
+.product-review .product-img-box .label {
+    @include font-size(1.1);
+    margin:0 0 3px;
+}
+
+.product-review .ratings .rating-box {
+    float:none;
+    display:block;
+    margin:0 0 5px;
+}
+
+.product-review .product-details {
+    margin-left:150px
+}
+
+.product-review > h3 {
+}
+
+.product-review .ratings-table {
+    margin:0 0 10px;
+}
+
+.product-review dt {
+    font-weight:700;
+}
+.product-review dd {
+    @include font-size(1.3);
+    margin:5px 0 0;
+}
+
+
+// Account Dashboard
+
+.dashboard {
+    .welcome-msg {
+        font-weight: normal;
+        line-height: 1.5;
+        padding-bottom: 1em;
+    }
+}
+
+
+// Recent Orders
+
+.dashboard .recent-orders {
+    margin-bottom: 40px;
+
+    .table-caption {
+        @extend .sub-title;
+
+        a {
+            font-weight: normal;
+        }
+    }
+}
+
+#my-orders-table {
+    border-bottom: 1px solid $lightGrey;
+    float: left;
+    margin-bottom: 2em;
+
+    .product-name,
+    .price {
+        @include font-size(1.2);
+        font-weight: normal;
+        margin: 0;
+    }
+}
+.order-items {
+    .product-name,
+    .price {
+        @include font-size(1.2);
+        font-weight: normal;
+        margin: 0;
+    }
+
+    .stacktable.small-only {
+        margin-bottom: 2em;
+    }
+}
+
+.customer-account-index {
+
+    #my-orders-table {
+        td.last { padding: 0.5em 0;}
+    }
+
+}
+
+
+// Reviews
+
+.dashboard .box-reviews .number {
+    float:left;
+    @include font-size(1);
+    font-weight:700;
+    line-height:1;
+    color:#fff;
+    margin:3px -20px 0 0;
+    padding:2px 3px;
+    background:#ddd;
+}
+
+.dashboard .box-reviews .details {
+    margin-left:20px;
+}
+
+
+// Store Credit
+
+.storecredit {
+    .account-balance {
+    }
+}
+
+
+// Tags
+
+.dashboard .box-tags {
+    .number {
+        float:left;
+        font-size:10px;
+        font-weight:700;
+        line-height:1;
+        color:#fff;
+        margin:3px -20px 0 0;
+        padding:2px 3px;
+        background:#ddd;
+    }
+
+    .details {
+        margin-left:20px
+    }
+}
+
+.sidebar .welcome-msg h2 {
+    @include font-size(3);
+    color:$orange;
+    font-family: $swiss-thin;
+    padding: 0.5em 0 1em 0;
+    margin: 0;
+    line-height: 1;
+
+    @include breakpoint("mama-bear") {
+         @include font-size(3.8);
+    }
+}
+
+// Credits
+
+.account-balance {
+    padding-bottom: 2em;
+}
+
+
+// Subscribe
+
+.newsletter-manage-index {
+    .form-list .control label {
+        @include breakpoint("mama-bear") {
+            width: 30%;
+        }
+    }
+}
+
+// Wishlist
+
+.my-wishlist {
+    fieldset {
+        padding: 0;
+    }
+
+    @media all and (max-width: 550px) {
+        .buttons-set button { display: block; margin-bottom: 0.2em; width: 280px;}
+    }
+
+    .data-table {
+
+        border-bottom: 1px solid $lightGrey;
+
+        fieldset {
+            width: 50px;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+            height: 45px;
+        }
+
+        input, textarea {
+            padding: 1em;
+            line-height: 1.2;
+            @include inline-block;
+            width: 100%;
+            @include font-size(1.3);
+        }
+
+        .product-name, textarea { margin: 0.3em 0;}
+
+        .product-name a {
+            text-transform: uppercase;
+            @include font-size(1.4);
+        }
+
+        .price {
+            @include font-size(1.4);
+            padding: 0.4em 0 0 0;
+            float: left;
+            width: 100%;
+        }
+
+        .add-to-cart-alt .button { padding-right: 1em; padding-left: 1em;}
+
+        input.qty {
+            width: 2.5em;
+            padding: 0;
+            text-align: center;
+            height: 2.3em;
+            margin: 1em;
+            margin-left: 0;
+        }
+
+        .link-edit {
+            padding: 1em 0;
+            float: left;
+            width: 100%;
+        }
+
+        td, th { border: none;}
+
+        th {
+            border-bottom:1px solid $lightGrey;
+            color:$orange;
+            text-transform: uppercase;
+        }
+
+        td.last {
+
+            padding-top: 4.5em;
+
+            a {
+                background: image-url('sprite.png') no-repeat -80px -386px;
+                text-indent: -9999px;
+                overflow: hidden;
+                display: block;
+
+                @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+                  only screen and (min--moz-device-pixel-ratio: 1.5),
+                  only screen and (min-resolution: 240dpi) {
+                        background-image: image-url('sprite@2x.png');
+                        background-size: 200px 500px;
+                }
+            }
+        }
+    }
+
+    .stacktable {
+        fieldset {
+            width: 50px;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+            height: 45px;
+        }
+
+        input,
+        textarea {
+            padding: 1em;
+            line-height: 1.2;
+            @include inline-block;
+            width: 100%;
+            @include font-size(1.3);
+        }
+
+        .product-name,
+        textarea {
+            margin: 0.3em 0;
+        }
+
+        .product-name a {
+            text-transform: uppercase;
+            @include font-size(1.4);
+        }
+
+        .price {
+            @include font-size(1.4);
+            padding: 0.4em 0 0 0;
+            float: left;
+            width: 100%;
+        }
+
+        .add-to-cart-alt .button {
+            padding-right: 1em; padding-left: 1em;
+        }
+
+        input.qty {
+            width: 2.5em;
+            padding: 0;
+            text-align: center;
+            height: 2.3em;
+            margin: 1em;
+            margin-left: 0;
+        }
+
+        .link-edit {
+            padding: 1em 0;
+            float: left;
+            width: 100%;
+        }
+    }
+
+}
+
+.wishlist-index-share {
+    .buttons-set {
+        padding: 0 0 1em 0;
+    }
+}
+
+.customer-account-edit {
+    .change-password {
+        padding-top: 2em;
+        float: left;
+    }
+
+    #dummy {
+        display: none;
+    }
+
+    .form-list label {
+        width: 200px;
+    }
+}
+
+body p.back-link {
+    margin: 0 1em 2em 0;
+
+    a  {
+        background: image-url('sprite.png') no-repeat 0 -384px;
+        text-decoration: none;
+        padding: 0.2em 0 0.2em 1em;
+        color: #000;
+        @include font-size(1.4);
+        text-transform: uppercase;
+        text-decoration: none;
+
+        @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+          only screen and (min--moz-device-pixel-ratio: 1.5),
+          only screen and (min-resolution: 240dpi) {
+                background-image: image-url('sprite@2x.png');
+                background-size: 200px 500px;
+            }
+
+        small {
+            display: none;
+        }
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.customer-account-forgotpassword .form-list {
+    @media all and (min-width: 950px) {
+        width: 65%;
+    }
+}
+
+.sales-order-view {
+    .order-page h1 {
+        width: 100%;
+    }
+
+    #my-orders-table {
+        border-bottom: none;
+    }
+}
+
+#my_recent_reviews {
+
+
+    .item {
+
+        padding: 0 0 1em 0; border-bottom: 1px solid $lightGrey;
+        margin-bottom: 1em;
+
+        &.last { border-bottom: none; margin-bottom: 0; padding: 0;}
+    }
+
+    .number { display: none;}
+
+
+    .product-name {
+
+        a {
+        text-transform: uppercase;
+        @include font-size(1.4);
+        }
+    }
+}
+
+.review-product-list .col-main { padding-top:0; }
+
+.product-review {}
+.product-review .product-img-box {
+    float:left;
+    width:100%;
+    @include breakpoint("mama-bear") {
+        width:50%;
+    }
+}
+.product-review .product-img-box .product-image { display:block; margin:0 0 15px; }
+.product-review .details { float:right; width: 100%;
+    @include breakpoint("mama-bear") {
+        width:50%;
+    }
+}
+
+
+.product-review .details .product-name { margin-top: 0;}
+.product-review .details p.date { @include font-size(1.2);}
+.product-review .details p { margin:10px 0;}
+.product-review .details .review-summary-table { margin:10px 0; }
+.product-review .buttons-set { clear:both; padding:25px 0 0; }
+
+.review-product-view .col-main .page-title { margin-left:0; margin-right:0; }
+.review-product-view .product-review .product-img-box { padding:0 0 20px 20px; }
+.review-product-view .product-review .details { width:570px; padding:0 20px 20px 0; }
+.review-product-view .product-review .buttons-set { background:#fff; margin:0; padding:15px 20px; }
+
+.product-review .data-table {
+
+    tr, td { padding: 0 0 1em 0; border: none;}
+    td.label { display: none;}
+}
+
+.my-account .let-us-know a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.3em 1em;
+    margin: 1em 0;
+}

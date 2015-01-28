@@ -1,0 +1,183 @@
+.products-grid {
+    position:relative;
+
+    li.item {
+        float: left;
+        padding: 0 1.428571429em .714285714em; // 10, 20 / 14
+        position: relative;
+        @include min-height(150px);
+    }
+
+    .product-image {
+        display: block;
+        width: 100%;
+
+        img {
+            display: block;
+            margin: 0 auto;
+            width: 92%;
+        }
+    }
+
+    .product-details {
+
+        float: left;
+        width: 75%;
+
+        @media screen and (min-width: 420px) {
+            // 420 and up
+            @include font-size(1.2);
+            width: 70%;
+        }
+
+
+        @media screen and (min-width: 500px) {
+            // 500 and up
+            width: 60%;
+            position: absolute;
+            bottom: .833333333em; // 10 / 12
+        }
+
+        @include breakpoint("mama-bear") {
+            width: 66.666666667%; // 140 / 210
+            bottom: 1.666666667em; // 20 / 12
+        }
+
+    }
+
+    .product-name {
+        @include font-size(1.1);
+        font-family: Arial, sans-serif;
+        line-height: 1;
+        margin-bottom: 0;
+
+        a {
+            text-decoration: none;
+            color: $darkGrey;
+        }
+    }
+
+    .price-box {
+        @include font-size(1.1);
+        position: absolute;
+        right: 1em;
+        text-align: right;
+
+        &,
+        p {
+            color: $black;
+            line-height: 1;
+        }
+
+        @media only screen and (min-width: 420px) {
+            // 420 and up
+            @include font-size(1.1);
+            bottom: .909090909em; // 10 / 11
+        }
+
+        @media only screen and (min-width:500px) {
+            // 500 and up
+            right: 1.818181818em; // 20 / 11
+        }
+
+        @include breakpoint("mama-bear") {
+            bottom: 1.818181818em; // 20 / 11
+        }
+    }
+
+    .spotlight {
+        clear: both;
+        color: $black;
+    }
+}
+
+
+// Category view specific overrides
+
+.catalog-category-view,
+.customlandingpage-index-brand,
+.catalogsearch-result-index,
+.catalog-product-view {
+    .col2-left-layout {
+        .col-main {
+            border-left: 0;
+            padding: 0;
+        }
+    }
+
+}
+
+.catalog-category-view,
+.customlandingpage-index-brand,
+.catalogsearch-result-index {
+    .products-grid {
+        li.item {
+            border-left: 1px solid $lightGrey;
+            border-bottom: 1px solid $lightGrey;
+            width: 50%;
+            padding: 0;
+            @include min-height(190px);
+
+            @media screen and (min-width: 400px) {
+                width: 33.3%;
+                @include min-height(193px);
+                padding: 0 1.428571429em 1.428571429em; // 20 / 14
+            }
+
+            @media screen and (min-width: 800px) {
+                @include min-height(250px);
+            }
+        }
+    }
+}
+
+.catalog-category-view,
+.customlandingpage-index-brand,
+.catalogsearch-result-index,
+.catalog-product-view {
+    .products-grid {
+        @include pie-clearfix;
+        margin-bottom: 0;
+        clear: both;
+
+        .product-details {
+            @include font-size(1.1);
+            position: absolute;
+            width: 60%;
+            bottom: .909090909em; // 10 / 11
+
+            @include breakpoint("baby-bear") {
+                bottom: 1.818181818em; // 20 / 11
+            }
+
+            @media screen and (max-width: 1000px) {
+                // Max width 750px
+                padding-left: .909090909em; // 10 / 11
+            }
+        }
+
+        .price-box {
+            bottom: .909090909em; // 10 / 11
+
+            @include breakpoint("baby-bear") {
+                bottom: 1.818181818em; // 20 / 11
+            }
+        }
+
+        .product-name {
+                width: 100%;
+        }
+
+        .spotlight {
+            @media screen and (max-width: 750px) {
+                padding-left: .909090909em; // 10 / 11
+            }
+        }
+
+        .product-image {
+            @media screen and (max-width: 750px) {
+                margin-bottom: .357142857em;
+            }
+        }
+    }
+}

@@ -1,0 +1,103 @@
+.form-subscribe {
+    padding: 22px 16px;
+    background: $shade-colour;
+    @include pie-clearfix;
+
+    @include breakpoint("baby-bear") {
+        padding: 10px;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .inner {
+        @include pie-clearfix;
+        margin: 0 auto;
+        float: none;
+
+        @include breakpoint("baby-bear") {
+            width: 100%;
+        }
+    }
+
+    .form-subscribe-header {
+        text-transform: uppercase;
+        @include pie-clearfix;
+
+        @include breakpoint("baby-bear") {
+            float: left;
+            width: 50%;
+        }
+
+        label {
+            @include font-size(1.2);
+            display: block;
+            text-align: left;
+            margin: 0 auto 1em;
+            width: 100%;
+            max-width: 335px;
+
+            @media only screen and (min-width: 420px) {
+                @include font-size(1.4);
+            }
+
+            @include breakpoint("baby-bear") {
+                line-height: 3.571428571; // 50 / 14
+                margin-bottom: 0;
+                text-align: right;
+                padding-right: 1.285714286em; // 18 / 14
+                max-width: none;
+            }
+
+            b {
+                font-weight: normal;
+            }
+        }
+    }
+
+    .form-subscribe-body {
+        @include pie-clearfix;
+        background: #fff;
+        padding: 10px; // 10
+        max-width: 335px;
+        position: relative;
+
+        @media only screen and (min-width: 395px) {
+            // 395 and up
+            margin: 0 auto;
+        }
+
+        @include breakpoint("baby-bear") {
+            float: left;
+            width: 50%;
+        }
+    }
+
+    .input-text {
+        border: none;
+        float: left;
+        width: 68%;
+        height: 30px; // 30 / 14
+        background: #fff;
+        line-height: 30px;
+        text-indent: 5px;
+
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    .button-subscribe {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        width: 93px;
+        line-height: 30px;
+        padding: 0;
+        margin: 0;
+    }
+
+    .validation-advice {
+        padding-top: 5px;
+    }
+}

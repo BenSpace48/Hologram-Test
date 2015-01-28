@@ -1,0 +1,200 @@
+.product-review-summary {
+    @extend %box-style;
+
+    .product-name {
+        margin-top: 0;
+        font-weight: bold;
+    }
+
+    .bd {
+        line-height: 1.5;
+    }
+
+    .img {
+        margin-right: 20px;
+    }
+}
+
+.review-form {
+    .form-list {
+        margin: 0;
+
+        .input-text:focus,
+        textarea:focus {
+            outline: none;
+        }
+
+        textarea {
+            width: 90%;
+            @include min-height(175px);
+            max-height: 175px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        label {
+            width: 100%;
+        }
+    }
+
+    fieldset {
+        @extend %box-style;
+        width: 415px;
+        @include min-height(435px);
+    }
+
+    .what-you-think,
+    .security-code {
+        @include min-height(490px);
+    }
+
+    label,
+    .label {
+        padding-top: 0;
+        font-weight: bold;
+    }
+
+    legend {
+        display: block;
+        color: #fff;
+        padding: 10px;
+    }
+
+    .buttons-set {
+        padding: 0;
+        float: right;
+        width: 360px;
+        line-height: 2.833333333; // 34 / 12
+
+
+        a {
+            font-weight: bold;
+            margin-right: 20px;
+        }
+
+        .button {
+            padding: 0 20px;
+            line-height: 2.833333333; // 34 / 12
+        }
+
+    }
+}
+
+.field-note {
+    clear: both;
+    font-style: italic;
+    color: #777;
+    padding: 5px 0;
+    display: block;
+}
+
+.recommend-scale {
+    label {
+        width: auto;
+        padding: 0;
+
+        &:after {
+            content: '';
+        }
+    }
+
+    dd {
+        @include pie-clearfix;
+        clear: both;
+    }
+}
+
+
+// Ratings
+
+.product-ratings {
+    .rating {
+        clear: both;
+        margin: 0 0 25px;
+    }
+
+    .input-box {
+        margin: 0;
+    }
+
+    dd {
+        margin-left: 0;
+        margin-bottom: 20px;
+        @include pie-clearfix;
+    }
+
+    .input-box {
+        @include inline-block;
+    }
+
+    .label {
+        clear: both;
+        width: 100%;
+        margin-bottom: 5px;
+    }
+
+    .rating-label {
+        @include inline-block;
+        width: 100px;
+        margin-left: 10px;
+        line-height: 1.833333333; // 22 / 12
+    }
+
+    .product-recommend {
+        dl {
+            margin-bottom: 0;
+        }
+
+        dd li {
+            @include inline-block;
+            margin-bottom: 0;
+            width: 60px;
+            margin-right: 5px;
+        }
+
+        label {
+            width: auto;
+            padding: 0;
+            float: none;
+        }
+    }
+}
+
+
+// What you think...
+
+.what-you-think {
+    .input-radio  {
+        label {
+            font-weight: normal;
+            margin: 0 6px 0 2px;
+        }
+
+        dt,
+        .input-box {
+            margin-bottom: 5px;
+        }
+
+        .input-box {
+            display: block;
+            width: 100%;
+            margin-left: 0;
+        }
+    }
+
+    .recommend-scale {
+        label {
+            width: auto;
+        }
+    }
+}
+
+
+// Resize Specific fields
+
+.order-number .input-box .input-text,
+.security-code .form-list .input-text {
+    width: 120px;
+}

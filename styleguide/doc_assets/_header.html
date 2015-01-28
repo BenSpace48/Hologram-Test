@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+    <title>ShopRegis Styleguide</title>
+    <link rel="stylesheet" href="css/styleguide.css">
+    <link rel="stylesheet" href="css/local.css">
+    <link rel="stylesheet" href="css/styleguide-examples.css">
+
+    <script type="text/javascript" src="js/js/scriptaculous/slider.js"></script>
+    <script type="text/javascript" src="js/js/jquery/jquery.noConflict.js"></script>
+    <script type="text/javascript" src="js/js/scripts.js"></script>
+    <script type="text/javascript" src="js/customselect.js"></script>
+    <script type="text/javascript" src="js/accordiontofull.js"></script>
+    <script type="text/javascript" src="js/global.js"></script>
+    <script type="text/javascript" src="js/libs/jquery.flexslider.js"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <div>
+            <nav>
+                <ul>
+                    <% @categories.each do |category, file_name| %>
+                    <li><a href="<%= file_name %>"><%= category %></a></li>
+                    <% end %>
+                </ul>
+            </nav>
+            
+            <div class="styleguide-title">
+                <h1>ShopRegis Styleguide</h1>
+            </div><!-- end styleguide-title -->
+            <section class="content">
+                <ul class="categories">
+                    <% @blocks.each do |b| %>
+                    <li><a href="#<%= b[:name] %>"><%= b[:title] %></a></li>
+                    <% end %>
+                </ul>

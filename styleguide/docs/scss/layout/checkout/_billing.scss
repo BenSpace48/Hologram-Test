@@ -1,0 +1,91 @@
+.opc {
+    #checkout-step-billing, #checkout-step-shipping {
+
+        .form-list .label {
+            width: 200px;
+        }
+    }
+}
+
+#opc-billing {
+    .delivery-address-option {
+        width: 100%;
+
+        label {
+            width: auto;
+            margin-left: 20px;
+            margin-right: 5px;
+
+            &:after {
+                content: '';
+            }
+        }
+
+        .field {
+            margin-bottom: 6px;
+        }
+    }
+
+
+    // Set Your Password
+    .form-list {
+        .different-delivery-address {
+            margin-bottom: 18px;
+        }
+
+        .register-password {
+            margin-bottom: 12px;
+        }
+
+        .control {
+            float: left;
+            text-transform: none;
+            width: 100%;
+            padding: 0;
+
+            @include breakpoint("baby-bear") {
+                width: 30%;
+                padding: 1em 0;
+                line-height: 1;
+            }
+
+            label {
+                padding: 0;
+            }
+
+            &.alter-address {
+                padding-bottom: 0.5em;
+
+                @include breakpoint("mama-bear") {
+                    padding-bottom: 0;
+                }
+            }
+        }
+
+        .delivery-label {
+            float: left;
+            width:227px;
+        }
+
+        .billing-address label,
+        .alter-address label {
+            text-transform: none; padding: 0;
+        }
+
+         @include breakpoint("mama-bear") {
+            .local-salon-text {
+                padding-left: 225px;
+            }
+        }
+
+        .newslettercheckbox {
+            width: 100%;
+            padding-top: 0;
+
+            label {
+                width: 90%;
+                text-transform: none;
+            }
+        }
+    }
+}

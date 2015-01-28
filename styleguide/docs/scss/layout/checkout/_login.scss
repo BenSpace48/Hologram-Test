@@ -1,0 +1,172 @@
+#opc-login {
+    // Utilise ID to override .section silent class.
+    width: 100%;
+}
+
+.checkout-step-login {
+    .step-title {
+        @extend %hidden;
+    }
+}
+
+#opc-login {
+    .progressBar {
+        display: none;
+    }
+
+    .buttons-set {
+        padding-bottom: 0;
+        padding-left: 115px;
+    }
+
+    .step {
+        width: 100%;
+    }
+
+    h4 {
+        @include font-size(1.8);
+        line-height: 1;
+        padding-top: 1em;
+        color: $orange;
+
+        @include breakpoint("mama-bear") {
+            padding: 0;
+        }
+    }
+
+    .pod {
+        @include min-height(250px);
+        width: 430px;
+        padding: 30px 15px 15px;
+    }
+
+    .col-title {
+        @extend %ir;
+        margin-top: 10px;
+        margin-left: 105px;
+        height: 27px;
+    }
+
+    .col-1 {
+        @media all and (min-width: 750px) {
+            padding: 0 4em 0 0;
+            border-right: $lightGrey solid 1px;
+        }
+
+        p {
+            margin: 0 0 2em 0;
+        }
+
+        .form-list {
+            width: 100%;
+
+            .buttons-set {
+                padding: 0;
+                margin: 1em 0;
+                width: 100%;
+
+                .button {
+                    width: 100%;
+                    padding: 0.6em 3em;
+                }
+
+            }
+
+            .input-box {
+                @include inline-block;
+                width: 100%;
+            }
+
+            .input-text {
+                width: 100%;
+            }
+
+            .note {
+
+                padding: 0.5em 0 1em 0 ;
+
+                a {
+                    text-decoration: underline;
+                    color: #000;
+                    @include font-size(1.2);
+                }
+            }
+        }
+
+        .required {
+            padding: 1em 0;
+        }
+    }
+
+
+    .col-2 {
+        padding: 0 0 1em 0;
+        float: left;
+
+        @media all and (min-width: 750px) {
+            height: 313px;
+            padding: 0 0 0 4em;
+            position: relative;
+        }
+
+        @media all and (max-width: 1000px) and (min-width: 750px) {
+            height: 330px;
+        }
+
+        .buttons-set {
+            width: 100%;
+            padding: 0;
+            margin: 0;
+
+            @media all and (min-width: 750px) {
+                width: 88%;
+                position: absolute;
+                bottom: 0;
+                right: 0;
+            }
+
+            .button {
+                width: 100%;
+                padding: 0.6em 3em;
+            }
+        }
+
+        .form-list {
+
+            li { padding-bottom: 1em;
+
+                label { padding: 0 1em;}
+
+                input[type="radio"] { float: left; margin-top: 0.2em;}
+            }
+        }
+    }
+}
+
+
+// Forgot Password Modal
+
+.forgot-pass-modal {
+    z-index: 9999;
+
+    label {
+        @extend %hidden;
+    }
+
+    .form-list {
+        .input-email-add {
+            margin-bottom: 12px;
+            @include pie-clearfix;
+        }
+
+        .input-text {
+            width: 200px;
+        }
+    }
+
+    .button {
+        @include font-size(1.1);
+        padding: 10px 20px;
+        line-height: 1;
+    }
+}

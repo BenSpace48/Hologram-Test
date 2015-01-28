@@ -1,0 +1,120 @@
+// Search Form
+
+.search-form {
+    display: none;
+    z-index: 10;
+    width: 100%;
+    cursor: pointer;
+
+    @include breakpoint("baby-bear") {
+        width: 35%; // 350 / 1000
+        float: right;
+        display: block;
+    }
+
+    @include breakpoint("mama-bear") {
+        width: 25%;
+    }
+}
+
+.form-search {
+    @include pie-clearfix;
+    position: relative;
+    display: block;
+    clear: both;
+    background: $lightGrey;
+    padding: 20px 16px;
+    width: 100%;
+
+    @include breakpoint("baby-bear") {
+        float: right;
+        clear: none;
+        margin-top: -.214285714em;
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+
+    label {
+        @extend %hidden;
+    }
+
+    .input-text {
+        @include font-size(1.5);
+        width: 100%;
+        border: 0;
+        background: #fff;
+        width: 85%;
+        outline: none;
+        float: left;
+
+        @media screen and (max-width: 750px) {
+            // max width 750px
+            text-indent: 1em;
+            padding: 9px 0;
+            height: 36px;
+        }
+
+        @include breakpoint("baby-bear") {
+            background: $lightGrey;
+            outline: none;
+            padding: 0;
+        }
+    }
+
+    .button-search {
+        line-height: 1;
+        color: $black;
+        padding: 0;
+        line-height: normal;
+
+
+        @media screen and (max-width: 750px) {
+            // max width 750px
+            @include font-size(1.8);
+            vertical-align: top;
+            width: 15%;
+            height: 2em;
+            text-align: center;
+            background: #fff;
+            float: left;
+            line-height: 1;
+        }
+
+        @include breakpoint("baby-bear") {
+            background: none;
+            float: right;
+        }
+    }
+}
+
+.search-autocomplete {
+    z-index: 999;
+
+    ul {
+        border: 1px solid #ddd;
+        background-color: #fff;
+    }
+
+    li {
+        padding: 3px;
+        border-bottom: 1px solid #ddd;
+        cursor: pointer;
+
+        .amount {
+            float: right;
+            font-weight: 700;
+        }
+    }
+}
+
+
+// Advanced Search
+
+.advanced-search {
+}
+
+.advanced-search-amount {
+}
+
+.advanced-search-summary {
+}

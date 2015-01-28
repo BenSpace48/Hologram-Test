@@ -1,0 +1,38 @@
+.block-account {
+    border: none;
+
+    .block-title {
+        padding: 0.2em 0.5em;
+    }
+
+    .block-content {
+        padding: 0;
+
+        li {
+            text-transform: none;
+            display: block;
+            width: 100%;
+
+            a {
+                color: $black;
+                padding: 0.2em 0.5em;
+                text-decoration: none;
+                font-family: $swiss-light;
+                display: block;
+
+                &:hover {
+                    background: #000;
+                    color: #fff;
+                }
+            }
+
+            &.current {
+                background: #000;
+                color: #fff;
+                display:block;
+                padding: 0.2em 0.5em;
+                font-family: $swiss-light;
+            }
+        }
+    }
+}

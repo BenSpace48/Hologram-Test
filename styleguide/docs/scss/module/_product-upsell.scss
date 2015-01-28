@@ -1,0 +1,67 @@
+.product-collateral {
+    .mob-hide {
+
+        i { font-style: normal;}
+
+        // Hide specific text on mobile only
+        @media only screen and (max-width:750px) {
+            display: none;
+        }
+    }
+}
+
+.box-up-sell {
+    clear: both;
+    position: relative;
+    border-top: 1px solid $lightGrey;
+    border-bottom: 1px solid $lightGrey;
+    overflow: hidden;
+    @include pie-clearfix;
+    margin-bottom: 20px;
+
+    @include breakpoint("baby-bear") {
+        margin-bottom: 30px;
+    }
+
+    .products-grid {
+        @include pie-clearfix;
+
+        .item {
+            padding: 0 10px 10px;
+            border-right: 1px solid $lightGrey;
+            @include pie-clearfix;
+
+            &:last-child,
+            &.last {
+                border-right: 0;
+            }
+
+            @include breakpoint("baby-bear") {
+                @include min-height(240px);
+            }
+
+            @include breakpoint("mama-bear") {
+                width: 25%;
+                @include min-height(265px);
+                padding: 0 20px 20px;
+            }
+
+            // Remove product upsell image width set in products-grid partial
+            .product-image {
+                img {
+                    width: 100%;
+                }
+            }
+
+            .product-name {
+                padding-left: 0;
+                width: 70%;
+                max-width: 155px;
+            }
+
+            .price-box {
+                bottom: 20px;
+            }
+        }
+    }
+}

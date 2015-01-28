@@ -1,0 +1,1612 @@
+/*
+*	Site Wide Defaults
+*/
+/*doc
+---
+title: Variables
+name: variables
+category: Basics
+---
+
+Instead of remembering or copy/pasting the colour codes we use variables.
+
+```
+$orange: #f06803;      // Set the variable
+
+.variable-element {
+    color: $orange;    // Use the variable
+}
+
+<div class="variable-element">This is some orange text</div>
+
+```
+
+<div class="variable-element">This is some orange text</div>
+
+A full list of variables can be seen in <span class="orange">RegisShop/skin/frontend/enterprise/shopRegis/scss/_variables.scss</span>
+
+*/
+/*
+ *  Global Variables
+ */
+/*doc
+
+
+---
+title: Font size
+name: font-size
+category: Mixins
+---
+
+These mixins are used to keep your code DRY (Don't repeat yourself) and save yourself typing out prefixes and doing repetative calculations
+
+```
+<div class="my-element"></div>
+
+.my-element {
+    @include font-size(2);       // Compiles to 20px which is 2rem
+    @include font-size(1.5);     // Compiles to 15px which is 1.5rem
+}
+```
+
+<p class="font-size-example-2">This is font-size(2)</p>
+<p class="font-size-example-1-5">This is font-size(1.5)</p>
+
+*/
+@font-face {
+  font-family: "Swiss721BT-Light";
+  src: url('../../../fonts/29B170_0_0.eot?1414400187');
+  src: url('../../../fonts/29B170_0_0.eot?&1414400187#iefix') format('embedded-opentype'), url('../../../fonts/29B170_0_0.woff?1414400187') format('woff'), url('../../../fonts/29B170_0_0.ttf?1414400187') format('truetype'); }
+@font-face {
+  font-family: "Swiss721BT-Roman";
+  src: url('../../../fonts/29B170_1_0.eot?1414400187');
+  src: url('../../../fonts/29B170_1_0.eot?&1414400187#iefix') format('embedded-opentype'), url('../../../fonts/29B170_1_0.woff?1414400187') format('woff'), url('../../../fonts/29B170_1_0.ttf?1414400187') format('truetype'); }
+@font-face {
+  font-family: "Swiss721BT-Bold";
+  src: url('../../../fonts/29B170_2_0.eot?1414400187');
+  src: url('../../../fonts/29B170_2_0.eot?&1414400187#iefix') format('embedded-opentype'), url('../../../fonts/29B170_2_0.woff?1414400187') format('woff'), url('../../../fonts/29B170_2_0.ttf?1414400187') format('truetype'); }
+@font-face {
+  font-family: "Swiss721BT-Thin";
+  src: url('../../../fonts/29B170_3_0.eot?1414400187');
+  src: url('../../../fonts/29B170_3_0.eot?&1414400187#iefix') format('embedded-opentype'), url('../../../fonts/29B170_3_0.woff?1414400187') format('woff'), url('../../../fonts/29B170_3_0.ttf?1414400187') format('truetype'); }
+/*doc
+---
+title: Icons
+name: Icons
+category: Basics
+---
+
+```html_example
+
+<div class="icon-basket"></div>
+<div class="icon-account"></div>
+<div class="icon-youtube"></div>
+<div class="icon-facebook"></div>
+<div class="icon-twitter"></div>
+
+```
+
+<p>To use these icons just add the class to the relevent div, e.g:</p>
+
+<p>A full list of icons can be seen in <span class="orange">RegisShop/skin/frontend/enterprise/shopRegis/scss/_icons.scss</span></p>
+*/
+@font-face {
+  font-family: "Shop-Regis-Icons";
+  src: url('../../../fonts/shop-regis-icons.eot?1414400187');
+  src: url('../../../fonts/shop-regis-icons.eot?&1414400187#iefix') format('embedded-opentype'), url('../../../fonts/shop-regis-icons.woff?1414400187') format('woff'), url('../../../fonts/shop-regis-icons.ttf?1414400187') format('truetype'), url('../../../fonts/shop-regis-icons.svg?1414400187') format('svg'); }
+/* line 28, ../../../scss/_icons.scss */
+[class^="icon-"], [class*=" icon-"] {
+  font-family: 'Shop-Regis-Icons';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+/* line 43, ../../../scss/_icons.scss */
+.icon-basket:before {
+  content: "\e600"; }
+
+/* line 46, ../../../scss/_icons.scss */
+.icon-youtube:before {
+  content: "\e601"; }
+
+/* line 49, ../../../scss/_icons.scss */
+.icon-facebook:before {
+  content: "\e602"; }
+
+/* line 52, ../../../scss/_icons.scss */
+.icon-twitter:before {
+  content: "\e603"; }
+
+/* line 55, ../../../scss/_icons.scss */
+.icon-search:before {
+  content: "\e604"; }
+
+/* line 58, ../../../scss/_icons.scss */
+.icon-pinterest:before {
+  content: "\e605"; }
+
+/* line 61, ../../../scss/_icons.scss */
+.icon-pin-full:before {
+  content: "\e606"; }
+
+/* line 64, ../../../scss/_icons.scss */
+.icon-pin-empty:before {
+  content: "\e607"; }
+
+/* line 67, ../../../scss/_icons.scss */
+.icon-phone:before {
+  content: "\e608"; }
+
+/* line 70, ../../../scss/_icons.scss */
+.icon-menu:before {
+  content: "\e609"; }
+
+/* line 73, ../../../scss/_icons.scss */
+.icon-home:before {
+  content: "\e60a"; }
+
+/* line 76, ../../../scss/_icons.scss */
+.icon-gplus:before {
+  content: "\e60b"; }
+
+/* line 79, ../../../scss/_icons.scss */
+.icon-email:before {
+  content: "\e60c"; }
+
+/* line 82, ../../../scss/_icons.scss */
+.icon-edit:before {
+  content: "\e60d"; }
+
+/* line 85, ../../../scss/_icons.scss */
+.icon-account:before {
+  content: "\e60e"; }
+
+/* line 6, ../../../scss/layout/_utilities.scss */
+.ir {
+  display: block;
+  text-indent: -999em;
+  overflow: hidden;
+  font-size: 0;
+  line-height: 0;
+  background-position: 0 0;
+  background-repeat: no-repeat; }
+
+/* line 18, ../../../scss/layout/_utilities.scss */
+.hidden {
+  display: block !important;
+  border: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  font-size: 0 !important;
+  line-height: 0 !important;
+  width: 0 !important;
+  height: 0 !important;
+  overflow: hidden !important; }
+
+/* line 31, ../../../scss/layout/_utilities.scss */
+.hide-on-mob {
+  display: none;
+  visibility: hidden; }
+  @media only screen and (min-width: 750px) {
+    /* line 31, ../../../scss/layout/_utilities.scss */
+    .hide-on-mob {
+      display: inline-block;
+      vertical-align: middle;
+      *vertical-align: auto;
+      *zoom: 1;
+      *display: inline;
+      visibility: visible; } }
+
+@media only screen and (min-width: 750px) {
+  /* line 41, ../../../scss/layout/_utilities.scss */
+  .hide-on-tablet {
+    display: none !important;
+    visibility: hidden; } }
+
+@media only screen and (min-width: 1000px) {
+  /* line 48, ../../../scss/layout/_utilities.scss */
+  .hide-on-desktop {
+    display: none !important;
+    visibility: hidden; } }
+
+/* line 55, ../../../scss/layout/_utilities.scss */
+.nobr {
+  white-space: nowrap !important; }
+
+/* line 59, ../../../scss/layout/_utilities.scss */
+.wrap {
+  white-space: normal !important; }
+
+/* line 63, ../../../scss/layout/_utilities.scss */
+.a-left {
+  text-align: left !important; }
+
+/* line 67, ../../../scss/layout/_utilities.scss */
+.a-center {
+  text-align: center !important; }
+
+/* line 71, ../../../scss/layout/_utilities.scss */
+.a-right {
+  text-align: right !important; }
+
+/* line 75, ../../../scss/layout/_utilities.scss */
+.v-top {
+  vertical-align: top; }
+
+/* line 79, ../../../scss/layout/_utilities.scss */
+.v-middle {
+  vertical-align: middle; }
+
+/* line 83, ../../../scss/layout/_utilities.scss */
+.v-fix {
+  float: left; }
+
+/* line 87, ../../../scss/layout/_utilities.scss */
+.v-fix .validation-advice {
+  display: block;
+  width: 12em;
+  margin-right: -12em;
+  position: relative; }
+
+/* line 94, ../../../scss/layout/_utilities.scss */
+.f-left,
+.left {
+  float: left !important; }
+
+/* line 99, ../../../scss/layout/_utilities.scss */
+.f-right,
+.right {
+  float: right !important; }
+
+/* line 104, ../../../scss/layout/_utilities.scss */
+.f-none {
+  float: none !important; }
+
+/* line 108, ../../../scss/layout/_utilities.scss */
+.f-fix {
+  float: left;
+  width: 100%; }
+
+/* line 113, ../../../scss/layout/_utilities.scss */
+.no-display {
+  display: none; }
+
+/* line 117, ../../../scss/layout/_utilities.scss */
+.no-margin {
+  margin: 0 !important; }
+
+/* line 121, ../../../scss/layout/_utilities.scss */
+.no-padding {
+  padding: 0 !important; }
+
+/* line 125, ../../../scss/layout/_utilities.scss */
+.no-bg {
+  background: none !important; }
+
+/* line 129, ../../../scss/layout/_utilities.scss */
+.links li {
+  display: inline; }
+
+/* line 133, ../../../scss/layout/_utilities.scss */
+.links li.first {
+  padding-left: 0; }
+
+/* line 137, ../../../scss/layout/_utilities.scss */
+.links li.last {
+  background: none !important;
+  padding-right: 0 !important; }
+
+/* line 142, ../../../scss/layout/_utilities.scss */
+.separator {
+  margin: 0 3px; }
+
+/* line 146, ../../../scss/layout/_utilities.scss */
+.divider {
+  clear: both;
+  display: block;
+  font-size: 0;
+  line-height: 0;
+  height: 1px;
+  margin: 10px 0;
+  background: #ddd;
+  text-indent: -999em;
+  overflow: hidden; }
+
+/* line 158, ../../../scss/layout/_utilities.scss */
+.window-overlay {
+  background: rgba(0, 0, 0, 0.35);
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 990; }
+
+/* line 174, ../../../scss/layout/_utilities.scss */
+.media {
+  *zoom: 1;
+  position: relative; }
+  /* line 38, ../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/utilities/general/_clearfix.scss */
+  .media:after {
+    content: "";
+    display: table;
+    clear: both; }
+  /* line 178, ../../../scss/layout/_utilities.scss */
+  .media .bd {
+    overflow: hidden;
+    _overflow: visible;
+    zoom: 1; }
+  /* line 184, ../../../scss/layout/_utilities.scss */
+  .media .img {
+    position: relative;
+    float: left;
+    margin-right: 10px; }
+    /* line 189, ../../../scss/layout/_utilities.scss */
+    .media .img > img {
+      display: block; }
+  /* line 194, ../../../scss/layout/_utilities.scss */
+  .media .imgExt {
+    position: relative;
+    float: right;
+    margin-left: 10px; }
+    /* line 199, ../../../scss/layout/_utilities.scss */
+    .media .imgExt > img {
+      display: block; }
+
+/*
+*   Default Global Button Styles
+*   Don't edit these styles - use the mixin defined below to extend the styles to create the button theme
+*
+*/
+/* line 7, ../../../scss/module/_buttons.scss */
+.button,
+button {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  background: #f06803;
+  line-height: 2.142857143;
+  padding: 0 1.285714286em;
+  font-family: 'Swiss721BT-Light', Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-decoration: none; }
+  /* line 21, ../../../scss/module/_buttons.scss */
+  .button:hover,
+  button:hover {
+    background: #000; }
+
+/* line 46, ../../../scss/module/_buttons.scss */
+.black {
+  background-color: #000;
+  color: #fff; }
+  /* line 49, ../../../scss/module/_buttons.scss */
+  .black:hover {
+    background: #f06803;
+    color: #fff; }
+
+/* line 55, ../../../scss/module/_buttons.scss */
+.lgrey {
+  background-color: #e5e5e5;
+  color: #fff; }
+
+/* line 59, ../../../scss/module/_buttons.scss */
+.mgrey {
+  background-color: #dcdcdc;
+  color: #fff; }
+
+/* line 63, ../../../scss/module/_buttons.scss */
+.dgrey {
+  background-color: #888888;
+  color: #fff; }
+
+/* line 67, ../../../scss/module/_buttons.scss */
+.hpink {
+  background-color: #fff;
+  color: #ed1465; }
+
+/* line 42, ../../../scss/layout/brands/brand-colours.scss */
+.category-kms-california .category-info {
+  background: #fff; }
+  /* line 45, ../../../scss/layout/brands/brand-colours.scss */
+  .category-kms-california .category-info .cat-quick-links a, .category-kms-california .category-info .category-description {
+    color: #000; }
+    /* line 47, ../../../scss/layout/brands/brand-colours.scss */
+    .category-kms-california .category-info .cat-quick-links a a, .category-kms-california .category-info .category-description a {
+      color: #000; }
+  /* line 50, ../../../scss/layout/brands/brand-colours.scss */
+  .category-kms-california .category-info .category-title {
+    height: 110px; }
+    /* line 54, ../../../scss/layout/brands/brand-colours.scss */
+    .category-kms-california .category-info .category-title h1 {
+      text-indent: -119988px;
+      overflow: hidden;
+      text-align: left;
+      text-transform: capitalize;
+      background-image: url('../../../img/brands/kms-california.png?1414400187');
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      width: 140px;
+      height: 89px; }
+      @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
+        /* line 54, ../../../scss/layout/brands/brand-colours.scss */
+        .category-kms-california .category-info .category-title h1 {
+          background-image: url('../../../img/brands/kms-california-2x.png?1414400187');
+          background-size: 140px 89px; } }
+
+/* line 63, ../../../scss/layout/brands/brand-colours.scss */
+.category-wella-professionals .category-info {
+  background: #fff; }
+  /* line 66, ../../../scss/layout/brands/brand-colours.scss */
+  .category-wella-professionals .category-info .cat-quick-links a, .category-wella-professionals .category-info .category-description {
+    color: #000; }
+    /* line 68, ../../../scss/layout/brands/brand-colours.scss */
+    .category-wella-professionals .category-info .cat-quick-links a a, .category-wella-professionals .category-info .category-description a {
+      color: #000; }
+  /* line 71, ../../../scss/layout/brands/brand-colours.scss */
+  .category-wella-professionals .category-info .category-title {
+    height: 110px; }
+    /* line 75, ../../../scss/layout/brands/brand-colours.scss */
+    .category-wella-professionals .category-info .category-title h1 {
+      text-indent: -119988px;
+      overflow: hidden;
+      text-align: left;
+      text-transform: capitalize;
+      background-image: url('../../../img/brands/wella-professionals.png?1414400187');
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      width: 148px;
+      height: 89px; }
+      @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
+        /* line 75, ../../../scss/layout/brands/brand-colours.scss */
+        .category-wella-professionals .category-info .category-title h1 {
+          background-image: url('../../../img/brands/wella-professionals-2x.png?1414400187');
+          background-size: 148px 89px; } }
+
+/* line 84, ../../../scss/layout/brands/brand-colours.scss */
+.category-sassoon .category-info {
+  background: #fff; }
+  /* line 87, ../../../scss/layout/brands/brand-colours.scss */
+  .category-sassoon .category-info .cat-quick-links a, .category-sassoon .category-info .category-description {
+    color: #000; }
+    /* line 89, ../../../scss/layout/brands/brand-colours.scss */
+    .category-sassoon .category-info .cat-quick-links a a, .category-sassoon .category-info .category-description a {
+      color: #000; }
+  /* line 92, ../../../scss/layout/brands/brand-colours.scss */
+  .category-sassoon .category-info .category-title {
+    height: 110px; }
+    /* line 96, ../../../scss/layout/brands/brand-colours.scss */
+    .category-sassoon .category-info .category-title h1 {
+      text-indent: -119988px;
+      overflow: hidden;
+      text-align: left;
+      text-transform: capitalize;
+      background-image: url('../../../img/brands/sassoon.png?1414400187');
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      width: 176px;
+      height: 89px; }
+      @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
+        /* line 96, ../../../scss/layout/brands/brand-colours.scss */
+        .category-sassoon .category-info .category-title h1 {
+          background-image: url('../../../img/brands/sassoon-2x.png?1414400187');
+          background-size: 176px 89px; } }
+
+/* line 105, ../../../scss/layout/brands/brand-colours.scss */
+.category-color-wow .category-info {
+  background: #fff; }
+  /* line 108, ../../../scss/layout/brands/brand-colours.scss */
+  .category-color-wow .category-info .cat-quick-links a, .category-color-wow .category-info .category-description {
+    color: #000; }
+    /* line 110, ../../../scss/layout/brands/brand-colours.scss */
+    .category-color-wow .category-info .cat-quick-links a a, .category-color-wow .category-info .category-description a {
+      color: #000; }
+  /* line 113, ../../../scss/layout/brands/brand-colours.scss */
+  .category-color-wow .category-info .category-title {
+    height: 110px; }
+    /* line 117, ../../../scss/layout/brands/brand-colours.scss */
+    .category-color-wow .category-info .category-title h1 {
+      text-indent: -119988px;
+      overflow: hidden;
+      text-align: left;
+      text-transform: capitalize;
+      background-image: url('../../../img/brands/colorwow.png?1414400187');
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      width: 176px;
+      height: 89px; }
+      @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
+        /* line 117, ../../../scss/layout/brands/brand-colours.scss */
+        .category-color-wow .category-info .category-title h1 {
+          background-image: url('../../../img/brands/colorwow-2x.png?1414400187');
+          background-size: 176px 89px; } }
+
+/* line 126, ../../../scss/layout/brands/brand-colours.scss */
+.category-matrix-total-results .category-info {
+  background: #fff; }
+  /* line 129, ../../../scss/layout/brands/brand-colours.scss */
+  .category-matrix-total-results .category-info .cat-quick-links a, .category-matrix-total-results .category-info .category-description {
+    color: #000; }
+    /* line 131, ../../../scss/layout/brands/brand-colours.scss */
+    .category-matrix-total-results .category-info .cat-quick-links a a, .category-matrix-total-results .category-info .category-description a {
+      color: #000; }
+  /* line 134, ../../../scss/layout/brands/brand-colours.scss */
+  .category-matrix-total-results .category-info .category-title {
+    height: 110px; }
+    /* line 138, ../../../scss/layout/brands/brand-colours.scss */
+    .category-matrix-total-results .category-info .category-title h1 {
+      text-indent: -119988px;
+      overflow: hidden;
+      text-align: left;
+      text-transform: capitalize;
+      background-image: url('../../../img/brands/matrix-total-results.png?1415974798');
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      width: 176px;
+      height: 89px; }
+      @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
+        /* line 138, ../../../scss/layout/brands/brand-colours.scss */
+        .category-matrix-total-results .category-info .category-title h1 {
+          background-image: url('../../../img/brands/matrix-total-results2x.png');
+          background-size: 176px 89px; } }
+
+/* line 147, ../../../scss/layout/brands/brand-colours.scss */
+.category-american-crew .category-info {
+  background: #fff; }
+  /* line 150, ../../../scss/layout/brands/brand-colours.scss */
+  .category-american-crew .category-info .cat-quick-links a, .category-american-crew .category-info .category-description {
+    color: #000; }
+    /* line 152, ../../../scss/layout/brands/brand-colours.scss */
+    .category-american-crew .category-info .cat-quick-links a a, .category-american-crew .category-info .category-description a {
+      color: #000; }
+  /* line 155, ../../../scss/layout/brands/brand-colours.scss */
+  .category-american-crew .category-info .category-title {
+    height: 110px; }
+    /* line 159, ../../../scss/layout/brands/brand-colours.scss */
+    .category-american-crew .category-info .category-title h1 {
+      text-indent: -119988px;
+      overflow: hidden;
+      text-align: left;
+      text-transform: capitalize;
+      background-image: url('../../../img/brands/american-crew.png?1414400187');
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      width: 104px;
+      height: 89px; }
+      @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
+        /* line 159, ../../../scss/layout/brands/brand-colours.scss */
+        .category-american-crew .category-info .category-title h1 {
+          background-image: url('../../../img/brands/american-crew-2x.png?1414400187');
+          background-size: 104px 89px; } }
+
+/* line 168, ../../../scss/layout/brands/brand-colours.scss */
+.category-alterna .category-info {
+  background: #9889a8; }
+  /* line 171, ../../../scss/layout/brands/brand-colours.scss */
+  .category-alterna .category-info .cat-quick-links a, .category-alterna .category-info .category-description {
+    color: #fff; }
+    /* line 173, ../../../scss/layout/brands/brand-colours.scss */
+    .category-alterna .category-info .cat-quick-links a a, .category-alterna .category-info .category-description a {
+      color: #fff; }
+  /* line 176, ../../../scss/layout/brands/brand-colours.scss */
+  .category-alterna .category-info .category-title {
+    height: 110px; }
+    /* line 180, ../../../scss/layout/brands/brand-colours.scss */
+    .category-alterna .category-info .category-title h1 {
+      text-indent: -119988px;
+      overflow: hidden;
+      text-align: left;
+      text-transform: capitalize;
+      background-image: url('../../../img/brands/alterna.png?1414400187');
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      width: 176px;
+      height: 89px; }
+      @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
+        /* line 180, ../../../scss/layout/brands/brand-colours.scss */
+        .category-alterna .category-info .category-title h1 {
+          background-image: url('../../../img/brands/alterna-2x.png?1414400187');
+          background-size: 176px 89px; } }
+
+/* line 189, ../../../scss/layout/brands/brand-colours.scss */
+.category-tangle-teezer .category-info {
+  background: #fff; }
+  /* line 192, ../../../scss/layout/brands/brand-colours.scss */
+  .category-tangle-teezer .category-info .cat-quick-links a, .category-tangle-teezer .category-info .category-description {
+    color: #000; }
+    /* line 194, ../../../scss/layout/brands/brand-colours.scss */
+    .category-tangle-teezer .category-info .cat-quick-links a a, .category-tangle-teezer .category-info .category-description a {
+      color: #000; }
+  /* line 197, ../../../scss/layout/brands/brand-colours.scss */
+  .category-tangle-teezer .category-info .category-title {
+    height: 110px; }
+    /* line 201, ../../../scss/layout/brands/brand-colours.scss */
+    .category-tangle-teezer .category-info .category-title h1 {
+      text-indent: -119988px;
+      overflow: hidden;
+      text-align: left;
+      text-transform: capitalize;
+      background-image: url('../../../img/brands/tangle.png?1414400187');
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      width: 176px;
+      height: 89px; }
+      @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
+        /* line 201, ../../../scss/layout/brands/brand-colours.scss */
+        .category-tangle-teezer .category-info .category-title h1 {
+          background-image: url('../../../img/brands/tangle-2x.png?1414400187');
+          background-size: 176px 89px; } }
+
+/* line 210, ../../../scss/layout/brands/brand-colours.scss */
+.category-loreal-professionnel .category-info {
+  background: #fff; }
+  /* line 213, ../../../scss/layout/brands/brand-colours.scss */
+  .category-loreal-professionnel .category-info .cat-quick-links a, .category-loreal-professionnel .category-info .category-description {
+    color: #000; }
+    /* line 215, ../../../scss/layout/brands/brand-colours.scss */
+    .category-loreal-professionnel .category-info .cat-quick-links a a, .category-loreal-professionnel .category-info .category-description a {
+      color: #000; }
+  /* line 218, ../../../scss/layout/brands/brand-colours.scss */
+  .category-loreal-professionnel .category-info .category-title {
+    height: 110px; }
+    /* line 222, ../../../scss/layout/brands/brand-colours.scss */
+    .category-loreal-professionnel .category-info .category-title h1 {
+      text-indent: -119988px;
+      overflow: hidden;
+      text-align: left;
+      text-transform: capitalize;
+      background-image: url('../../../img/brands/loreal.png?1414400187');
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      width: 176px;
+      height: 89px; }
+      @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
+        /* line 222, ../../../scss/layout/brands/brand-colours.scss */
+        .category-loreal-professionnel .category-info .category-title h1 {
+          background-image: url('../../../img/brands/loreal-2x.png?1414400187');
+          background-size: 176px 89px; } }
+
+/* line 231, ../../../scss/layout/brands/brand-colours.scss */
+.category-diva-professional-styling .category-info {
+  background: #fff; }
+  /* line 234, ../../../scss/layout/brands/brand-colours.scss */
+  .category-diva-professional-styling .category-info .cat-quick-links a, .category-diva-professional-styling .category-info .category-description {
+    color: #000; }
+    /* line 236, ../../../scss/layout/brands/brand-colours.scss */
+    .category-diva-professional-styling .category-info .cat-quick-links a a, .category-diva-professional-styling .category-info .category-description a {
+      color: #000; }
+  /* line 239, ../../../scss/layout/brands/brand-colours.scss */
+  .category-diva-professional-styling .category-info .category-title {
+    height: 110px; }
+    /* line 243, ../../../scss/layout/brands/brand-colours.scss */
+    .category-diva-professional-styling .category-info .category-title h1 {
+      text-indent: -119988px;
+      overflow: hidden;
+      text-align: left;
+      text-transform: capitalize;
+      background-image: url('../../../img/brands/diva.png?1414400187');
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      width: 128px;
+      height: 89px; }
+      @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
+        /* line 243, ../../../scss/layout/brands/brand-colours.scss */
+        .category-diva-professional-styling .category-info .category-title h1 {
+          background-image: url('../../../img/brands/diva-2x.png?1414400187');
+          background-size: 128px 89px; } }
+
+/* line 252, ../../../scss/layout/brands/brand-colours.scss */
+.category-catwalk .category-info {
+  background: #000; }
+  /* line 255, ../../../scss/layout/brands/brand-colours.scss */
+  .category-catwalk .category-info .cat-quick-links a, .category-catwalk .category-info .category-description {
+    color: #fff; }
+    /* line 257, ../../../scss/layout/brands/brand-colours.scss */
+    .category-catwalk .category-info .cat-quick-links a a, .category-catwalk .category-info .category-description a {
+      color: #fff; }
+  /* line 260, ../../../scss/layout/brands/brand-colours.scss */
+  .category-catwalk .category-info .category-title {
+    height: 110px; }
+    /* line 264, ../../../scss/layout/brands/brand-colours.scss */
+    .category-catwalk .category-info .category-title h1 {
+      text-indent: -119988px;
+      overflow: hidden;
+      text-align: left;
+      text-transform: capitalize;
+      background-image: url('../../../img/brands/catwalk.png?1414400187');
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      width: 110px;
+      height: 89px; }
+      @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
+        /* line 264, ../../../scss/layout/brands/brand-colours.scss */
+        .category-catwalk .category-info .category-title h1 {
+          background-image: url('../../../img/brands/catwalk-2x.png?1414400187');
+          background-size: 110px 89px; } }
+
+/* line 273, ../../../scss/layout/brands/brand-colours.scss */
+.category-bedhead .category-info {
+  background: #000; }
+  /* line 276, ../../../scss/layout/brands/brand-colours.scss */
+  .category-bedhead .category-info .cat-quick-links a, .category-bedhead .category-info .category-description {
+    color: #fff; }
+    /* line 278, ../../../scss/layout/brands/brand-colours.scss */
+    .category-bedhead .category-info .cat-quick-links a a, .category-bedhead .category-info .category-description a {
+      color: #fff; }
+  /* line 281, ../../../scss/layout/brands/brand-colours.scss */
+  .category-bedhead .category-info .category-title {
+    height: 110px; }
+    /* line 285, ../../../scss/layout/brands/brand-colours.scss */
+    .category-bedhead .category-info .category-title h1 {
+      text-indent: -119988px;
+      overflow: hidden;
+      text-align: left;
+      text-transform: capitalize;
+      background-image: url('../../../img/brands/bedhead.png?1414400187');
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      width: 105px;
+      height: 89px; }
+      @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
+        /* line 285, ../../../scss/layout/brands/brand-colours.scss */
+        .category-bedhead .category-info .category-title h1 {
+          background-image: url('../../../img/brands/bedhead-2x.png?1414400187');
+          background-size: 105px 89px; } }
+
+/* line 294, ../../../scss/layout/brands/brand-colours.scss */
+.category-s-factor .category-info {
+  background: #fff; }
+  /* line 297, ../../../scss/layout/brands/brand-colours.scss */
+  .category-s-factor .category-info .cat-quick-links a, .category-s-factor .category-info .category-description {
+    color: #000; }
+    /* line 299, ../../../scss/layout/brands/brand-colours.scss */
+    .category-s-factor .category-info .cat-quick-links a a, .category-s-factor .category-info .category-description a {
+      color: #000; }
+  /* line 302, ../../../scss/layout/brands/brand-colours.scss */
+  .category-s-factor .category-info .category-title {
+    height: 110px; }
+    /* line 306, ../../../scss/layout/brands/brand-colours.scss */
+    .category-s-factor .category-info .category-title h1 {
+      text-indent: -119988px;
+      overflow: hidden;
+      text-align: left;
+      text-transform: capitalize;
+      background-image: url('../../../img/brands/sfactor.png?1414400187');
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      width: 90px;
+      height: 89px; }
+      @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
+        /* line 306, ../../../scss/layout/brands/brand-colours.scss */
+        .category-s-factor .category-info .category-title h1 {
+          background-image: url('../../../img/brands/sfactor-2x.png?1414400187');
+          background-size: 90px 89px; } }
+
+/* line 315, ../../../scss/layout/brands/brand-colours.scss */
+.category-nioxin .category-info {
+  background: #fff; }
+  /* line 318, ../../../scss/layout/brands/brand-colours.scss */
+  .category-nioxin .category-info .cat-quick-links a, .category-nioxin .category-info .category-description {
+    color: #000; }
+    /* line 320, ../../../scss/layout/brands/brand-colours.scss */
+    .category-nioxin .category-info .cat-quick-links a a, .category-nioxin .category-info .category-description a {
+      color: #000; }
+  /* line 323, ../../../scss/layout/brands/brand-colours.scss */
+  .category-nioxin .category-info .category-title {
+    height: 110px; }
+    /* line 327, ../../../scss/layout/brands/brand-colours.scss */
+    .category-nioxin .category-info .category-title h1 {
+      text-indent: -119988px;
+      overflow: hidden;
+      text-align: left;
+      text-transform: capitalize;
+      background-image: url('../../../img/brands/nioxin.png?1414400187');
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      width: 176px;
+      height: 89px; }
+      @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
+        /* line 327, ../../../scss/layout/brands/brand-colours.scss */
+        .category-nioxin .category-info .category-title h1 {
+          background-image: url('../../../img/brands/nioxin-2x.png?1414400187');
+          background-size: 176px 89px; } }
+
+/* line 336, ../../../scss/layout/brands/brand-colours.scss */
+.category-paul-mitchell .category-info {
+  background: #fff; }
+  /* line 339, ../../../scss/layout/brands/brand-colours.scss */
+  .category-paul-mitchell .category-info .cat-quick-links a, .category-paul-mitchell .category-info .category-description {
+    color: #000; }
+    /* line 341, ../../../scss/layout/brands/brand-colours.scss */
+    .category-paul-mitchell .category-info .cat-quick-links a a, .category-paul-mitchell .category-info .category-description a {
+      color: #000; }
+  /* line 344, ../../../scss/layout/brands/brand-colours.scss */
+  .category-paul-mitchell .category-info .category-title {
+    height: 110px; }
+    /* line 348, ../../../scss/layout/brands/brand-colours.scss */
+    .category-paul-mitchell .category-info .category-title h1 {
+      text-indent: -119988px;
+      overflow: hidden;
+      text-align: left;
+      text-transform: capitalize;
+      background-image: url('../../../img/brands/paulmitchell.png?1414400187');
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      width: 176px;
+      height: 89px; }
+      @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
+        /* line 348, ../../../scss/layout/brands/brand-colours.scss */
+        .category-paul-mitchell .category-info .category-title h1 {
+          background-image: url('../../../img/brands/paulmitchell-2x.png?1414400187');
+          background-size: 176px 89px; } }
+
+/* line 357, ../../../scss/layout/brands/brand-colours.scss */
+.category-regis .category-info {
+  background: #000; }
+  /* line 360, ../../../scss/layout/brands/brand-colours.scss */
+  .category-regis .category-info .cat-quick-links a, .category-regis .category-info .category-description {
+    color: #fff; }
+    /* line 362, ../../../scss/layout/brands/brand-colours.scss */
+    .category-regis .category-info .cat-quick-links a a, .category-regis .category-info .category-description a {
+      color: #fff; }
+  /* line 365, ../../../scss/layout/brands/brand-colours.scss */
+  .category-regis .category-info .category-title {
+    height: 110px; }
+    /* line 369, ../../../scss/layout/brands/brand-colours.scss */
+    .category-regis .category-info .category-title h1 {
+      text-indent: -119988px;
+      overflow: hidden;
+      text-align: left;
+      text-transform: capitalize;
+      background-image: url('../../../img/brands/regis.png?1414400187');
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      width: 132px;
+      height: 89px; }
+      @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
+        /* line 369, ../../../scss/layout/brands/brand-colours.scss */
+        .category-regis .category-info .category-title h1 {
+          background-image: url('../../../img/brands/regis-2x.png?1414400187');
+          background-size: 132px 89px; } }
+
+/* line 379, ../../../scss/layout/brands/brand-colours.scss */
+.category-designline .category-info {
+  background: #fff; }
+  /* line 382, ../../../scss/layout/brands/brand-colours.scss */
+  .category-designline .category-info .cat-quick-links a, .category-designline .category-info .category-description {
+    color: #000; }
+    /* line 384, ../../../scss/layout/brands/brand-colours.scss */
+    .category-designline .category-info .cat-quick-links a a, .category-designline .category-info .category-description a {
+      color: #000; }
+  /* line 387, ../../../scss/layout/brands/brand-colours.scss */
+  .category-designline .category-info .category-title {
+    height: 110px; }
+    /* line 391, ../../../scss/layout/brands/brand-colours.scss */
+    .category-designline .category-info .category-title h1 {
+      text-indent: -119988px;
+      overflow: hidden;
+      text-align: left;
+      text-transform: capitalize;
+      background-image: url('../../../img/brands/designline.png?1414400187');
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      width: 176px;
+      height: 89px; }
+      @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
+        /* line 391, ../../../scss/layout/brands/brand-colours.scss */
+        .category-designline .category-info .category-title h1 {
+          background-image: url('../../../img/brands/designline-2x.png?1414400187');
+          background-size: 180px 89px; } }
+
+/* line 402, ../../../scss/layout/brands/brand-colours.scss */
+.category-mizani .category-info {
+  background: #452518; }
+  /* line 405, ../../../scss/layout/brands/brand-colours.scss */
+  .category-mizani .category-info .cat-quick-links a, .category-mizani .category-info .category-description {
+    color: #fff; }
+    /* line 407, ../../../scss/layout/brands/brand-colours.scss */
+    .category-mizani .category-info .cat-quick-links a a, .category-mizani .category-info .category-description a {
+      color: #fff; }
+  /* line 410, ../../../scss/layout/brands/brand-colours.scss */
+  .category-mizani .category-info .category-title {
+    height: 110px; }
+    /* line 414, ../../../scss/layout/brands/brand-colours.scss */
+    .category-mizani .category-info .category-title h1 {
+      text-indent: -119988px;
+      overflow: hidden;
+      text-align: left;
+      text-transform: capitalize;
+      background-image: url('../../../img/brands/mizani.png?1414400187');
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      width: 179px;
+      height: 89px; }
+      @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
+        /* line 414, ../../../scss/layout/brands/brand-colours.scss */
+        .category-mizani .category-info .category-title h1 {
+          background-image: url('../../../img/brands/mizani-2x.png?1414400187');
+          background-size: 180px 89px; } }
+
+/* line 424, ../../../scss/layout/brands/brand-colours.scss */
+.category-pureology .category-info {
+  background: #fff; }
+  /* line 427, ../../../scss/layout/brands/brand-colours.scss */
+  .category-pureology .category-info .cat-quick-links a, .category-pureology .category-info .category-description {
+    color: #000; }
+    /* line 429, ../../../scss/layout/brands/brand-colours.scss */
+    .category-pureology .category-info .cat-quick-links a a, .category-pureology .category-info .category-description a {
+      color: #000; }
+  /* line 432, ../../../scss/layout/brands/brand-colours.scss */
+  .category-pureology .category-info .category-title {
+    height: 110px; }
+    /* line 436, ../../../scss/layout/brands/brand-colours.scss */
+    .category-pureology .category-info .category-title h1 {
+      text-indent: -119988px;
+      overflow: hidden;
+      text-align: left;
+      text-transform: capitalize;
+      background-image: url('../../../img/brands/pureology.png?1414400187');
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      width: 126px;
+      height: 89px; }
+      @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
+        /* line 436, ../../../scss/layout/brands/brand-colours.scss */
+        .category-pureology .category-info .category-title h1 {
+          background-image: url('../../../img/brands/pureology-2x.png?1414400187');
+          background-size: 126px 89px; } }
+
+/* line 446, ../../../scss/layout/brands/brand-colours.scss */
+.category-ghd .category-info {
+  background: #EEF3F9; }
+  /* line 449, ../../../scss/layout/brands/brand-colours.scss */
+  .category-ghd .category-info .cat-quick-links a, .category-ghd .category-info .category-description {
+    color: #000; }
+    /* line 451, ../../../scss/layout/brands/brand-colours.scss */
+    .category-ghd .category-info .cat-quick-links a a, .category-ghd .category-info .category-description a {
+      color: #000; }
+  /* line 454, ../../../scss/layout/brands/brand-colours.scss */
+  .category-ghd .category-info .category-title {
+    height: 110px; }
+    /* line 458, ../../../scss/layout/brands/brand-colours.scss */
+    .category-ghd .category-info .category-title h1 {
+      text-indent: -119988px;
+      overflow: hidden;
+      text-align: left;
+      text-transform: capitalize;
+      background-image: url('../../../img/brands/ghd.png?1414400187');
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      width: 160px;
+      height: 89px; }
+      @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
+        /* line 458, ../../../scss/layout/brands/brand-colours.scss */
+        .category-ghd .category-info .category-title h1 {
+          background-image: url('../../../img/brands/ghd-2x.png?1414400187');
+          background-size: 160px 89px; } }
+
+/* line 468, ../../../scss/layout/brands/brand-colours.scss */
+.category-fake-bake .category-info {
+  background: #000; }
+  /* line 471, ../../../scss/layout/brands/brand-colours.scss */
+  .category-fake-bake .category-info .cat-quick-links a, .category-fake-bake .category-info .category-description {
+    color: #fff; }
+    /* line 473, ../../../scss/layout/brands/brand-colours.scss */
+    .category-fake-bake .category-info .cat-quick-links a a, .category-fake-bake .category-info .category-description a {
+      color: #fff; }
+  /* line 477, ../../../scss/layout/brands/brand-colours.scss */
+  .category-fake-bake .category-info .category-title {
+    height: 120px; }
+    /* line 481, ../../../scss/layout/brands/brand-colours.scss */
+    .category-fake-bake .category-info .category-title h1 {
+      text-indent: -119988px;
+      overflow: hidden;
+      text-align: left;
+      text-transform: capitalize;
+      background-image: url('../../../img/brands/fakebake.png?1414400187');
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      width: 117px;
+      height: 120px;
+      margin-top: 0; }
+      @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
+        /* line 481, ../../../scss/layout/brands/brand-colours.scss */
+        .category-fake-bake .category-info .category-title h1 {
+          background-image: url('../../../img/brands/fakebake-2x.png?1414400187');
+          background-size: 118px 120px; } }
+
+/* line 492, ../../../scss/layout/brands/brand-colours.scss */
+.category-fudge .category-info {
+  background: #F0810e; }
+  /* line 495, ../../../scss/layout/brands/brand-colours.scss */
+  .category-fudge .category-info .cat-quick-links a, .category-fudge .category-info .category-description {
+    color: #fff; }
+    /* line 497, ../../../scss/layout/brands/brand-colours.scss */
+    .category-fudge .category-info .cat-quick-links a a, .category-fudge .category-info .category-description a {
+      color: #fff; }
+  /* line 501, ../../../scss/layout/brands/brand-colours.scss */
+  .category-fudge .category-info .category-title {
+    height: 89px; }
+    /* line 505, ../../../scss/layout/brands/brand-colours.scss */
+    .category-fudge .category-info .category-title h1 {
+      width: 200px !important;
+      text-indent: -119988px;
+      overflow: hidden;
+      text-align: left;
+      text-transform: capitalize;
+      background-image: url('../../../img/brands/fudge.png?1414400187');
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      width: 176px;
+      height: 89px; }
+      @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
+        /* line 505, ../../../scss/layout/brands/brand-colours.scss */
+        .category-fudge .category-info .category-title h1 {
+          background-image: url('../../../img/brands/fudge-2x.png?1414400187');
+          background-size: 200px 89px; } }
+
+/* line 515, ../../../scss/layout/brands/brand-colours.scss */
+.category-ilah-brows .category-info {
+  background: #000; }
+  /* line 518, ../../../scss/layout/brands/brand-colours.scss */
+  .category-ilah-brows .category-info .cat-quick-links a, .category-ilah-brows .category-info .category-description {
+    color: #fff; }
+    /* line 520, ../../../scss/layout/brands/brand-colours.scss */
+    .category-ilah-brows .category-info .cat-quick-links a a, .category-ilah-brows .category-info .category-description a {
+      color: #fff; }
+  /* line 523, ../../../scss/layout/brands/brand-colours.scss */
+  .category-ilah-brows .category-info .category-title {
+    height: 89px; }
+    /* line 527, ../../../scss/layout/brands/brand-colours.scss */
+    .category-ilah-brows .category-info .category-title h1 {
+      text-indent: -119988px;
+      overflow: hidden;
+      text-align: left;
+      text-transform: capitalize;
+      background-image: url('../../../img/brands/ilah.png?1414400187');
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      width: 118px;
+      height: 89px;
+      margin-top: 17px; }
+      @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
+        /* line 527, ../../../scss/layout/brands/brand-colours.scss */
+        .category-ilah-brows .category-info .category-title h1 {
+          background-image: url('../../../img/brands/ilah-2x.png?1414400187');
+          background-size: 118px 89px; } }
+
+/* line 537, ../../../scss/layout/brands/brand-colours.scss */
+.category-kerastase .category-info {
+  background: #fff; }
+  /* line 540, ../../../scss/layout/brands/brand-colours.scss */
+  .category-kerastase .category-info .cat-quick-links a, .category-kerastase .category-info .category-description {
+    color: #000; }
+    /* line 542, ../../../scss/layout/brands/brand-colours.scss */
+    .category-kerastase .category-info .cat-quick-links a a, .category-kerastase .category-info .category-description a {
+      color: #000; }
+  /* line 545, ../../../scss/layout/brands/brand-colours.scss */
+  .category-kerastase .category-info .category-title {
+    height: 89px; }
+    /* line 549, ../../../scss/layout/brands/brand-colours.scss */
+    .category-kerastase .category-info .category-title h1 {
+      text-indent: -119988px;
+      overflow: hidden;
+      text-align: left;
+      text-transform: capitalize;
+      background-image: url('../../../img/brands/kerastase.png?1414400187');
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      width: 160px;
+      height: 89px; }
+      @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
+        /* line 549, ../../../scss/layout/brands/brand-colours.scss */
+        .category-kerastase .category-info .category-title h1 {
+          background-image: url('../../../img/brands/kerastase-2x.png?1414400187');
+          background-size: 160px 89px; } }
+
+/* line 558, ../../../scss/layout/brands/brand-colours.scss */
+.category-moroccanoil .category-info {
+  background: #43c5df; }
+  /* line 561, ../../../scss/layout/brands/brand-colours.scss */
+  .category-moroccanoil .category-info .cat-quick-links a, .category-moroccanoil .category-info .category-description {
+    color: #fff; }
+    /* line 563, ../../../scss/layout/brands/brand-colours.scss */
+    .category-moroccanoil .category-info .cat-quick-links a a, .category-moroccanoil .category-info .category-description a {
+      color: #fff; }
+  /* line 567, ../../../scss/layout/brands/brand-colours.scss */
+  .category-moroccanoil .category-info .category-title {
+    height: 89px; }
+    /* line 571, ../../../scss/layout/brands/brand-colours.scss */
+    .category-moroccanoil .category-info .category-title h1 {
+      text-indent: -119988px;
+      overflow: hidden;
+      text-align: left;
+      text-transform: capitalize;
+      background-image: url('../../../img/brands/moroccanoil.png?1414400187');
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      width: 134px;
+      height: 82px; }
+      @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
+        /* line 571, ../../../scss/layout/brands/brand-colours.scss */
+        .category-moroccanoil .category-info .category-title h1 {
+          background-image: url('../../../img/brands/moroccanoil-2x.png?1414400187');
+          background-size: 134px 89px; } }
+
+/* line 580, ../../../scss/layout/brands/brand-colours.scss */
+.category-opi .category-info {
+  background: #fff;
+  border-bottom: 1px solid #e5e5e5; }
+  /* line 584, ../../../scss/layout/brands/brand-colours.scss */
+  .category-opi .category-info .cat-quick-links a, .category-opi .category-info .category-description {
+    color: #000; }
+    /* line 586, ../../../scss/layout/brands/brand-colours.scss */
+    .category-opi .category-info .cat-quick-links a a, .category-opi .category-info .category-description a {
+      color: #000; }
+  /* line 589, ../../../scss/layout/brands/brand-colours.scss */
+  .category-opi .category-info .category-title {
+    height: 89px; }
+    /* line 593, ../../../scss/layout/brands/brand-colours.scss */
+    .category-opi .category-info .category-title h1 {
+      text-indent: -119988px;
+      overflow: hidden;
+      text-align: left;
+      text-transform: capitalize;
+      background-image: url('../../../img/brands/opi.png?1414400187');
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      width: 129px;
+      height: 89px;
+      margin-top: 20px; }
+      @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
+        /* line 593, ../../../scss/layout/brands/brand-colours.scss */
+        .category-opi .category-info .category-title h1 {
+          background-image: url('../../../img/brands/opi-2x.png?1414400187');
+          background-size: 129px 89px; } }
+
+/* line 603, ../../../scss/layout/brands/brand-colours.scss */
+.category-redken .category-info {
+  background: #000; }
+  /* line 606, ../../../scss/layout/brands/brand-colours.scss */
+  .category-redken .category-info .cat-quick-links a, .category-redken .category-info .category-description {
+    color: #fff; }
+    /* line 608, ../../../scss/layout/brands/brand-colours.scss */
+    .category-redken .category-info .cat-quick-links a a, .category-redken .category-info .category-description a {
+      color: #fff; }
+  /* line 611, ../../../scss/layout/brands/brand-colours.scss */
+  .category-redken .category-info .category-title {
+    height: 89px; }
+    /* line 615, ../../../scss/layout/brands/brand-colours.scss */
+    .category-redken .category-info .category-title h1 {
+      text-indent: -119988px;
+      overflow: hidden;
+      text-align: left;
+      text-transform: capitalize;
+      background-image: url('../../../img/brands/redken.png?1414400187');
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      width: 160px;
+      height: 89px; }
+      @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
+        /* line 615, ../../../scss/layout/brands/brand-colours.scss */
+        .category-redken .category-info .category-title h1 {
+          background-image: url('../../../img/brands/redken-2x.png?1414400187');
+          background-size: 160px 89px; } }
+
+/* line 624, ../../../scss/layout/brands/brand-colours.scss */
+.category-sebastian .category-info {
+  background: #fff;
+  border-bottom: 1px solid #e5e5e5; }
+  /* line 628, ../../../scss/layout/brands/brand-colours.scss */
+  .category-sebastian .category-info .cat-quick-links a, .category-sebastian .category-info .category-description {
+    color: #000; }
+    /* line 630, ../../../scss/layout/brands/brand-colours.scss */
+    .category-sebastian .category-info .cat-quick-links a a, .category-sebastian .category-info .category-description a {
+      color: #000; }
+  /* line 633, ../../../scss/layout/brands/brand-colours.scss */
+  .category-sebastian .category-info .category-title {
+    height: 89px; }
+    /* line 637, ../../../scss/layout/brands/brand-colours.scss */
+    .category-sebastian .category-info .category-title h1 {
+      text-indent: -119988px;
+      overflow: hidden;
+      text-align: left;
+      text-transform: capitalize;
+      background-image: url('../../../img/brands/sebastian.png?1414400187');
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      width: 220px;
+      height: 89px;
+      margin-top: 20px; }
+      @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
+        /* line 637, ../../../scss/layout/brands/brand-colours.scss */
+        .category-sebastian .category-info .category-title h1 {
+          background-image: url('../../../img/brands/sebastian-2x.png?1414400187');
+          background-size: 220px 89px; } }
+
+/* line 647, ../../../scss/layout/brands/brand-colours.scss */
+.category-sothys .category-info {
+  background: #5c6a72; }
+  /* line 650, ../../../scss/layout/brands/brand-colours.scss */
+  .category-sothys .category-info .cat-quick-links a, .category-sothys .category-info .category-description {
+    color: #fff; }
+    /* line 652, ../../../scss/layout/brands/brand-colours.scss */
+    .category-sothys .category-info .cat-quick-links a a, .category-sothys .category-info .category-description a {
+      color: #fff; }
+  /* line 655, ../../../scss/layout/brands/brand-colours.scss */
+  .category-sothys .category-info .category-title {
+    height: 89px; }
+    /* line 659, ../../../scss/layout/brands/brand-colours.scss */
+    .category-sothys .category-info .category-title h1 {
+      text-indent: -119988px;
+      overflow: hidden;
+      text-align: left;
+      text-transform: capitalize;
+      background-image: url('../../../img/brands/sothys.png?1414400187');
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      width: 154px;
+      height: 89px;
+      margin-top: 20px; }
+      @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
+        /* line 659, ../../../scss/layout/brands/brand-colours.scss */
+        .category-sothys .category-info .category-title h1 {
+          background-image: url('../../../img/brands/sothys-2x.png?1414400187');
+          background-size: 154px 89px; } }
+
+/* line 669, ../../../scss/layout/brands/brand-colours.scss */
+.category-st-tropez .category-info {
+  background: #fff;
+  border-bottom: 1px solid #e5e5e5; }
+  /* line 673, ../../../scss/layout/brands/brand-colours.scss */
+  .category-st-tropez .category-info .cat-quick-links a, .category-st-tropez .category-info .category-description {
+    color: #000; }
+    /* line 675, ../../../scss/layout/brands/brand-colours.scss */
+    .category-st-tropez .category-info .cat-quick-links a a, .category-st-tropez .category-info .category-description a {
+      color: #000; }
+  /* line 679, ../../../scss/layout/brands/brand-colours.scss */
+  .category-st-tropez .category-info .category-title {
+    height: 89px; }
+    /* line 683, ../../../scss/layout/brands/brand-colours.scss */
+    .category-st-tropez .category-info .category-title h1 {
+      text-indent: -119988px;
+      overflow: hidden;
+      text-align: left;
+      text-transform: capitalize;
+      background-image: url('../../../img/brands/sttropez.png?1414400187');
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      width: 180px;
+      height: 89px;
+      margin-top: 20px; }
+      @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
+        /* line 683, ../../../scss/layout/brands/brand-colours.scss */
+        .category-st-tropez .category-info .category-title h1 {
+          background-image: url('../../../img/brands/sttropez-2x.png?1414400187');
+          background-size: 180px 89px; } }
+
+/* line 693, ../../../scss/layout/brands/brand-colours.scss */
+.category-wella .category-info {
+  background: #ce0f3d; }
+  /* line 696, ../../../scss/layout/brands/brand-colours.scss */
+  .category-wella .category-info .cat-quick-links a, .category-wella .category-info .category-description {
+    color: #fff; }
+    /* line 698, ../../../scss/layout/brands/brand-colours.scss */
+    .category-wella .category-info .cat-quick-links a a, .category-wella .category-info .category-description a {
+      color: #fff; }
+  /* line 701, ../../../scss/layout/brands/brand-colours.scss */
+  .category-wella .category-info .category-title {
+    height: 89px; }
+    /* line 705, ../../../scss/layout/brands/brand-colours.scss */
+    .category-wella .category-info .category-title h1 {
+      width: 160px;
+      height: 89px;
+      text-indent: -119988px;
+      overflow: hidden;
+      text-align: left;
+      text-transform: capitalize;
+      background-image: url('../../../img/brands/wella.png?1414400187');
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      width: 106px;
+      height: 89px; }
+      @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
+        /* line 705, ../../../scss/layout/brands/brand-colours.scss */
+        .category-wella .category-info .category-title h1 {
+          background-image: url('../../../img/brands/wella-2x.png?1414400187');
+          background-size: 106px 89px; } }
+
+/* line 716, ../../../scss/layout/brands/brand-colours.scss */
+.category-wella-sp .category-info {
+  background: #54075b; }
+  /* line 719, ../../../scss/layout/brands/brand-colours.scss */
+  .category-wella-sp .category-info .cat-quick-links a, .category-wella-sp .category-info .category-description {
+    color: #fff; }
+    /* line 721, ../../../scss/layout/brands/brand-colours.scss */
+    .category-wella-sp .category-info .cat-quick-links a a, .category-wella-sp .category-info .category-description a {
+      color: #fff; }
+  /* line 725, ../../../scss/layout/brands/brand-colours.scss */
+  .category-wella-sp .category-info .category-title {
+    height: 120px; }
+    /* line 728, ../../../scss/layout/brands/brand-colours.scss */
+    .category-wella-sp .category-info .category-title h1 {
+      width: 200px;
+      height: 120px;
+      text-indent: -119988px;
+      overflow: hidden;
+      text-align: left;
+      text-transform: capitalize;
+      background-image: url('../../../img/brands/sp.png?1414400187');
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      width: 47px;
+      height: 120px; }
+      @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
+        /* line 728, ../../../scss/layout/brands/brand-colours.scss */
+        .category-wella-sp .category-info .category-title h1 {
+          background-image: url('../../../img/brands/sp-2x.png?1414400187');
+          background-size: 47px 120px; } }
+
+@media only screen and (min-width: 750px) {
+  /* line 739, ../../../scss/layout/brands/brand-colours.scss */
+  .parent-brands .category-info {
+    height: 250px;
+    padding: 30px; } }
+/* line 745, ../../../scss/layout/brands/brand-colours.scss */
+.parent-brands .category-info .category-title {
+  margin-left: 4px; }
+/* line 747, ../../../scss/layout/brands/brand-colours.scss */
+.parent-brands .category-info h1 {
+  float: left;
+  text-indent: -9999px;
+  overflow: hidden;
+  margin: 10px 0 0 0; }
+  @media only screen and (max-width: 450px) {
+    /* line 747, ../../../scss/layout/brands/brand-colours.scss */
+    .parent-brands .category-info h1 {
+      margin: 0 auto;
+      float: none; } }
+/* line 759, ../../../scss/layout/brands/brand-colours.scss */
+.parent-brands .category-info #narrow-by-list {
+  background: #fff;
+  padding-bottom: 0; }
+  /* line 765, ../../../scss/layout/brands/brand-colours.scss */
+  .parent-brands .category-info #narrow-by-list.active {
+    margin-bottom: 1em; }
+  /* line 767, ../../../scss/layout/brands/brand-colours.scss */
+  .parent-brands .category-info #narrow-by-list .filter-title {
+    border-bottom: 1px solid #e1e1e1; }
+/* line 774, ../../../scss/layout/brands/brand-colours.scss */
+.parent-brands .sidebar,
+.parent-brands .col-main {
+  padding: 2.857142857em 0 0; }
+/* line 779, ../../../scss/layout/brands/brand-colours.scss */
+.parent-brands .col-main {
+  border-left: 0;
+  padding-top: 0; }
+/* line 785, ../../../scss/layout/brands/brand-colours.scss */
+.parent-brands .sidebar .block-content {
+  clear: both;
+  padding: 0 1.428571429em; }
+
+/* line 793, ../../../scss/layout/brands/brand-colours.scss */
+.category-elemis .category-info {
+  background: #fff; }
+  /* line 796, ../../../scss/layout/brands/brand-colours.scss */
+  .category-elemis .category-info .cat-quick-links a, .category-elemis .category-info .category-description {
+    color: #000; }
+    /* line 798, ../../../scss/layout/brands/brand-colours.scss */
+    .category-elemis .category-info .cat-quick-links a a, .category-elemis .category-info .category-description a {
+      color: #000; }
+  /* line 801, ../../../scss/layout/brands/brand-colours.scss */
+  .category-elemis .category-info .category-title {
+    height: 110px; }
+    /* line 805, ../../../scss/layout/brands/brand-colours.scss */
+    .category-elemis .category-info .category-title h1 {
+      text-indent: -119988px;
+      overflow: hidden;
+      text-align: left;
+      text-transform: capitalize;
+      background-image: url('../../../img/brands/elemis.png?1418892684');
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      width: 200px;
+      height: 90px; }
+      @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
+        /* line 805, ../../../scss/layout/brands/brand-colours.scss */
+        .category-elemis .category-info .category-title h1 {
+          background-image: url('../../../img/brands/elemis-2x.jgp');
+          background-size: 104px 89px; } }
+
+/* line 815, ../../../scss/layout/brands/brand-colours.scss */
+.category-d-fi .category-info {
+  background: #fff; }
+  /* line 818, ../../../scss/layout/brands/brand-colours.scss */
+  .category-d-fi .category-info .cat-quick-links a, .category-d-fi .category-info .category-description {
+    color: #000; }
+    /* line 820, ../../../scss/layout/brands/brand-colours.scss */
+    .category-d-fi .category-info .cat-quick-links a a, .category-d-fi .category-info .category-description a {
+      color: #000; }
+  /* line 823, ../../../scss/layout/brands/brand-colours.scss */
+  .category-d-fi .category-info .category-title {
+    height: 110px; }
+    /* line 827, ../../../scss/layout/brands/brand-colours.scss */
+    .category-d-fi .category-info .category-title h1 {
+      text-indent: -119988px;
+      overflow: hidden;
+      text-align: left;
+      text-transform: capitalize;
+      background-image: url('../../../img/brands/d-fi.png?1418892684');
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      width: 200px;
+      height: 90px; }
+      @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
+        /* line 827, ../../../scss/layout/brands/brand-colours.scss */
+        .category-d-fi .category-info .category-title h1 {
+          background-image: url('../../../img/brands/d-fi-2x.jpg?1418892684');
+          background-size: 104px 89px; } }
+
+/* line 3, ../../../scss/layout/brands/brands.scss */
+.category-brands .col1-layout .col-main {
+  padding: 0;
+  float: left;
+  width: 100%; }
+  /* line 8, ../../../scss/layout/brands/brands.scss */
+  .category-brands .col1-layout .col-main .brands {
+    float: left;
+    width: 100%;
+    margin: 0;
+    padding: 0; }
+    /* line 14, ../../../scss/layout/brands/brands.scss */
+    .category-brands .col1-layout .col-main .brands li {
+      width: 50%;
+      float: left;
+      display: block;
+      position: relative;
+      border-right: 1px solid #e5e5e5;
+      border-bottom: 1px solid #e5e5e5; }
+      /* line 22, ../../../scss/layout/brands/brands.scss */
+      .category-brands .col1-layout .col-main .brands li.last {
+        border-right: none; }
+      @media only screen and (min-width: 450px) {
+        /* line 14, ../../../scss/layout/brands/brands.scss */
+        .category-brands .col1-layout .col-main .brands li {
+          width: 25%; } }
+      /* line 31, ../../../scss/layout/brands/brands.scss */
+      .category-brands .col1-layout .col-main .brands li a span {
+        display: none; }
+      @media only screen and (min-width: 1000px) {
+        /* line 37, ../../../scss/layout/brands/brands.scss */
+        .category-brands .col1-layout .col-main .brands li a:hover span {
+          display: block;
+          position: absolute;
+          right: 0;
+          bottom: 0;
+          text-transform: uppercase;
+          background: #fff;
+          padding: 0.8em 1em;
+          font-family: "Swiss721BT-Roman", Arial, Helvetica, sans-serif;
+          font-size: 14px;
+          font-size: 1.4rem; }
+          /* line 48, ../../../scss/layout/brands/brands.scss */
+          .category-brands .col1-layout .col-main .brands li a:hover span.ghd {
+            color: #000;
+            text-transform: lowercase !important; }
+          /* line 49, ../../../scss/layout/brands/brands.scss */
+          .category-brands .col1-layout .col-main .brands li a:hover span.fake-bake {
+            color: #000; }
+          /* line 50, ../../../scss/layout/brands/brands.scss */
+          .category-brands .col1-layout .col-main .brands li a:hover span.fudge {
+            color: #F0810e; }
+          /* line 51, ../../../scss/layout/brands/brands.scss */
+          .category-brands .col1-layout .col-main .brands li a:hover span.ilah-brows {
+            color: #000; }
+          /* line 52, ../../../scss/layout/brands/brands.scss */
+          .category-brands .col1-layout .col-main .brands li a:hover span.kerastase {
+            color: #000; }
+          /* line 53, ../../../scss/layout/brands/brands.scss */
+          .category-brands .col1-layout .col-main .brands li a:hover span.moroccanoil {
+            color: #43c5df; }
+          /* line 54, ../../../scss/layout/brands/brands.scss */
+          .category-brands .col1-layout .col-main .brands li a:hover span.opi {
+            color: #000; }
+          /* line 55, ../../../scss/layout/brands/brands.scss */
+          .category-brands .col1-layout .col-main .brands li a:hover span.redken {
+            color: #000; }
+          /* line 56, ../../../scss/layout/brands/brands.scss */
+          .category-brands .col1-layout .col-main .brands li a:hover span.sebastian-professional {
+            color: #000; }
+          /* line 57, ../../../scss/layout/brands/brands.scss */
+          .category-brands .col1-layout .col-main .brands li a:hover span.sothys {
+            color: #5c6a72; }
+          /* line 58, ../../../scss/layout/brands/brands.scss */
+          .category-brands .col1-layout .col-main .brands li a:hover span.st-tropez {
+            color: #000; }
+          /* line 59, ../../../scss/layout/brands/brands.scss */
+          .category-brands .col1-layout .col-main .brands li a:hover span.wella {
+            color: #ce0f3d; }
+          /* line 60, ../../../scss/layout/brands/brands.scss */
+          .category-brands .col1-layout .col-main .brands li a:hover span.mizani {
+            color: #452518; }
+          /* line 61, ../../../scss/layout/brands/brands.scss */
+          .category-brands .col1-layout .col-main .brands li a:hover span.pureology {
+            color: #000; }
+          /* line 62, ../../../scss/layout/brands/brands.scss */
+          .category-brands .col1-layout .col-main .brands li a:hover span.regis {
+            color: #000; }
+          /* line 63, ../../../scss/layout/brands/brands.scss */
+          .category-brands .col1-layout .col-main .brands li a:hover span.designline {
+            color: #000; }
+          /* line 64, ../../../scss/layout/brands/brands.scss */
+          .category-brands .col1-layout .col-main .brands li a:hover span.nioxin {
+            color: #000; }
+          /* line 65, ../../../scss/layout/brands/brands.scss */
+          .category-brands .col1-layout .col-main .brands li a:hover span.paul-mitchell {
+            color: #000; }
+          /* line 66, ../../../scss/layout/brands/brands.scss */
+          .category-brands .col1-layout .col-main .brands li a:hover span.s-factor {
+            color: #000; }
+          /* line 67, ../../../scss/layout/brands/brands.scss */
+          .category-brands .col1-layout .col-main .brands li a:hover span.bedhead {
+            color: #000; }
+          /* line 68, ../../../scss/layout/brands/brands.scss */
+          .category-brands .col1-layout .col-main .brands li a:hover span.catwalk {
+            color: #000; }
+          /* line 69, ../../../scss/layout/brands/brands.scss */
+          .category-brands .col1-layout .col-main .brands li a:hover span.diva {
+            color: #000; }
+          /* line 70, ../../../scss/layout/brands/brands.scss */
+          .category-brands .col1-layout .col-main .brands li a:hover span.loreal {
+            color: #000; }
+          /* line 71, ../../../scss/layout/brands/brands.scss */
+          .category-brands .col1-layout .col-main .brands li a:hover span.tangle-teezer {
+            color: #000; }
+          /* line 72, ../../../scss/layout/brands/brands.scss */
+          .category-brands .col1-layout .col-main .brands li a:hover span.alterna {
+            color: #9889a8; }
+          /* line 73, ../../../scss/layout/brands/brands.scss */
+          .category-brands .col1-layout .col-main .brands li a:hover span.color-wow {
+            color: #000; }
+          /* line 74, ../../../scss/layout/brands/brands.scss */
+          .category-brands .col1-layout .col-main .brands li a:hover span.sassoon {
+            color: #000; }
+          /* line 75, ../../../scss/layout/brands/brands.scss */
+          .category-brands .col1-layout .col-main .brands li a:hover span.wella-professionals {
+            color: #d31145; }
+          /* line 76, ../../../scss/layout/brands/brands.scss */
+          .category-brands .col1-layout .col-main .brands li a:hover span.kms-california {
+            color: #000; }
+          /* line 77, ../../../scss/layout/brands/brands.scss */
+          .category-brands .col1-layout .col-main .brands li a:hover span.american-crew {
+            color: #000; }
+          /* line 78, ../../../scss/layout/brands/brands.scss */
+          .category-brands .col1-layout .col-main .brands li a:hover span.elemis {
+            color: #000; }
+          /* line 79, ../../../scss/layout/brands/brands.scss */
+          .category-brands .col1-layout .col-main .brands li a:hover span.d-fi {
+            color: #000; }
+          /* line 80, ../../../scss/layout/brands/brands.scss */
+          .category-brands .col1-layout .col-main .brands li a:hover span.matrix-total-results {
+            color: #000; } }
+  /* line 89, ../../../scss/layout/brands/brands.scss */
+  .category-brands .col1-layout .col-main .cat-quick-links .ghd {
+    text-transform: none; }

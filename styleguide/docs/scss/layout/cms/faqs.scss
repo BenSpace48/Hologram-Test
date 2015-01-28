@@ -1,0 +1,25 @@
+@import "bootstrap";
+
+.std h2 {
+    @include font-size(1.4);
+    padding: 0 0 1em 0;
+    color: $orange;
+    font-family: $swiss-bold;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: block;
+}
+
+.accordion dt  {
+    @media screen and (max-width:420px) {
+      line-height: 1.3;
+      background-position:0 14px;
+    }
+
+    &.accordion-active {
+      @media screen and (max-width:420px) {
+        line-height: 1.3;
+        background-position:0 -82px;
+      }
+    }
+}

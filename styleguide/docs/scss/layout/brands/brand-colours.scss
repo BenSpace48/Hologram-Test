@@ -1,0 +1,835 @@
+@import "bootstrap";
+
+// Brand Colours
+
+$ghd: #EEF3F9;
+$fakebake: #000;
+$fudge: #F0810e;
+$ilahbrows: #000;
+$kerastase: #fff;
+$moroccanoil: #43c5df;
+$opi: #fff;
+$redken: #000;
+$sebastian: #fff;
+$sothys: #5c6a72;
+$sttropez: #fff;
+$wella: #ce0f3d;
+$sp: #54075b;
+$mizani: #452518;
+$pureology: #fff;
+$designline: #fff;
+$regis: #000;
+$nioxin: #fff;
+$paulmitchell: #fff;
+$sfactor: #fff;
+$bedhead: #000;
+$catwalk: #000;
+$diva: #fff;
+$loreal: #fff;
+$tangle-teezer: #fff;
+$american-crew: #fff;
+$alterna: #9889a8;
+$color-wow:  #fff;
+$sassoon: #fff;
+$wella-professionals :#fff;
+$kms-california :#fff;
+$matrix-total-results :#fff;
+$elemis: #fff;
+$d-fi: #fff;
+
+
+.category-kms-california {
+    .category-info {
+        background: $kms-california;
+
+        .cat-quick-links a, .category-description { color: #000;
+
+            a { color: #000;}
+        }
+
+        .category-title {
+
+            height: 110px;
+
+            h1 {
+                @include replace-text-with-dimensions("brands/kms-california.png", 0, 0);
+                @include image-2x("brands/kms-california-2x.png", 140px, 89px);
+            }
+        }
+
+    }
+}
+.category-wella-professionals {
+    .category-info {
+        background: $wella-professionals;
+
+        .cat-quick-links a, .category-description { color: #000;
+
+            a { color: #000;}
+        }
+
+        .category-title {
+
+            height: 110px;
+
+            h1 {
+                @include replace-text-with-dimensions("brands/wella-professionals.png", 0, 0);
+                @include image-2x("brands/wella-professionals-2x.png", 148px, 89px);
+            }
+        }
+
+    }
+}
+.category-sassoon {
+    .category-info {
+        background: $sassoon;
+
+        .cat-quick-links a, .category-description { color: #000;
+
+            a { color: #000;}
+        }
+
+        .category-title {
+
+            height: 110px;
+
+            h1 {
+                @include replace-text-with-dimensions("brands/sassoon.png", 0, 0);
+                @include image-2x("brands/sassoon-2x.png", 176px, 89px);
+            }
+        }
+
+    }
+}
+.category-color-wow {
+    .category-info {
+        background: $color-wow;
+
+        .cat-quick-links a, .category-description { color: #000;
+
+            a { color: #000;}
+        }
+
+        .category-title {
+
+            height: 110px;
+
+            h1 {
+                @include replace-text-with-dimensions("brands/colorwow.png", 0, 0);
+                @include image-2x("brands/colorwow-2x.png", 176px, 89px);
+            }
+        }
+
+    }
+}
+.category-matrix-total-results {
+    .category-info {
+        background: $matrix-total-results;
+
+        .cat-quick-links a, .category-description { color: #000;
+
+            a { color: #000;}
+        }
+
+        .category-title {
+
+            height: 110px;
+
+            h1 {
+                @include replace-text-with-dimensions("brands/matrix-total-results.png", 0, 0);
+                @include image-2x("brands/matrix-total-results2x.png", 176px, 89px);
+            }
+        }
+
+    }
+}
+.category-american-crew {
+    .category-info {
+        background: $american-crew;
+
+        .cat-quick-links a, .category-description { color: #000;
+
+            a { color: #000;}
+        }
+
+        .category-title {
+
+            height: 110px;
+
+            h1 {
+                @include replace-text-with-dimensions("brands/american-crew.png", 0, 0);
+                @include image-2x("brands/american-crew-2x.png", 104px, 89px);
+            }
+        }
+
+    }
+}
+.category-alterna {
+    .category-info {
+        background: $alterna;
+
+        .cat-quick-links a, .category-description { color: #fff;
+
+            a { color: #fff;}
+        }
+
+        .category-title {
+
+            height: 110px;
+
+            h1 {
+                @include replace-text-with-dimensions("brands/alterna.png", 0, 0);
+                @include image-2x("brands/alterna-2x.png", 176px, 89px);
+            }
+        }
+
+    }
+}
+.category-tangle-teezer {
+    .category-info {
+        background: $tangle-teezer;
+
+        .cat-quick-links a, .category-description { color: #000;
+
+            a { color: #000;}
+        }
+
+        .category-title {
+
+            height: 110px;
+
+            h1 {
+                @include replace-text-with-dimensions("brands/tangle.png", 0, 0);
+                @include image-2x("brands/tangle-2x.png", 176px, 89px);
+            }
+        }
+
+    }
+}
+.category-loreal-professionnel {
+    .category-info {
+        background: $loreal;
+
+        .cat-quick-links a, .category-description { color: #000;
+
+            a { color: #000;}
+        }
+
+        .category-title {
+
+            height: 110px;
+
+            h1 {
+                @include replace-text-with-dimensions("brands/loreal.png", 0, 0);
+                @include image-2x("brands/loreal-2x.png", 176px, 89px);
+            }
+        }
+
+    }
+}
+.category-diva-professional-styling {
+    .category-info {
+        background: $diva;
+
+        .cat-quick-links a, .category-description { color: #000;
+
+            a { color: #000;}
+        }
+
+        .category-title {
+
+            height: 110px;
+
+            h1 {
+                @include replace-text-with-dimensions("brands/diva.png", 0, 0);
+                @include image-2x("brands/diva-2x.png", 128px, 89px);
+            }
+        }
+
+    }
+}
+.category-catwalk {
+    .category-info {
+        background: $catwalk;
+
+        .cat-quick-links a, .category-description { color: #fff;
+
+            a { color: #fff;}
+        }
+
+        .category-title {
+
+            height: 110px;
+
+            h1 {
+                @include replace-text-with-dimensions("brands/catwalk.png", 0, 0);
+                @include image-2x("brands/catwalk-2x.png", 110px, 89px);
+            }
+        }
+
+    }
+}
+.category-bedhead {
+    .category-info {
+        background: $bedhead;
+
+        .cat-quick-links a, .category-description { color: #fff;
+
+            a { color: #fff;}
+        }
+
+        .category-title {
+
+            height: 110px;
+
+            h1 {
+                @include replace-text-with-dimensions("brands/bedhead.png", 0, 0);
+                @include image-2x("brands/bedhead-2x.png", 105px, 89px);
+            }
+        }
+
+    }
+}
+.category-s-factor {
+    .category-info {
+        background: $sfactor;
+
+        .cat-quick-links a, .category-description { color: #000;
+
+            a { color: #000;}
+        }
+
+        .category-title {
+
+            height: 110px;
+
+            h1 {
+                @include replace-text-with-dimensions("brands/sfactor.png", 0, 0);
+                @include image-2x("brands/sfactor-2x.png", 90px, 89px);
+            }
+        }
+
+    }
+}
+.category-nioxin {
+    .category-info {
+        background: $nioxin;
+
+        .cat-quick-links a, .category-description { color: #000;
+
+            a { color: #000;}
+        }
+
+        .category-title {
+
+            height: 110px;
+
+            h1 {
+                @include replace-text-with-dimensions("brands/nioxin.png", 0, 0);
+                @include image-2x("brands/nioxin-2x.png", 176px, 89px);
+            }
+        }
+
+    }
+}
+.category-paul-mitchell {
+    .category-info {
+        background: $paulmitchell;
+
+        .cat-quick-links a, .category-description { color: #000;
+
+            a { color: #000;}
+        }
+
+        .category-title {
+
+            height: 110px;
+
+            h1 {
+                @include replace-text-with-dimensions("brands/paulmitchell.png", 0, 0);
+                @include image-2x("brands/paulmitchell-2x.png", 176px, 89px);
+            }
+        }
+
+    }
+}
+.category-regis {
+    .category-info {
+        background: $regis;
+
+        .cat-quick-links a, .category-description { color: #fff;
+
+            a { color: #fff;}
+        }
+
+        .category-title {
+
+            height: 110px;
+
+            h1 {
+                @include replace-text-with-dimensions("brands/regis.png", 0, 0);
+                @include image-2x("brands/regis-2x.png", 132px, 89px);
+            }
+        }
+
+    }
+}
+
+.category-designline {
+    .category-info {
+        background: $designline;
+
+        .cat-quick-links a, .category-description { color: #000;
+
+            a { color: #000;}
+        }
+
+        .category-title {
+
+            height: 110px;
+
+            h1 {
+                @include replace-text-with-dimensions("brands/designline.png", 0, 0);
+                @include image-2x("brands/designline-2x.png", 180px, 89px);
+            }
+        }
+
+    }
+}
+
+
+.category-mizani {
+    .category-info {
+        background: $mizani;
+
+        .cat-quick-links a, .category-description { color: #fff;
+
+            a { color: #fff;}
+        }
+
+        .category-title {
+
+            height: 110px;
+
+            h1 {
+                @include replace-text-with-dimensions("brands/mizani.png", 0, 0);
+                @include image-2x("brands/mizani-2x.png", 180px, 89px);
+            }
+        }
+
+    }
+}
+
+.category-pureology {
+    .category-info {
+        background: $pureology;
+
+        .cat-quick-links a, .category-description { color: #000;
+
+            a { color: #000;}
+        }
+
+        .category-title {
+
+            height: 110px;
+
+            h1 {
+                @include replace-text-with-dimensions("brands/pureology.png", 0, 0);
+                @include image-2x("brands/pureology-2x.png", 126px, 89px);
+            }
+        }
+
+    }
+}
+
+.category-ghd {
+    .category-info {
+        background: $ghd;
+
+        .cat-quick-links a, .category-description { color: #000;
+
+            a { color: #000;}
+        }
+
+        .category-title {
+
+            height: 110px;
+
+            h1 {
+                @include replace-text-with-dimensions("brands/ghd.png", 0, 0);
+                @include image-2x("brands/ghd-2x.png", 160px, 89px);
+            }
+        }
+
+    }
+}
+
+.category-fake-bake {
+    .category-info {
+        background: $fakebake;
+
+        .cat-quick-links a, .category-description { color: #fff;
+
+        a { color: #fff;}
+
+        }
+
+        .category-title {
+
+            height: 120px;
+
+            h1 {
+                @include replace-text-with-dimensions("brands/fakebake.png", 0, 0);
+                @include image-2x("brands/fakebake-2x.png", 118px, 120px);
+                margin-top: 0;
+            }
+        }
+    }
+
+}
+
+.category-fudge {
+    .category-info {
+        background: $fudge;
+
+        .cat-quick-links a, .category-description { color: #fff;
+
+            a { color: #fff;}
+
+        }
+
+        .category-title {
+
+            height: 89px;
+
+            h1 {
+                width: 200px !important;
+                @include replace-text-with-dimensions("brands/fudge.png", 0, 0);
+                @include image-2x("brands/fudge-2x.png", 200px, 89px);
+            }
+        }
+    }
+}
+
+.category-ilah-brows {
+    .category-info {
+        background: $ilahbrows;
+
+        .cat-quick-links a, .category-description { color: #fff;
+
+            a { color: #fff;}
+        }
+
+        .category-title {
+
+            height: 89px;
+
+            h1 {
+                @include replace-text-with-dimensions("brands/ilah.png", 0, 0);
+                @include image-2x("brands/ilah-2x.png", 118px, 89px);
+                margin-top: 17px
+            }
+        }
+    }
+}
+
+.category-kerastase {
+    .category-info {
+        background: $kerastase;
+
+        .cat-quick-links a, .category-description { color: #000;
+
+            a { color: #000;}
+        }
+
+        .category-title {
+
+            height: 89px;
+
+            h1 {
+                @include replace-text-with-dimensions("brands/kerastase.png", 0, 0);
+                @include image-2x("brands/kerastase-2x.png", 160px, 89px);
+            }
+        }
+    }
+}
+
+.category-moroccanoil {
+    .category-info {
+        background: $moroccanoil;
+
+        .cat-quick-links a, .category-description { color: #fff;
+
+            a { color: #fff;}
+
+        }
+
+        .category-title {
+
+            height: 89px;
+
+            h1 {
+                @include replace-text-with-dimensions("brands/moroccanoil.png", 0, 0);
+                @include image-2x("brands/moroccanoil-2x.png", 134px, 89px);
+            }
+        }
+    }
+}
+
+.category-opi {
+    .category-info {
+        background: $opi;
+        border-bottom: 1px solid $lightGrey;
+
+        .cat-quick-links a, .category-description { color: #000;
+
+            a { color: #000;}
+        }
+
+        .category-title {
+
+            height: 89px;
+
+            h1 {
+                @include replace-text-with-dimensions("brands/opi.png", 0, 0);
+                @include image-2x("brands/opi-2x.png", 129px, 89px);
+                margin-top: 20px;
+            }
+        }
+    }
+}
+
+.category-redken {
+    .category-info {
+        background: $redken;
+
+        .cat-quick-links a, .category-description { color: #fff;
+
+            a { color: #fff;}
+        }
+
+        .category-title {
+
+            height: 89px;
+
+            h1 {
+                @include replace-text-with-dimensions("brands/redken.png", 0, 0);
+                @include image-2x("brands/redken-2x.png", 160px, 89px);
+            }
+        }
+    }
+}
+
+.category-sebastian {
+    .category-info {
+        background: $sebastian;
+        border-bottom: 1px solid $lightGrey;
+
+        .cat-quick-links a, .category-description { color: #000;
+
+            a { color: #000;}
+        }
+
+        .category-title {
+
+            height: 89px;
+
+             h1 {
+                @include replace-text-with-dimensions("brands/sebastian.png", 0, 0);
+                @include image-2x("brands/sebastian-2x.png", 220px, 89px);
+                margin-top: 20px;
+            }
+        }
+    }
+}
+
+.category-sothys {
+    .category-info {
+        background: $sothys;
+
+        .cat-quick-links a, .category-description { color: #fff;
+
+            a { color: #fff;}
+        }
+
+        .category-title {
+
+            height: 89px;
+
+            h1 {
+                @include replace-text-with-dimensions("brands/sothys.png", 0, 0);
+                @include image-2x("brands/sothys-2x.png", 154px, 89px);
+                margin-top: 20px;
+            }
+        }
+    }
+}
+
+.category-st-tropez {
+    .category-info {
+        background: $sttropez;
+        border-bottom: 1px solid $lightGrey;
+
+        .cat-quick-links a, .category-description { color: #000;
+
+            a { color: #000;}
+
+        }
+
+        .category-title {
+
+            height: 89px;
+
+            h1 {
+                @include replace-text-with-dimensions("brands/sttropez.png", 0, 0);
+                @include image-2x("brands/sttropez-2x.png", 180px, 89px);
+                margin-top: 20px;
+            }
+        }
+    }
+}
+
+.category-wella {
+    .category-info {
+        background: $wella;
+
+        .cat-quick-links a, .category-description { color: #fff;
+
+            a { color: #fff;}
+        }
+
+        .category-title {
+
+            height: 89px;
+
+            h1 {
+                width: 160px;
+                height: 89px;
+                @include replace-text-with-dimensions("brands/wella.png", 0, 0);
+                @include image-2x("brands/wella-2x.png", 106px, 89px);
+            }
+        }
+    }
+}
+
+.category-wella-sp {
+    .category-info {
+        background: $sp;
+
+        .cat-quick-links a, .category-description { color: #fff;
+
+            a { color: #fff;}
+
+        }
+
+        .category-title {
+            height: 120px;
+
+            h1 {
+                width: 200px;
+                height: 120px;
+                @include replace-text-with-dimensions("brands/sp.png", 0, 0);
+                @include image-2x("brands/sp-2x.png", 47px, 120px);
+            }
+        }
+    }
+}
+
+.parent-brands {
+    .category-info {
+        @include breakpoint("baby-bear") {
+            height: 250px;
+            padding: 30px;
+        }
+
+        .category-title { margin-left: 4px;}
+
+        h1 {
+
+            float: left; text-indent: -9999px; overflow: hidden;
+            margin: 10px 0 0 0;
+
+            @media only screen and (max-width: 450px) {
+                margin: 0 auto;
+                float: none;
+            }
+
+        }
+
+        #narrow-by-list {
+
+            background: #fff;
+            padding-bottom: 0;
+
+
+            &.active {margin-bottom: 1em;}
+
+            .filter-title {
+                border-bottom: 1px solid #e1e1e1;
+            }
+        }
+
+    }
+
+    .sidebar,
+    .col-main {
+        padding: 2.857142857em 0 0; // 40 / 14
+    }
+
+    .col-main {
+        border-left: 0;
+        padding-top: 0;
+    }
+
+    .sidebar {
+        .block-content {
+            clear: both;
+            padding: 0 1.428571429em; // 20 / 14
+        }
+    }
+}
+
+.category-elemis {
+    .category-info {
+        background: $elemis;
+
+        .cat-quick-links a, .category-description { color: #000;
+
+            a { color: #000;}
+        }
+
+        .category-title {
+
+            height: 110px;
+
+            h1 {
+                @include replace-text-with-dimensions("brands/elemis.png", 0, 0);
+                @include image-2x("brands/elemis-2x.jgp", 104px, 89px);
+            }
+        }
+
+    }
+}
+
+.category-d-fi {
+    .category-info {
+        background: $d-fi;
+
+        .cat-quick-links a, .category-description { color: #000;
+
+            a { color: #000;}
+        }
+
+        .category-title {
+
+            height: 110px;
+
+            h1 {
+                @include replace-text-with-dimensions("brands/d-fi.png", 0, 0);
+                @include image-2x("brands/d-fi-2x.jpg", 104px, 89px);
+            }
+        }
+
+    }
+}
+

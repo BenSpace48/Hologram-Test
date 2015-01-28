@@ -1,0 +1,1022 @@
+@import "bootstrap";
+
+.checkout-onepage-index,
+.checkout-onepage-success {
+    .col-main {
+        padding: 0;
+    }
+}
+
+.checkout-onepage-success {
+    .success-container {
+        padding: 1.428571429em 1.142857143em 2em 1.142857143em; // 20, 16 / 14
+        float: left;
+        width: 100%;
+        margin-bottom: 2em;
+    }
+}
+
+// Checkout Styles
+
+.opc-wrapper {
+    .page-title {
+        z-index: 1;
+        display: none;
+    }
+ }
+
+.opc li.section {
+    position:relative;
+
+    .step-title {
+        padding: 1.5em 0 1em 1.5em;
+
+        .number,
+        a {
+            display: none;
+        }
+
+        h2 {
+            @include font-size(2.8);
+            color:$orange;
+            font-family: $swiss-thin;
+            line-height: 1;
+            margin: 0.4em 0;
+
+            @include breakpoint("mama-bear") {
+                 @include font-size(4.2);
+            }
+        }
+    }
+
+    .step {
+        h2 {
+            padding-top: 1em;
+            @include font-size(3);
+            color:$orange;
+            font-family: $swiss-thin;
+            line-height: 1;
+            margin: 0.4em 0;
+            float: left;
+            width: 100%;
+
+            @include breakpoint("mama-bear") {
+                 @include font-size(4.2);
+            }
+        }
+
+        li {
+            h2 { padding: 1em 0 0.5em 0; margin:0;}
+        }
+
+        p {
+            float: left;
+            width: 100%;
+        }
+
+        p.required {
+            text-transform: uppercase;
+            color: #000;
+            @include font-size(1.2);
+            text-align:right;
+            width:100%;
+            padding-left:0;
+            float: right;
+        }
+
+        p.back-link {
+            margin: 1em 1em 2em 0;
+            float: left;
+            text-align: left;
+            width: 65px;
+
+            a  {
+                background: image-url('sprite.png') no-repeat 0 -384px;
+                text-decoration: none;
+                padding: 0.2em 0 0.2em 1em;
+                color: #000;
+                @include font-size(1.4);
+                text-transform: uppercase;
+                text-decoration: none;
+
+                @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+                  only screen and (min--moz-device-pixel-ratio: 1.5),
+                  only screen and (min-resolution: 240dpi) {
+                        background-image: image-url('sprite@2x.png');
+                        background-size: 200px 500px;
+                    }
+
+                small {
+                    display: none;
+                }
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+}
+.opc .order-review .authentication {
+    margin:0 auto;
+    width:570px;
+}
+
+.opc .order-review .warning-message {
+    color:#222;
+    font-weight:bold;
+    text-align:center;
+    padding:10px 10px 0;
+}
+
+/* Steps */
+.opc .form-alt .input-box { }
+.opc .form-alt .input-box select { }
+
+.opc .form-buttons {
+    float: left;
+    width: 100%;
+
+    @include breakpoint("mama-bear") {
+        float: right;
+        text-align:right
+    }
+}
+.opc .buttons-set .button,
+.opc .form-buttons .button {
+    margin:0;
+    padding: 0.5em 1.5em;
+    float: left;
+    width: 100%;
+
+    @include breakpoint("mama-bear") {
+        width: 70%;
+        float:right;
+    }
+}
+.checkout-onepage-payment-additional-customerbalance { margin-bottom:1em; }
+.checkout-onepage-payment-additional-customerbalance .checkbox { margin-left:0; }
+
+/*
+#checkout-step-shipping_method .buttons-set,
+#opc-payment .buttons-set { width:521px; margin-top:10px; margin-bottom:0; }
+#checkout-step-shipping_method .buttons-set .back-link,
+#opc-payment .buttons-set .back-link { width:245px; padding-right:15px; float:left; text-align:right; }
+#checkout-step-shipping_method .buttons-set .back-link a,
+#opc-payment .buttons-set .back-link a { display:inline; float:none; }
+#checkout-step-shipping_method p.required,
+#opc-payment p.required { padding:0 0 0 260px; }
+#opc-payment p.note { padding:10px 0; font-size:11px; }
+*/
+
+// PayPal Review Order
+
+.paypal-review-order .info-set {
+    margin-bottom: 1em;
+}
+
+.paypal-review-order #customer-info-form {
+    label {
+        @include breakpoint("papa-bear") {
+            width: percentage(140 / 1000);
+        }
+    }
+
+    .input-box {
+        @include breakpoint("mama-bear") {
+            max-width: 49%;
+        }
+
+        @include breakpoint("papa-bear") {
+            max-width: 270px;
+        }
+    }
+}
+
+.paypal-review-order #shipping-address {
+    .same-as-delivery {
+        margin-bottom: 1.75em;
+        overflow: hidden;
+
+        .input-box {
+            float: left;
+            width: percentage(30 / 360);
+        }
+
+        label {
+            width: 80%;
+        }
+    }
+
+    @include breakpoint("mama-bear") {
+        .legend {
+            float: left;
+            width: 50%;
+        }
+
+        .same-as-delivery {
+            float: right;
+            width: percentage(150 / 420);
+            margin-bottom: 0;
+
+            .input-box {
+                width: percentage(25 / 140);
+            }
+        }
+    }
+
+    @include breakpoint("papa-bear") {
+        .same-as-delivery {
+            width: percentage(140 / 490);
+        }
+    }
+}
+
+.ie8 .paypal-review-order .form-list {
+    .wide {
+        width: 100%;
+
+        @include breakpoint("papa-bear") {
+            label {
+                width: 100px;
+                float: left;
+            }
+
+            .input-box {
+                width: 269px;
+                float: left;
+            }
+
+        }
+    }
+}
+
+.paypal-review-order  .paypal-shipping-method {
+    padding-left: 0;
+}
+
+.paypal-review-order fieldset {
+    clear: both;
+}
+
+.paypal-review-order fieldset > ul {
+    margin: 0;
+}
+
+.paypal-review-order .form-list .field {
+    margin: 0 0 calc-em(3px, 13px);
+}
+
+.paypal-review-order .legend {
+    margin: 0 0 1em;
+}
+
+.paypal-review-order .col-1,
+.paypal-review-order .col-2 {
+    margin-right: 0;
+    margin-bottom: 2em;
+}
+
+#update_order {
+    margin-top: .75em;
+
+    @include breakpoint("mama-bear") {
+        margin-top: 0;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .paypal-review-order #details-table {
+        th {
+            @include font-size(1.1);
+        }
+    }
+}
+
+.multiple-checkout { position:relative; z-index:1; }
+.multiple-checkout .data-table thead th { vertical-align:bottom; }
+.multiple-checkout .col3-set .actions { border:1px solid #e4e4e4; padding:3px 9px 4px; float:left; }
+.multiple-checkout .col3-set address { padding:10px; clear:both; }
+.multiple-checkout .col3-set,
+.multiple-checkout .col2-set { margin:0 0 15px; }
+.multiple-checkout .buttons-set { padding:15px 0; clear:both; width:auto; }
+.multiple-checkout .buttons-set .button { float:right; }
+.multiple-checkout .tool-tip { top:50%; margin-top:-120px; right:10px; }
+.multiple-checkout .grand-total { font-weight:normal; font-size:18px; color:#cd3800; text-align:right; display:block; margin:10px 0 15px; }
+.multiple-checkout .grand-total .price-label { font-weight:normal; }
+.multiple-checkout .grand-total .price { font-weight:bold; }
+.multiple-checkout .sp-methods { }
+.multiple-checkout .checkout-multishipping-payment-customerbalance { font-size:12px; margin-bottom:7px; }
+.multiple-checkout .fieldset label { }
+.multiple-checkout .gift-item .fieldset { }
+
+/* Review Details */
+#checkout-step-review .data-table .btn-remove,
+.checkout-multishipping-overview .data-table .btn-remove,
+#details-table .btn-remove { display:-moz-inline-stack; display:inline-block; vertical-align:middle; }
+
+/********** < Common Checkout Styles */
+/* Shipping and Payment methods */
+
+
+.sp-methods { margin-top: 0; }
+.sp-methods dt {
+    font-family: $swiss-bold;
+    margin-bottom:5px;
+
+    label {
+        text-transform: uppercase;
+    }
+}
+.sp-methods dd { margin:0 0 3em 0; float: left;}
+
+.sp-methods dd li { margin: 10px 0; }
+.sp-methods dd ul { margin-bottom: 1em; }
+
+.sp-methods .price { font-family: $swiss-bold;}
+.sp-methods .form-list { margin: 0; }
+
+.sp-methods select.month { width:150px; margin-right:10px; }
+.sp-methods select.year { width:96px; }
+.sp-methods input.cvv { width:32em !important; }
+.sp-methods .input-box { line-height:21px; }
+.sp-methods .radio,
+.sp-methods .checkbox {}
+.sp-methods .v-fix .validation-advice { margin-right:-250px; position:relative; z-index:1; width:250px; }
+.sp-methods .adv-container { padding-left:170px; }
+.sp-methods .centinel-logos a { margin-right:3px; }
+.sp-methods .centinel-logos img { vertical-align:middle; }
+
+.sp-methods .release-amounts { margin:1.5em 0 2em; }
+.sp-methods .release-amounts button { float:left; margin:5px 10px 0 0; }
+
+.checkmo-list li { margin:0 0 4px; }
+.checkmo-list label { padding-top:0; }
+.checkmo-list address { float:left; }
+
+.please-wait {
+    position:fixed;
+    z-index:99;
+    top:44%;
+    left:50%;
+    margin:-50px 0 0 -100px;
+    border:5px solid #f06804;
+    @include font-size(1.3);
+    text-transform:uppercase;
+    color: #f06804;
+    background:#fff;
+    padding:20px;
+    white-space:nowrap;
+    font-family: $swiss-light;
+
+    img {
+        margin: 0 auto 5px;
+        padding-right:0.5em;
+    }
+}
+
+.cvv-what-is-this { cursor:help; margin-left:10px; line-height: 30px; color: #000; @include font-size(1.1);}
+
+/* Payment Bridge */
+.pbridge-reload { display:block; text-align:right; }
+.pbridge-reload a { color:#1e75b4; font-size:11px; }
+
+/* Tooltip */
+.tool-tip { border:1px solid #ddd; background-color:#f6f6f6; padding:5px; position:absolute; z-index:9999; }
+.tool-tip .btn-close { text-align:right; }
+.tool-tip .tool-tip-content { padding:5px; }
+
+/* Gift Messages */
+.add-gift-message { padding:20px 0; }
+.add-gift-message h3 { font-size:16px; font-weight:normal; color:#000; line-height:19px; margin:0 0 10px; }
+.add-gift-message p { margin:10px 0; }
+
+.gift-message-form { border:1px solid #d1d1d1; background:#f5f5f5;}
+.gift-message-form .fieldset { padding:10px 0 10px; }
+.gift-message-form .fieldset .input-text,
+.gift-message-form .fieldset textarea { width:200px; }
+.gift-message-form .fieldset textarea { width:200px; height:8em; }
+.gift-message-form .inner-box { padding:0; height:300px; overflow:auto; }
+.gift-message-form .inner-box h5,
+.gift-message-form .inner-box h4 { font:14px/1.25 Arial, Helvetica, sans-serif; padding:0 20px; color:#222; margin:17px 0; }
+.gift-message-form .inner-box p { margin:10px 0; padding:0 20px; }
+.gift-message-form .gift-item { padding:5px 0 0;  }
+.gift-message-form .gift-item .number { padding:5px 20px 5px; margin-bottom:0; color:#adadad; font-weight:bold; }
+.gift-message-form .gift-item .product-img-box { float:left; width:150px; padding-right:15px; }
+.gift-message-form .gift-item .product-image { text-align:center; margin:20px; }
+.gift-message-form .gift-item .product-name { font-size:12px; margin:20px 0 5px; text-align:center; }
+.gift-message-form .gift-item .fieldset { float:left; padding:20px 0 10px 10px; margin:0 0 0 -2px; }
+.gift-message-form .gift-item .fieldset label { width:80px; }
+.gift-message-form .gift-item .gift-wrapping-form { padding:0 20px; }
+
+.gift-options-for-order { padding:0 40px; }
+.gift-options-for-order .fieldset { padding:0; }
+.gift-options-for-order .fieldset p { padding:0; }
+.gift-options-for-order .fieldset label { width:80px; }
+.gift-options-for-order .fieldset .input-text,
+.gift-options-for-order .fieldset textarea { width:340px; }
+
+.gift-wrapping-form { padding:0 0 10px; }
+.gift-wrapping-form img { border:1px solid #ccc; float:left; margin-right:10px; }
+.gift-wrapping-form label { margin-right:10px; vertical-align:middle; }
+.gift-wrapping-form .gift-wrapping-design { overflow:hidden; padding:10px 0 0; width:100%; }
+
+.gift-message-link { display:block; padding-left:20px; }
+.gift-message-link.expanded { background-position:0 -53px; }
+.gift-message-row {}
+.gift-message-row .btn-close { float:right; width:13px; height:12px; text-indent:-999em; overflow:hidden; }
+.gift-message dt strong { font-weight:bold; }
+
+/* Checkout Agreements */
+.checkout-agreements {}
+.checkout-agreements li { margin:10px 0; }
+.checkout-agreements .agreement-content { border:1px solid $lightGrey; font-size:11px; background-color:#fff; padding:1em; height:10em; overflow:auto; }
+.checkout-agreements .agree { padding:10px 0; font-size:12px; font-weight:bold; }
+.checkout-agreements .agree .checkbox { margin-right:5px; }
+
+/* Centinel */
+.centinel { margin:10px 0; }
+.centinel p { margin:0 0 10px; }
+.centinel .authentication { border:1px solid #ddd; background:#fff; }
+.centinel .authentication iframe { width:99%; height:400px; background:transparent !important; margin:0 !important; padding:0 !important; border:0 !important; }
+
+.opc .centinel { margin:0; padding:20px; }
+
+/* Checkout Success */
+.checkout-onepage-success  {
+
+    .footer.checkout .wrap { border-top: none;}
+
+    .col-main {
+        h2 {
+            @include font-size(2.8);
+            color:$orange;
+            font-family: $swiss-thin;
+            line-height: 0.9;
+            padding: 0 0.5em;
+            float: left;
+
+            @include breakpoint("mama-bear") {
+                 @include font-size(4.2);
+            }
+        }
+
+        .checkout-promos {
+            float: left;
+            border: 1px solid $lightGrey;
+            width: 100%;
+        }
+
+        .row {
+            .col {
+                position: relative;
+
+                img {
+                    position: absolute;
+                    top: 0;
+                    right:0;
+                    z-index: 0;}
+
+                h3 {
+                    font-family: $swiss-thin;
+                    @include font-size(2.9);
+                    line-height: 1;
+                    margin: 0;
+                    color: #b2b2b2;
+
+                    span {
+                        display: block;
+                    }
+
+                    @include breakpoint("mama-bear") {
+                        @include font-size(4);
+                    }
+                }
+            }
+
+            .col.first {
+                background: #000;
+                display:block;
+                padding: 3em 3em 2.3em 3em;
+
+
+                @media screen and (max-width: 1000px) {
+                    padding: 3em 1.6em;
+                }
+
+                ul {
+                    z-index: 10;
+                    position: relative;
+
+                    li {
+                        padding-top: 0.3em;
+                    }
+                }
+
+                h3 {
+                    color: #fff;
+                    border-bottom: 1px solid #fff;
+                    padding-bottom: 0.8em;
+                    margin-bottom: 0.8em;
+                    z-index: 10;
+                    position: relative;
+
+                    span {
+                        @include inline-block;
+                        @include replace-text-with-dimensions("logo-checkout-small.png", 0, 0);
+                        @include image-2x("logo-checkout-small-2x.png", 169px, 25px);
+                        height: 25px;
+                        vertical-align: top;
+
+                        @media screen and (min-width: 1000px) {
+                            @include replace-text-with-dimensions("logo-checkout.png", 0, 0);
+                            @include image-2x("logo-checkout-2x.png", 237px, 34px);
+                            height: 34px;
+                            vertical-align: top;
+                        }
+                    }
+                }
+            }
+
+            .col.social {
+                padding: 3em 3em 2.3em 3em;
+                display: block;
+                float: left;
+
+                @media only screen and (max-width: 1000px) {
+                    padding: 3em 1.6em;
+                }
+
+                h3 {
+                    margin: 0;
+                    color: #b2b2b2;
+                    padding-bottom: 0.8em;
+                    z-index: 10; position: relative;
+
+                    span {
+                        display: block;
+                    }
+                }
+
+                .social-links {
+                    float: left;
+                    width: 100%;
+                    margin: 0;
+                    z-index: 10; position: relative;
+
+                    li {
+                        float: left;
+                        padding-right: 2em;
+
+                        @media screen and (min-width: 1000px) {
+                            padding-right: 5.5em;
+                        }
+
+                        a { color: #b2b2b2;
+                            @include font-size(4.5);
+
+                            &:hover {
+                                color: #000;
+                            }
+                        }
+
+                        &.social-yt {
+                            padding: 0;
+                        }
+                    }
+                }
+            }
+
+            .backto-links,
+            .social-links {
+                .col {
+                    margin-bottom: 0;
+
+                    a {
+                        text-transform: uppercase;
+                        color: #fff;
+                        text-decoration: none;
+                        font-family: $swiss-light;
+
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+
+            .inspired {
+                padding: 3em 3em 2.3em 3em;
+                display: block;
+                float: left;
+                background: image-url('be-inspired2.jpg') no-repeat #c3c8cc right 0;
+
+                @media screen and (max-width: 1000px) {
+                    padding: 3em 1.6em;
+                }
+
+                h3 {
+                    color: #fff;
+                    z-index: 10;
+                    position: relative;
+                }
+
+                ul {
+                    z-index: 10;
+                    padding: 3em 0 0 0;
+                    margin: 0;
+                    position: relative;
+
+                    li {
+                        padding-top: 0.5em;
+
+                        a {
+                            text-transform: uppercase;
+                            color: #fff;
+                            text-decoration: none;
+
+                            &:hover {
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .store-locator {
+                padding: 3em 3em 2.3em 3em;
+                display: block;
+                float: left;
+                border-bottom: 1px solid $lightGrey;
+                background: image-url('salon-locator2.jpg') no-repeat #fff right 0;
+
+                @media screen and (max-width: 1000px) {
+                    padding: 3em 1.6em;
+                }
+
+                @media screen and (min-width: 750px) {
+                    border: none;
+                }
+
+                p {
+                    position: relative;
+                    z-index: 10;
+                    padding: 0;
+                    margin: 0;
+
+                    &.text {
+                        width: 60%; padding: 0.8em 0;
+
+                        @media screen and (min-width: 1000px) {
+                            width: 75%;
+                        }
+                    }
+                }
+
+                h3 {
+                    color: #c21d1b;
+                    position: relative;
+                    z-index: 10;
+                }
+
+                a {
+                    text-decoration: none;
+
+                    &:hover {
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.checkout-onepage-success .col-main p {
+    margin:0 0 10px;
+}
+
+
+/********** Common Checkout Styles > */
+/* ======================================================================================= */
+
+/* One Page Checkout */
+
+.opc-wrapper {
+    padding: 0;
+}
+
+
+// One Page Checkout
+
+.opc {
+    position:relative;
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+
+    fieldset {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+
+        .field { padding-bottom: 0;}
+    }
+
+    .section {
+        display: none;
+        margin-bottom: calc-em(10px, 13px);
+
+        &.active {
+            display: block;
+        }
+
+        .tool-tip {
+            right:30px;
+        }
+    }
+
+    .step-box {
+        padding: calc-em(20px, 13px);
+
+        @include breakpoint("baby-bear") {
+            padding: calc-em(40px, 13px) calc-em(30px, 13px);
+        }
+    }
+
+    .step {
+        clear: both;
+        border: none;
+        float: left;
+        width: 100%;
+        padding: 0 1.5em 1.5em;
+
+        @include breakpoint("mama-bear") {width: 80%; padding: 1.5em;}
+    }
+
+    .order-review {
+        padding: 0;
+        clear: both;
+    }
+
+    .input-text,
+    select {
+        width: 100%;
+    }
+
+    select { margin: 1em 0;}
+
+    .control {
+        margin: 0;
+
+        label { padding: 0;}
+
+        .input-box { float: left;}
+    }
+
+    .buttons-set {
+        margin-top:0;
+
+        p.required {
+            margin:0;
+            padding:0 0 10px;
+        }
+
+        &.disabled button.button {
+            display:none;
+        }
+    }
+
+    li.control, li.radio {
+        line-height: 30px;
+
+        input {
+            float: left;
+        }
+
+        label { padding: 0;}
+
+        input.control, input.radio, input.checkbox {
+            margin-top: 0.3em;
+            margin-right: 1em;
+        }
+
+        .checkbox {
+        }
+
+        label {
+            float: left;
+        }
+    }
+}
+
+#co-billing-form {
+    .wide {
+        label {
+            display: block;
+            width: 100%;
+        }
+    }
+
+    #billing-new-address-form {
+        .wide {
+            label {
+                float: left;
+                width: 20%;
+            }
+        }
+
+    }
+
+}
+
+// Shipping Methods
+
+#opc-shipping_method {
+    .sp-methods dt {
+        display: none;
+    }
+    .sp-methods dd {
+        margin:0;
+        margin-bottom: 2em;
+        margin-bottom: 0;
+        width: 100%;
+
+        ul {
+            li {
+                margin: 0 0 1em 0;
+
+                label {
+
+                    width: 90%;
+
+                    padding: 0;
+                    @include inline-block;
+
+                    .price {
+                        font-family: $swiss-bold;
+
+                        @media only screen and (min-width: 350px) {
+                            float: right;
+                        }
+                    }
+                }
+            }
+
+            input {
+                float:right;
+                margin-top: 0.2em;
+            }
+        }
+    }
+}
+
+// Payment Methods
+
+#opc-payment {
+    label {
+        font-family: $swiss-roman;
+        @include font-size(1.3);
+        background: none !important; // Override SagePay Module
+        padding-left: calc-em(6px, 13px);
+        font-weight: 400;
+        cursor: pointer;
+        padding: 0;
+
+        @include breakpoint("mama-bear") {
+            width: 175px;
+            padding: 1em 0;
+            margin-right: calc-em(10px, 13px);
+        }
+
+        .price {
+            font-weight: 400;
+        }
+    }
+
+    .sp-methods {
+        dd li {
+            margin-bottom: 0;
+        }
+
+        dt {
+            margin-bottom: 2em;
+
+            input {
+                vertical-align: text-top;
+            }
+        }
+    }
+
+    @media only screen and (max-width: 350px) {
+        .sp-methods .form-list { width: 280px;
+            .v-fix {width: 280px;}
+        }
+    }
+}
+
+// Review
+
+#opc-review {
+    .block-title {
+        font-size: 1em;
+        font-weight: 500;
+        text-transform: none;
+        margin-bottom: calc-em(40px, 13px);
+    }
+
+    .block-subtitle {
+        border-bottom: 1px solid #e6e6e6;
+        width: 100%;
+
+        a {
+            float: right;
+            font-style: italic;
+            text-transform: none;
+            font-weight: 300;
+            font-size: calc-em(12px, 16px);
+
+            &:hover {
+            }
+        }
+    }
+
+    .payment-method {
+        table {
+            border: 0;
+
+            td {
+                padding: 0;
+                width: auto;
+            }
+        }
+    }
+
+    .block-details-review {
+        margin-bottom: calc-em(40px, 13px);
+
+        @include breakpoint("baby-bear") {
+            float: left;
+            width: 50%;
+            padding: calc-em(40px, 13px);
+        }
+
+        address {
+            font-style: normal;
+        }
+    }
+
+    #checkout-review-table-wrapper {
+        clear: both;
+    }
+
+    #checkout-review-table {
+
+        width: 255px;
+
+        thead th, tbody td {
+            padding: 0.5em 0.3em;
+        }
+
+        @media screen and (min-width: 350px) {
+            width: 100%;
+
+            thead th, tbody td {
+                padding: 0.5em;
+            }
+
+        }
+
+        tfoot th {
+            background: none;
+            color: #000;
+            border-bottom: 1px solid #ccc;
+        }
+    }
+
+    .shipping-address,x
+    .shipping-method {
+        margin-right: 0;
+    }
+
+    .btn-checkout {
+        font-size:  calc-em(14px, 13px);
+    }
+}
+
+
+#checkout-review-submit {
+
+    padding: 1em 0;
+
+    .buttons-set {
+        padding-top: 0;
+    }
+}
+
+ @import    "header",
+            "checkout-progress",
+            "footer",
+            "login",
+            "billing",
+            "order-review";

@@ -1,0 +1,93 @@
+@import "brand-colours";
+
+.category-brands .col1-layout .col-main {
+    padding: 0;
+    float: left;
+    width: 100%;
+
+    .brands {
+        float: left;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+
+        li {
+            width: 50%;
+            float: left;
+            display: block;
+            position: relative;
+            border-right: 1px solid #e5e5e5;
+            border-bottom: 1px solid #e5e5e5;
+
+            &.last {
+                border-right:none;
+            }
+
+            @media only screen and (min-width: 450px) {
+                width: 25%;
+            }
+
+            a {
+                span {
+                    display: none;
+                }
+
+                @include breakpoint("mama-bear") {
+                    &:hover {
+                        span {
+                            display: block;
+                            position: absolute;
+                            right:0;
+                            bottom: 0;
+                            text-transform: uppercase;
+                            background: #fff;
+                            padding:0.8em 1em;
+                            font-family: $swiss-roman;
+                            @include font-size(1.4);
+
+                            &.ghd { color:#000; text-transform: lowercase !important;}
+                            &.fake-bake { color:$fakebake;}
+                            &.fudge { color:$fudge;}
+                            &.ilah-brows { color:$ilahbrows;}
+                            &.kerastase { color:#000;}
+                            &.moroccanoil { color:$moroccanoil;}
+                            &.opi  { color:#000;}
+                            &.redken  { color:$redken;}
+                            &.sebastian-professional  { color:#000;}
+                            &.sothys  { color:$sothys;}
+                            &.st-tropez  { color:#000;}
+                            &.wella  { color:$wella;}
+                            &.mizani  { color:$mizani;}
+                            &.pureology  { color:#000;}
+                            &.regis  { color:$regis;}
+                            &.designline  { color:#000;}
+                            &.nioxin  { color:#000;}
+                            &.paul-mitchell  { color:#000;}
+                            &.s-factor  { color:#000;}
+                            &.bedhead  { color:#000;}
+                            &.catwalk  { color:#000;}
+                            &.diva  { color:#000;}
+                            &.loreal  { color:#000;}
+                            &.tangle-teezer  { color:#000;}
+                            &.alterna  { color:#9889a8;}
+                            &.color-wow  { color:#000;}
+                            &.sassoon  { color:#000;}
+                            &.wella-professionals { color:#d31145;}
+                            &.kms-california { color:#000;}
+                            &.american-crew { color:#000;}
+                            &.elemis { color:#000;}
+                            &.d-fi { color:#000;}
+                            &.matrix-total-results { color:#000;}
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .cat-quick-links {
+        .ghd {
+            text-transform: none;
+        }
+    }
+}

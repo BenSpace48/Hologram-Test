@@ -1,0 +1,60 @@
+.add-to-cart {
+    @include pie-clearfix;
+    margin-bottom: 20px;
+
+    @include breakpoint("baby-bear") {
+        float: left;
+        width: 250px;
+    }
+
+    label {
+        @include font-size(1.6);
+        float:left;
+        margin-right: 13px;
+        text-transform: uppercase;
+        line-height: 37px;
+
+        @include breakpoint("baby-bear") {
+            @include font-size(1.4);
+            line-height: 56px;
+        }
+    }
+
+    .qty {
+        @include font-size(1.6);
+        float:left;
+        text-align: center;
+        margin-right: 30px;
+        width: 37px;
+        height: 37px;
+
+        @include breakpoint("baby-bear") {
+            margin-right: 13px;
+            @include font-size(1.4);
+            padding: 9px 0;
+            width: 56px;
+            height: 56px;
+        }
+    }
+
+    .btn-cart {
+        @include font-size(1.6);
+        height: 37px;
+        width: 120px;
+        float: left;
+
+        @include breakpoint("baby-bear") {
+            @include font-size(1.4);
+            float:left;
+            width: 102px;
+            height: 56px;
+            padding: 9px 0;
+        }
+    }
+}
+
+.lt-ie9 {
+    .qty {
+        line-height: 37px;
+    }
+}

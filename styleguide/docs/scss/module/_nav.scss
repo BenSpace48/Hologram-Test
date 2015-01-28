@@ -1,0 +1,24 @@
+/**
+ *
+ * Generic Nav Abstraction
+ *
+ * When developing many sites, we always need several components that consist
+ * of a series of horizontal links contained in either a ul or an ol.
+ *
+ * Rather than repeatedly building these components over and over,
+ * create a ‘nav abstraction’ to abstract out the repeated design pattern
+ * into a reusable, extendable class. https://coderwall.com/p/z1eukq
+ *
+ */
+
+%nav,
+.nav {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+
+    & > li,
+    & > li > a {
+        @include inline-block;
+    }
+}

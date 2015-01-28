@@ -1,0 +1,668 @@
+/*
+*	Site Wide Defaults
+*/
+/*doc
+---
+title: Variables
+name: variables
+category: Basics
+---
+
+Instead of remembering or copy/pasting the colour codes we use variables.
+
+```
+$orange: #f06803;      // Set the variable
+
+.variable-element {
+    color: $orange;    // Use the variable
+}
+
+<div class="variable-element">This is some orange text</div>
+
+```
+
+<div class="variable-element">This is some orange text</div>
+
+A full list of variables can be seen in <span class="orange">RegisShop/skin/frontend/enterprise/shopRegis/scss/_variables.scss</span>
+
+*/
+/*
+ *  Global Variables
+ */
+/*doc
+
+
+---
+title: Font size
+name: font-size
+category: Mixins
+---
+
+These mixins are used to keep your code DRY (Don't repeat yourself) and save yourself typing out prefixes and doing repetative calculations
+
+```
+<div class="my-element"></div>
+
+.my-element {
+    @include font-size(2);       // Compiles to 20px which is 2rem
+    @include font-size(1.5);     // Compiles to 15px which is 1.5rem
+}
+```
+
+<p class="font-size-example-2">This is font-size(2)</p>
+<p class="font-size-example-1-5">This is font-size(1.5)</p>
+
+*/
+@font-face {
+  font-family: "Swiss721BT-Light";
+  src: url('../fonts/29B170_0_0.eot?1414400187');
+  src: url('../fonts/29B170_0_0.eot?&1414400187#iefix') format('embedded-opentype'), url('../fonts/29B170_0_0.woff?1414400187') format('woff'), url('../fonts/29B170_0_0.ttf?1414400187') format('truetype'); }
+@font-face {
+  font-family: "Swiss721BT-Roman";
+  src: url('../fonts/29B170_1_0.eot?1414400187');
+  src: url('../fonts/29B170_1_0.eot?&1414400187#iefix') format('embedded-opentype'), url('../fonts/29B170_1_0.woff?1414400187') format('woff'), url('../fonts/29B170_1_0.ttf?1414400187') format('truetype'); }
+@font-face {
+  font-family: "Swiss721BT-Bold";
+  src: url('../fonts/29B170_2_0.eot?1414400187');
+  src: url('../fonts/29B170_2_0.eot?&1414400187#iefix') format('embedded-opentype'), url('../fonts/29B170_2_0.woff?1414400187') format('woff'), url('../fonts/29B170_2_0.ttf?1414400187') format('truetype'); }
+@font-face {
+  font-family: "Swiss721BT-Thin";
+  src: url('../fonts/29B170_3_0.eot?1414400187');
+  src: url('../fonts/29B170_3_0.eot?&1414400187#iefix') format('embedded-opentype'), url('../fonts/29B170_3_0.woff?1414400187') format('woff'), url('../fonts/29B170_3_0.ttf?1414400187') format('truetype'); }
+/*doc
+---
+title: Icons
+name: Icons
+category: Basics
+---
+
+```html_example
+
+<div class="icon-basket"></div>
+<div class="icon-account"></div>
+<div class="icon-youtube"></div>
+<div class="icon-facebook"></div>
+<div class="icon-twitter"></div>
+
+```
+
+<p>To use these icons just add the class to the relevent div, e.g:</p>
+
+<p>A full list of icons can be seen in <span class="orange">RegisShop/skin/frontend/enterprise/shopRegis/scss/_icons.scss</span></p>
+*/
+@font-face {
+  font-family: "Shop-Regis-Icons";
+  src: url('../fonts/shop-regis-icons.eot?1414400187');
+  src: url('../fonts/shop-regis-icons.eot?&1414400187#iefix') format('embedded-opentype'), url('../fonts/shop-regis-icons.woff?1414400187') format('woff'), url('../fonts/shop-regis-icons.ttf?1414400187') format('truetype'), url('../fonts/shop-regis-icons.svg?1414400187') format('svg'); }
+/* line 28, ../scss/_icons.scss */
+[class^="icon-"], [class*=" icon-"] {
+  font-family: 'Shop-Regis-Icons';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+/* line 43, ../scss/_icons.scss */
+.icon-basket:before {
+  content: "\e600"; }
+
+/* line 46, ../scss/_icons.scss */
+.icon-youtube:before {
+  content: "\e601"; }
+
+/* line 49, ../scss/_icons.scss */
+.icon-facebook:before {
+  content: "\e602"; }
+
+/* line 52, ../scss/_icons.scss */
+.icon-twitter:before {
+  content: "\e603"; }
+
+/* line 55, ../scss/_icons.scss */
+.icon-search:before {
+  content: "\e604"; }
+
+/* line 58, ../scss/_icons.scss */
+.icon-pinterest:before {
+  content: "\e605"; }
+
+/* line 61, ../scss/_icons.scss */
+.icon-pin-full:before {
+  content: "\e606"; }
+
+/* line 64, ../scss/_icons.scss */
+.icon-pin-empty:before {
+  content: "\e607"; }
+
+/* line 67, ../scss/_icons.scss */
+.icon-phone:before {
+  content: "\e608"; }
+
+/* line 70, ../scss/_icons.scss */
+.icon-menu:before {
+  content: "\e609"; }
+
+/* line 73, ../scss/_icons.scss */
+.icon-home:before {
+  content: "\e60a"; }
+
+/* line 76, ../scss/_icons.scss */
+.icon-gplus:before {
+  content: "\e60b"; }
+
+/* line 79, ../scss/_icons.scss */
+.icon-email:before {
+  content: "\e60c"; }
+
+/* line 82, ../scss/_icons.scss */
+.icon-edit:before {
+  content: "\e60d"; }
+
+/* line 85, ../scss/_icons.scss */
+.icon-account:before {
+  content: "\e60e"; }
+
+/* line 6, ../scss/layout/_utilities.scss */
+.ir {
+  display: block;
+  text-indent: -999em;
+  overflow: hidden;
+  font-size: 0;
+  line-height: 0;
+  background-position: 0 0;
+  background-repeat: no-repeat; }
+
+/* line 18, ../scss/layout/_utilities.scss */
+.hidden {
+  display: block !important;
+  border: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  font-size: 0 !important;
+  line-height: 0 !important;
+  width: 0 !important;
+  height: 0 !important;
+  overflow: hidden !important; }
+
+/* line 31, ../scss/layout/_utilities.scss */
+.hide-on-mob {
+  display: none;
+  visibility: hidden; }
+  @media only screen and (min-width: 750px) {
+    /* line 31, ../scss/layout/_utilities.scss */
+    .hide-on-mob {
+      display: inline-block;
+      vertical-align: middle;
+      *vertical-align: auto;
+      *zoom: 1;
+      *display: inline;
+      visibility: visible; } }
+
+@media only screen and (min-width: 750px) {
+  /* line 41, ../scss/layout/_utilities.scss */
+  .hide-on-tablet {
+    display: none !important;
+    visibility: hidden; } }
+
+@media only screen and (min-width: 1000px) {
+  /* line 48, ../scss/layout/_utilities.scss */
+  .hide-on-desktop {
+    display: none !important;
+    visibility: hidden; } }
+
+/* line 55, ../scss/layout/_utilities.scss */
+.nobr {
+  white-space: nowrap !important; }
+
+/* line 59, ../scss/layout/_utilities.scss */
+.wrap {
+  white-space: normal !important; }
+
+/* line 63, ../scss/layout/_utilities.scss */
+.a-left {
+  text-align: left !important; }
+
+/* line 67, ../scss/layout/_utilities.scss */
+.a-center {
+  text-align: center !important; }
+
+/* line 71, ../scss/layout/_utilities.scss */
+.a-right {
+  text-align: right !important; }
+
+/* line 75, ../scss/layout/_utilities.scss */
+.v-top {
+  vertical-align: top; }
+
+/* line 79, ../scss/layout/_utilities.scss */
+.v-middle {
+  vertical-align: middle; }
+
+/* line 83, ../scss/layout/_utilities.scss */
+.v-fix {
+  float: left; }
+
+/* line 87, ../scss/layout/_utilities.scss */
+.v-fix .validation-advice {
+  display: block;
+  width: 12em;
+  margin-right: -12em;
+  position: relative; }
+
+/* line 94, ../scss/layout/_utilities.scss */
+.f-left,
+.left {
+  float: left !important; }
+
+/* line 99, ../scss/layout/_utilities.scss */
+.f-right,
+.right {
+  float: right !important; }
+
+/* line 104, ../scss/layout/_utilities.scss */
+.f-none {
+  float: none !important; }
+
+/* line 108, ../scss/layout/_utilities.scss */
+.f-fix {
+  float: left;
+  width: 100%; }
+
+/* line 113, ../scss/layout/_utilities.scss */
+.no-display {
+  display: none; }
+
+/* line 117, ../scss/layout/_utilities.scss */
+.no-margin {
+  margin: 0 !important; }
+
+/* line 121, ../scss/layout/_utilities.scss */
+.no-padding {
+  padding: 0 !important; }
+
+/* line 125, ../scss/layout/_utilities.scss */
+.no-bg {
+  background: none !important; }
+
+/* line 129, ../scss/layout/_utilities.scss */
+.links li {
+  display: inline; }
+
+/* line 133, ../scss/layout/_utilities.scss */
+.links li.first {
+  padding-left: 0; }
+
+/* line 137, ../scss/layout/_utilities.scss */
+.links li.last {
+  background: none !important;
+  padding-right: 0 !important; }
+
+/* line 142, ../scss/layout/_utilities.scss */
+.separator {
+  margin: 0 3px; }
+
+/* line 146, ../scss/layout/_utilities.scss */
+.divider {
+  clear: both;
+  display: block;
+  font-size: 0;
+  line-height: 0;
+  height: 1px;
+  margin: 10px 0;
+  background: #ddd;
+  text-indent: -999em;
+  overflow: hidden; }
+
+/* line 158, ../scss/layout/_utilities.scss */
+.window-overlay {
+  background: rgba(0, 0, 0, 0.35);
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 990; }
+
+/* line 174, ../scss/layout/_utilities.scss */
+.media {
+  *zoom: 1;
+  position: relative; }
+  /* line 38, ../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/utilities/general/_clearfix.scss */
+  .media:after {
+    content: "";
+    display: table;
+    clear: both; }
+  /* line 178, ../scss/layout/_utilities.scss */
+  .media .bd {
+    overflow: hidden;
+    _overflow: visible;
+    zoom: 1; }
+  /* line 184, ../scss/layout/_utilities.scss */
+  .media .img {
+    position: relative;
+    float: left;
+    margin-right: 10px; }
+    /* line 189, ../scss/layout/_utilities.scss */
+    .media .img > img {
+      display: block; }
+  /* line 194, ../scss/layout/_utilities.scss */
+  .media .imgExt {
+    position: relative;
+    float: right;
+    margin-left: 10px; }
+    /* line 199, ../scss/layout/_utilities.scss */
+    .media .imgExt > img {
+      display: block; }
+
+/*
+*   Default Global Button Styles
+*   Don't edit these styles - use the mixin defined below to extend the styles to create the button theme
+*
+*/
+/* line 7, ../scss/module/_buttons.scss */
+.button,
+button {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  background: #f06803;
+  line-height: 2.142857143;
+  padding: 0 1.285714286em;
+  font-family: 'Swiss721BT-Light', Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-decoration: none; }
+  /* line 21, ../scss/module/_buttons.scss */
+  .button:hover,
+  button:hover {
+    background: #000; }
+
+/* line 46, ../scss/module/_buttons.scss */
+.black {
+  background-color: #000;
+  color: #fff; }
+  /* line 49, ../scss/module/_buttons.scss */
+  .black:hover {
+    background: #f06803;
+    color: #fff; }
+
+/* line 55, ../scss/module/_buttons.scss */
+.lgrey {
+  background-color: #e5e5e5;
+  color: #fff; }
+
+/* line 59, ../scss/module/_buttons.scss */
+.mgrey {
+  background-color: #dcdcdc;
+  color: #fff; }
+
+/* line 63, ../scss/module/_buttons.scss */
+.dgrey {
+  background-color: #888888;
+  color: #fff; }
+
+/* line 67, ../scss/module/_buttons.scss */
+.hpink {
+  background-color: #fff;
+  color: #ed1465; }
+
+/*
+ *  Base Styles
+ *
+ *  This file is used as a basic reset and to set some sensible
+ *  defaults that will be used throughout the site. Be aware that
+ *  styles edited in this file will be applied site-wide.
+ *
+ */
+/* line 10, ../scss/_base.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/* line 16, ../scss/_base.scss */
+html {
+  font-size: 62.5%;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%; }
+
+/* line 22, ../scss/_base.scss */
+body {
+  font-size: 14px;
+  font-size: 1.4rem;
+  font-family: "Swiss721BT-Light", Arial, Helvetica, sans-serif;
+  line-height: 1.428571429;
+  margin: 0;
+  color: #000; }
+
+/* line 30, ../scss/_base.scss */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block; }
+
+/* line 45, ../scss/_base.scss */
+a {
+  color: #888888;
+  text-decoration: underline; }
+
+/* line 50, ../scss/_base.scss */
+a:focus {
+  outline: thin dotted; }
+
+/* line 54, ../scss/_base.scss */
+a:active,
+a:hover {
+  outline: 0;
+  text-decoration: none; }
+
+/* line 63, ../scss/_base.scss */
+img {
+  border: 0;
+  vertical-align: top;
+  max-width: 100%;
+  height: auto !important; }
+
+/* line 71, ../scss/_base.scss */
+.lt-ie9 img {
+  width: auto; }
+
+/* line 76, ../scss/_base.scss */
+ul,
+ol,
+dl {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 0; }
+
+/* line 84, ../scss/_base.scss */
+dd {
+  margin-left: 0; }
+
+/* line 88, ../scss/_base.scss */
+address {
+  font-style: normal; }
+
+/* line 92, ../scss/_base.scss */
+cite {
+  font-style: normal; }
+
+/* line 96, ../scss/_base.scss */
+em {
+  font-style: normal; }
+
+/* line 100, ../scss/_base.scss */
+q,
+blockquote {
+  quotes: none; }
+
+/* line 105, ../scss/_base.scss */
+q:before,
+q:after {
+  content: ''; }
+
+/* line 110, ../scss/_base.scss */
+b,
+strong {
+  font-family: "Swiss721BT-Bold", Arial, Helvetica, sans-serif; }
+
+/* line 118, ../scss/_base.scss */
+form {
+  display: inline; }
+
+/* line 122, ../scss/_base.scss */
+fieldset {
+  border: 0; }
+
+/* line 126, ../scss/_base.scss */
+legend {
+  display: none; }
+
+/* line 130, ../scss/_base.scss */
+input,
+select,
+textarea,
+button {
+  font-size: 14px;
+  font-size: 1.4rem;
+  vertical-align: middle;
+  margin: 0;
+  padding: 0;
+  font-family: "Swiss721BT-Roman", Arial, Helvetica, sans-serif; }
+
+/* line 141, ../scss/_base.scss */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="search"],
+textarea {
+  -webkit-appearance: none;
+  background: #e5e5e5;
+  border: 0;
+  border-radius: 0; }
+
+/* line 153, ../scss/_base.scss */
+select option {
+  padding-right: .714285714; }
+
+/* line 161, ../scss/_base.scss */
+table {
+  border: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
+  empty-cells: show;
+  font-size: 100%; }
+
+/* line 169, ../scss/_base.scss */
+caption,
+th,
+td {
+  vertical-align: top;
+  text-align: left;
+  font-weight: 400; }
+
+/* line 3, ../scss/_typography.scss */
+h1, h2, h3, h4, h5, h6, hgroup,
+ul, ol, dd,
+p, figure,
+pre, table, fieldset, hr, .media {
+  margin-top: 0;
+  margin-bottom: 1.428571429;
+  font-weight: normal; }
+
+/* line 12, ../scss/_typography.scss */
+h1, h2, h3, h4, h5, h6 {
+  text-transform: uppercase; }
+
+/* line 16, ../scss/_typography.scss */
+h1,
+.h1 {
+  font-size: 40px;
+  font-size: 4rem; }
+
+/* line 21, ../scss/_typography.scss */
+h2,
+.h2 {
+  font-size: 18px;
+  font-size: 1.8rem; }
+
+/* line 26, ../scss/_typography.scss */
+h3,
+.h3 {
+  font-size: 16px;
+  font-size: 1.6rem; }
+
+/* line 31, ../scss/_typography.scss */
+h4,
+.h4 {
+  font-size: 14px;
+  font-size: 1.4rem; }
+
+/* line 36, ../scss/_typography.scss */
+h5,
+.h5 {
+  font-size: 12px;
+  font-size: 1.2rem; }
+
+/* line 41, ../scss/_typography.scss */
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+/* line 45, ../scss/_typography.scss */
+b,
+strong {
+  font-weight: normal;
+  font-family: 'Swiss721BT-Bold', Arial, Helvetica, sans-serif; }
+
+/* line 51, ../scss/_typography.scss */
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0; }
+
+/* line 57, ../scss/_typography.scss */
+small {
+  font-size: 80%; }
+
+/* line 61, ../scss/_typography.scss */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+  vertical-align: top; }
+
+/* line 70, ../scss/_typography.scss */
+sup {
+  top: -0.5em; }
+
+/* line 74, ../scss/_typography.scss */
+sub {
+  bottom: -0.25em; }

@@ -1,0 +1,171 @@
+// Page Headings
+
+.page-title {
+    padding: 0;
+
+    @media screen and (min-width: 745px) {
+        // 745 and up
+        padding: 1.5em 0 0.8em 0;
+    }
+}
+
+.page-title h1,
+.page-title h2 {
+    @include font-size(3);
+    color:$orange;
+    font-family: $swiss-thin;
+    line-height: 1;
+    margin: 0.4em 0;
+
+    @media screen and (min-width: 450px) {
+         @include font-size(4.2);
+    }
+}
+
+.page-title .separator {
+    margin: 0 3px;
+}
+
+.page-title .link-rss {
+    float:right;
+}
+
+.title-buttons {
+    text-align:right;
+}
+
+.title-buttons h1,
+.title-buttons h2,
+.title-buttons h3,
+.title-buttons h4,
+.title-buttons h5,
+.title-buttons h6 {
+    float:left;
+}
+
+.subtitle,
+.sub-title {
+    clear:both;
+}
+
+.std .subtitle {
+    padding: 0;
+}
+
+.std ol.ol {
+    list-style:decimal outside;
+    padding-left: 1.5em;
+}
+
+.std ul.disc {
+    list-style:disc outside;
+    padding-left:18px;
+    margin:0 0 10px;
+}
+
+.std dl dd {
+    margin:0;
+}
+
+.std ul,
+.std ol,
+.std dl,
+.std p,
+.std address,
+.std blockquote {
+    margin: 0 0 1em;
+    padding: 0;
+    line-height: 1.8;
+    font-style: normal;
+    color: #6d6d6d;
+}
+
+.std ul {
+    list-style:disc outside;
+    padding-left:4em;
+}
+
+.std ol {
+    list-style:decimal outside;
+    padding-left:4em;
+}
+
+.std ul ul {
+    list-style-type:circle;
+}
+
+.std ul ul,.std ol ol,.std ul ol,.std ol ul {
+    margin:.5em 0;
+}
+
+.std dd {
+    padding:0;
+}
+
+.std blockquote {
+    font-style:italic;
+    padding:0 0 0 1.5em;
+}
+
+.std address {
+    font-style:normal;
+}
+
+.std .form-list {
+    margin: 0;
+    padding: 0;
+    float: left;
+}
+
+.std b,
+.std strong {
+    font-family: $swiss-bold;
+}
+
+.std i,.std em {
+    font-style:italic;
+}
+
+.std a {
+    color:$orange;
+}
+
+.std h2 {
+    margin-bottom: 0;
+    @include font-size(1.4);
+    color: #000;
+    line-height: 1.8;
+}
+
+.std .data-table {
+    margin: 1em 0;
+    @include font-size(1.2);
+    color: #000;
+
+    tr {
+        border-top: 1px solid $lightGrey;
+
+        td {
+            border: none;
+            border-right: 1px solid $lightGrey;
+            padding: 1em;
+            vertical-align: middle;
+
+            &.last {
+                border: none;
+            }
+        }
+    }
+
+    thead {
+        background: none;
+
+        tr {
+            border: none;
+
+            td {
+                padding: 0.5em 1em;
+            }
+        }
+    }
+}

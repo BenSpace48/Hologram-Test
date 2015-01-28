@@ -1,0 +1,270 @@
+/*
+ *  Search Results
+ *
+ *  Default styles for search results.
+ *  Some styles rely on the results showing 2 items per row.
+ *
+ */
+
+
+.catalogsearch-result-index {
+    .col-main {
+        @include pie-clearfix;
+        overflow: hidden;
+    }
+}
+
+.results-view {
+    .recommendations {
+        margin-bottom: 20px;
+    }
+
+    .products-grid {
+        margin-bottom: 10px;
+
+        .item {
+            padding: 20px;
+            margin: 0 10px 0 0;
+            @include pie-clearfix;
+            @include min-height(240px);
+        }
+
+        .item-actions {
+            width: 150px;
+            @include pie-clearfix;
+
+            .button {
+                width: 148px;
+                padding: 0;
+                line-height: 2.5;
+            }
+
+            .btn-cart {
+                color: #fff;
+            }
+
+            .button-view-details {
+                margin-bottom: 10px;
+            }
+        }
+
+        .item-details {
+            width: 255px;
+            @include pie-clearfix;
+        }
+
+        .product-name {
+            margin: 0 0 10px;
+
+            & > a {
+                @include font-size(1.4);
+                text-align: left;
+                font-weight: bold;
+            }
+        }
+
+        .price-box {
+            text-align: left;
+
+            > p {
+                margin: 0;
+            }
+
+            .price-label {
+                font-weight: bold;
+            }
+
+            .price {
+                @include font-size(1.2);
+                line-height: 1.666667;
+            }
+        }
+
+        .old-price {
+            .price-label,
+            .price {
+                color: #366;
+                text-decoration: none;
+            }
+        }
+
+        .special-price {
+            .price-label,
+            .price {
+                color: #e42a24;
+            }
+        }
+
+        .product-ids {
+            line-height: 1.666667;
+            margin-top: 0;
+            color: #505050;
+            font-weight: bold;
+
+            & .label {
+                font-weight: normal;
+            }
+        }
+
+        .item-description {
+            color: #505050;
+            line-height: 1.6667; // 20 / 12
+        }
+    }
+}
+
+.query-results {
+    text-align: left;
+    display: block;
+}
+
+
+// Refine Search
+
+.refine-search {
+    @include pie-clearfix;
+
+    .pages {
+        @extend %hidden;
+    }
+
+    .refine-head {
+        padding: 0 20px;
+        overflow: hidden;
+        border-bottom: 1px solid silver;
+    }
+
+    .refine-title {
+        @include font-size(1.4);
+        line-height: 2.5;
+        margin: 0;
+        color: #555;
+    }
+
+    .refine-body {
+        @include pie-clearfix;
+        padding: 15px 20px;
+        position: relative;
+    }
+
+    label {
+        margin-right: 5px;
+    }
+
+    .toolbar {
+        margin-bottom: 0;
+
+        // 'x' items
+        .amount {
+            @extend %hidden;
+            margin-bottom: 0;
+        }
+
+        .limiter {
+            float: left;
+            margin-right: 15px;
+            width: 165px;
+        }
+
+        .sort-by {
+            float: left;
+            width: 200px;
+        }
+    }
+
+    .form-search {
+        padding-left: 0;
+
+        .link-advanced-search {
+            @extend %hidden;
+        }
+
+        .button-search {
+            position: absolute;
+            right: 0;
+            top: 15px;
+            width: 100px;
+            line-height: 2.5;
+            padding: 0;
+        }
+
+        .input-text {
+            width: 280px;
+            padding: 3px 5px;
+        }
+    }
+}
+
+
+// Refine Search - No Results
+
+.refine-no-results {
+    .refine-body {
+        padding: 25px 20px;
+    }
+
+    .form-search {
+        .button-search {
+            top: 2px;
+        }
+    }
+}
+
+.no-results {
+    .search-term {
+        color: red;
+        font-weight: bold;
+    }
+}
+
+
+// Bottom Toolbar
+
+.results-view {
+    .toolbar-bottom {
+        .toolbar {
+            @include pie-clearfix;
+            margin-bottom: 0;
+        }
+
+        .sort-by,
+        .limiter,
+        .pager,
+        .amount,
+        .show-all {
+            @extend %hidden;
+        }
+
+        .pagination-pages {
+            margin: 0;
+            float: left;
+            width: 270px;
+            margin-right: 10px;
+            font-weight: bold;
+            line-height: 2.0833333333; // 25 / 12
+        }
+
+        .pages {
+            width: 440px;
+            float: right;
+            text-align: left;
+
+            .label {
+                float: left;
+                margin-right: 5px;
+            }
+
+            ol {
+                margin: 0;
+            }
+
+            li {
+                @include inline-block;
+            }
+
+            .current {
+                font-weight: bold;
+            }
+        }
+    }
+}

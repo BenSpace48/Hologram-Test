@@ -1,0 +1,15 @@
+.checkout-onepage-index,
+.checkout-onepage-success {
+
+    .header {
+
+        @include breakpoint("mama-bear") {
+            padding-bottom: 2em;
+        }
+
+        border-bottom: $lightGrey solid 1px;
+
+        .thwate { float: right;}
+
+    }
+}

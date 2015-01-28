@@ -1,0 +1,318 @@
+@import "bootstrap";
+
+.review-product-list {
+
+    .col-main {
+
+        @include breakpoint("baby-bear") {
+            padding-top: 0;
+            padding-left: 0;
+        }
+    }
+
+    .highlight {
+        color: $orange;
+
+        &.upper {
+            text-transform: uppercase;
+        }
+    }
+
+    .global-promos {
+        @media only screen and (max-width: 750px) {
+            display: none;
+        }
+    }
+
+    .product-img-box {
+        @include breakpoint("baby-bear") {
+            margin-bottom: 0;
+        }
+
+        .product-image {
+            @include breakpoint("baby-bear") {
+                border-bottom: 0;
+            }
+        }
+    }
+
+    .prod-info-short {
+        @media only screen and (max-width: 750px) {
+            padding: 0;
+        }
+
+        @include breakpoint("baby-bear") {
+            padding-bottom: 0;
+        }
+
+        .add-to-links {
+        }
+
+        .link-wishlist {
+            @media only screen and (max-width:750px) {
+                line-height: 1;
+            }
+        }
+    }
+
+
+    p.back-link {
+
+        margin: 0 1em 2em 0;
+
+        @include breakpoint("baby-bear") {
+            padding: 0 20px;
+        }
+
+        a  {
+
+            background: image-url('sprite.png') no-repeat 0 -484px;
+            text-decoration: none;
+            padding: 0.2em 0 0.2em 1em;
+            color: #000;
+            @include font-size(1.4);
+            text-transform: uppercase;
+            text-decoration: none;
+
+            @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+              only screen and (min--moz-device-pixel-ratio: 1.5),
+              only screen and (min-resolution: 240dpi) {
+                    background-image:image-url('sprite@2x.png');
+                    background-size: 200px 500px;
+                }
+
+            small {
+                display: none;
+            }
+
+            &:hover { text-decoration: underline;}
+        }
+    }
+
+    .product-shop {
+        .buttons-set {
+            margin-top: 0;
+        }
+    }
+
+    .box-reviews {
+        padding: 30px 0 0;
+        border-top: 1px solid $lightGrey;
+
+        @include breakpoint("baby-bear") {
+            clear: both;
+        }
+
+        .review-detail {
+            display: block;
+        }
+
+    }
+
+
+    .box-reviews,
+    .review-form {
+        @include font-size(1.4);
+
+        @include breakpoint("baby-bear") {
+            padding: 40px 0 20px 20px;
+        }
+
+        @include breakpoint("mama-bear") {
+            width: 1000px;
+            padding-left: 125px;
+            padding-right: 125px;
+        }
+    }
+
+    .reviews-list {
+        margin-bottom: 30px;
+
+        @include breakpoint("mama-bear") {
+            margin-bottom: 60px;
+        }
+
+        .review-title {
+            margin-right: 6px;
+        }
+    }
+
+
+    // Rating Details
+
+    .rating-details {
+        background: #fff;
+        padding: 20px;
+        margin-bottom: 20px;
+
+        .highlight {
+            display: block;
+            margin-bottom: 3px;
+            text-transform: uppercase;
+        }
+
+        label,
+        .input-box {
+            width: 100%;
+
+            @include breakpoint("baby-bear") {
+                width: 50%;
+            }
+        }
+
+        label {
+            text-transform: none;
+            padding: 0;
+            margin-bottom: 16px;
+
+            @include breakpoint("baby-bear") {
+                margin-bottom: 0;
+            }
+        }
+
+        .input-box {
+            margin: 0;
+        }
+    }
+
+
+    // Review Summary Table
+
+    .review-summary-table {
+        .rating-box {
+            width: 15px;
+            margin-right: 4px;
+        }
+
+        .rating {
+            @include replace-text-with-dimensions("rating-single-full.png", 0, 0);
+            @include image-2x("rating-single-full-2x.png", 15px, 13px);
+            clear: both;
+            margin-bottom: 3px;
+        }
+
+        th,
+        .value {
+            border: 0;
+            padding: 0;
+        }
+
+        th {
+            @include font-size(1.4);
+            font-family: 'Swiss721BT-Light', Arial, Helvetica, sans-serif;
+            padding-left: 0.3em;
+        }
+
+        .value {
+            width: 20%;
+
+            .rating-box,
+            .radio {
+                vertical-align: bottom;
+                background: #fff;
+            }
+        }
+    }
+
+
+    // Review Details
+
+    .reviewer-details {
+        margin-bottom: 0;
+
+        li {
+            @include breakpoint("baby-bear") {
+                width: 48.666666667%; // 365 / 750
+                max-width: 470px;
+            }
+
+            @include breakpoint("mama-bear") {
+                width: 50%;
+                max-width: 365px;
+            }
+        }
+
+        .input-box {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        textarea {
+            height: 190px;
+            resize: none;
+            overflow: auto;
+            margin-bottom: 0;
+        }
+    }
+
+
+    // Add a Review Form
+
+    .review-form {
+        background: #f1f1f1;
+        clear: both;
+        @include pie-clearfix;
+
+        @media only screen and (max-width: 800px) {
+            padding: 20px;
+        }
+
+        @include breakpoint("mama-bear") {
+            padding-top: 60px;
+            padding-bottom: 60px;
+            margin-left: -125px;
+        }
+
+        .box-title {
+            h2 {
+                @include font-size(2);
+                margin-bottom: 5px;
+                letter-spacing: -0.03em;
+
+            }
+        }
+
+        .product-name {
+            @include font-size(1.4);
+            margin-bottom: 25px;
+        }
+
+        .you-are-reviewing {
+            text-transform: none;
+        }
+
+        .subtitle {
+            letter-spacing: -0.01em;
+            margin-bottom: 30px;
+        }
+
+        .input-box .input-text,
+        textarea {
+            background: #fff;
+            @include font-size(1.4);
+        }
+
+        .buttons-set {
+            padding: 0;
+            clear: both;
+            float: none;
+            @include pie-clearfix;
+            margin-bottom: 15px;
+        }
+
+        p.required {
+            color: $black;
+            @include font-size(1.2);
+            margin: 0;
+            padding: 0;
+        }
+    }
+
+    .reviewer-details {
+        label {
+            @extend %hidden;
+        }
+    }
+}
+
+.review-nologged a { color: $orange;}

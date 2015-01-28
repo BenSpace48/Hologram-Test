@@ -1,0 +1,527 @@
+// Product View
+
+.catalog-product-view {
+    .global-promos {
+        display: none;
+
+        @include breakpoint("mama-bear") {
+            display: block;
+        }
+    }
+
+    .page {
+        @include breakpoint("baby-bear") {
+            padding: 0 20px;
+        }
+
+        @include breakpoint("mama-bear") {
+            padding: 0;
+        }
+
+    }
+
+    .col-main {
+        padding: 25px 0 0 0;
+
+        @include breakpoint("baby-bear") {
+            padding: 0;
+        }
+    }
+
+    .row-title {
+        @media only screen and (max-width: 750px) {
+            @include font-size(1.6);
+        }
+    }
+}
+
+
+// Product 'Short Information'
+
+.prod-info-short {
+    position: relative;
+    padding: 0 16px;
+
+    @include breakpoint("baby-bear") {
+        padding: 30px 20px 10px;
+    }
+}
+
+
+// Email to a Friend
+
+.email-friend {
+}
+
+
+// Add to Links
+
+.add-to-links .separator {
+    display:none;
+}
+
+
+// Add to Links + Add to Cart
+
+.add-to-box {
+    @include pie-clearfix;
+
+    .or {
+        @extend %hidden;
+    }
+
+    // Add to Links
+
+    .add-to-links {
+        @media only screen and (max-width: 900px) {
+            clear: both;
+        }
+
+        @media only screen and (min-width: 900px) {
+            float: right;
+        }
+
+        @include breakpoint("mama-bear") {
+            width: 160px;
+        }
+
+
+        // Add to wishlist
+
+        .link-wishlist {
+            font-family: 'Swiss721BT-Roman', Arial, Helvetica, sans-serif;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: $black;
+            line-height: 0.02em;
+            line-height: 56px;
+
+            &:hover {
+                text-decoration: underline;
+            }
+
+            &:before {
+                content: '';
+                @include inline-block;
+                @include replace-text-with-dimensions("show-more-plus.png", 0, 1px);
+                @include image-2x("show-more-plus-2x.png", 9px, 9px);
+                width: 9px;
+                height: 14px;
+                margin-right: 3px;
+            }
+        }
+    }
+}
+
+
+// Product Essential
+
+.product-essential {
+    @include pie-clearfix;
+}
+
+// Product Collateral
+
+.product-collateral {
+    clear: both;
+    @include pie-clearfix;
+
+    .row-title {
+        &:after {
+            background-color: $orange;
+        }
+    }
+}
+
+
+// Product Shop
+
+.product-shop {
+    @include pie-clearfix();
+    position: relative;
+    margin-bottom: 5px;
+    @include font-size(1.4);
+
+    @include breakpoint("baby-bear") {
+        width: 50%;
+        float: right;
+    }
+
+    .product-name {
+        margin-bottom: 15px;
+
+        @include breakpoint("baby-bear") {
+            margin-bottom: 20px;
+            width: 75%;
+        }
+
+        h1 {
+            @include font-size(2);
+            line-height: 1;
+            margin-bottom: 0;
+        }
+    }
+
+    .spotlight {
+        padding-left: 0
+    }
+
+    .price-box {
+        clear: both;
+        font-family: 'Swiss721BT-Roman', Arial, Helvetica, sans-serif;
+        margin-bottom: 5px;
+
+        .old-price,
+        .special-price {
+            @include inline-block;
+        }
+
+        .price {
+            @include font-size(2);
+        }
+    }
+}
+
+
+// Product promotional message
+
+.product-promo-msg {
+    font-family: 'Swiss721BT-Bold', Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    color: $red;
+    margin-bottom: 20px;
+}
+
+
+// Product Images
+
+@import "media";
+
+
+// Product Share
+
+.product-share {
+    @include pie-clearfix;
+    margin: 20px 0 35px;
+    border-top: 1px solid $lightGrey;
+    padding: 25px 16px 0;
+
+    @include breakpoint("baby-bear") {
+        padding: 0 1em;
+        border-top: 0;
+    }
+
+    .share-label{
+        @include font-size(1.95);
+        text-transform: uppercase;
+        width: 100%;
+        display: block;
+        margin-bottom: 10px;
+
+        @media only screen and (max-width: 750px) {
+            font-family: 'Swiss721BT-Roman', Arial, Helvetica, sans-serif;
+        }
+
+        @include breakpoint("baby-bear") {
+            display: inline-block;
+            line-height: 26px;
+            margin-bottom: 16px;
+            margin-right: 10px;
+        }
+
+        @include breakpoint("mama-bear") {
+            margin-bottom: 0;
+            @include inline-block;
+            width: 35%;
+        }
+    }
+
+    .share {
+        @include inline-block;
+        width: 46px;
+        height: 46px;
+        margin-right: 1em;
+
+        @include breakpoint("baby-bear") {
+            margin-right: 1em;
+            width: 56px;
+            height: 56px;
+        }
+
+        a {
+            text-align: center;
+            color: #fff;
+            width: 100%;
+            display: block;
+            @include font-size(2.5);
+            padding: 0.3em;
+
+            @include breakpoint("baby-bear") {
+                padding: 0.4em;
+            }
+        }
+
+        &.fb-like { background: #3c5a9a;}
+        &.tweet { background: #01aaed;}
+        &.pin { background: #cb2028;}
+        &.plusone { background: #dd4224;}
+    }
+}
+
+
+// Expert Tips & Advice
+
+.row-expert-tips-advice {
+    .row-title {
+        margin-top: 0;
+    }
+}
+
+.col-recommends {
+
+    // Stylist Recommends
+
+    .stylist-recommends {
+        max-width: 500px;
+
+        .headline {
+            @include font-size(2);
+            margin-bottom: 20px;
+            line-height: 1.15;
+            height: 39px;
+            width: 200px;
+
+            @include breakpoint("baby-bear") {
+                @include font-size(2.4);
+                margin-bottom: 20px;
+                line-height: .95;
+                width: auto;
+            }
+
+            @include breakpoint("mama-bear") {
+                margin-bottom: 35px;
+            }
+
+            &:before  {
+                content: '';
+                @include replace-text-with-dimensions("quote-open.png", 0, 0);
+                @include image-2x("quote-open-2x.png", 44px, 39px);
+                float: left;
+                margin-right: 10px;
+            }
+        }
+
+        .content {
+            width: 300px;
+            padding: 20px 20px 10px;
+            @include font-size(1.2);
+
+            @include breakpoint("baby-bear") {
+                @include font-size(1.3);
+            }
+
+            @include breakpoint("mama-bear") {
+                @include font-size(1.4);
+                @include min-height(250px);
+                padding-top: 35px;
+            }
+        }
+
+        .review {
+            display: block;
+            margin-bottom: 3px;
+            width: 70%;
+
+            @include breakpoint("baby-bear") {
+                width: 90%;
+                margin-bottom: 15px;
+                @include min-height(60px);
+            }
+
+            @include breakpoint("mama-bear") {
+                width: 100%;
+                margin-bottom: 25px;
+            }
+        }
+
+        .reviewer {
+            clear: both;
+            display: block;
+            text-transform: uppercase;
+        }
+    }
+}
+
+.expert-tips-promos {
+    .promo {
+        float: left;
+        width: 50%;
+    }
+}
+
+
+// Block: Description
+
+.product-view .box-description {
+}
+
+
+// Block: Additional
+
+.product-view .box-additional {
+}
+
+
+// Block: Tags
+
+.product-view .box-tags .form-add label {
+    float: left
+}
+
+.product-view .box-tags .form-add .input-box {
+    float: left;
+    width: 260px;
+    margin: 0 5px;
+}
+
+.product-view .box-tags .form-add input.input-text {
+    width: 254px;
+}
+
+.product-view .box-tags .form-add p {
+    clear:both
+}
+
+
+// Block: Reviews
+
+.product-view  {
+    .box-reviews {
+        padding: 30px 16px 0;
+
+        @include breakpoint("baby-bear") {
+            padding: 30px 20px 0;
+        }
+
+        .box-title {
+            @include font-size(1.6);
+
+            @include breakpoint("baby-bear") {
+                @include font-size(2);
+            }
+
+            @media only screen and (max-width: 750px) {
+                font-family: 'Swiss721BT-Roman', Arial, Helvetica, sans-serif;
+            }
+        }
+
+        .review-list {
+            margin-bottom: 30px;
+        }
+
+        dt {
+            @media only screen and (max-width: 750px) {
+                margin-bottom: 10px;
+            }
+        }
+
+        .review-title {
+            text-transform: uppercase;
+            color: $orange;
+            text-decoration: none;
+            @include inline-block;
+            margin-right: 10px;
+            line-height: 24px;
+        }
+
+        .rating-box {
+            @include inline-block;
+            margin-top: -4px;
+        }
+
+        .review-detail {
+            margin-bottom: 30px;
+            line-height: 24px;
+            color: #767676;
+            display: none;
+
+            @include breakpoint("baby-bear") {
+                display: block;
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        h2 a {
+            float: right;
+            background: image-url('sprite.png') no-repeat 85px -417px;
+            text-decoration: none;
+            padding: 0.2em 1.5em 0.2em 0;
+            color: #000;
+            @include font-size(1.4);
+            text-transform: uppercase;
+            text-decoration: none;
+
+            @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+              only screen and (min--moz-device-pixel-ratio: 1.5),
+              only screen and (min-resolution: 240dpi) {
+                    background-image: image-url('sprite@2x.png');
+                    background-size: 200px 500px;
+                }
+
+            small {
+                display: none;
+            }
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .let-us-know {
+        text-transform: uppercase;
+        margin-bottom: 30px;
+        clear: both;
+        padding: 0 16px;
+
+        @media only screen and (max-width: 750px) {
+            font-family: 'Swiss721BT-Roman', Arial, Helvetica, sans-serif;
+        }
+
+        @include breakpoint("baby-bear") {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        @include breakpoint("mama-bear") {
+            line-height: 30px;
+        }
+
+        .button {
+            padding: 0 10px;
+
+            @media only screen and (max-width: 500px) {
+                display: block;
+                margin-top: 10px;
+                clear: both;
+                height: 37px;
+                line-height: 37px;
+                width: 50%;
+                text-align: center;
+            }
+
+            @include breakpoint("mama-bear") {
+                float: right;
+            }
+        }
+    }
+}
+
+
+// Send a Friend
+
+.send-friend {
+}

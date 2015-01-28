@@ -1,0 +1,240 @@
+.price-box {
+    .price {
+        white-space: nowrap !important;
+        margin: 0;
+    }
+
+    .price-label {
+        @extend %hidden;
+        white-space:nowrap;
+    }
+
+    p {
+        margin-bottom: 0;
+        line-height: 1;
+    }
+}
+
+// Regular price
+
+.regular-price {
+    .price {
+    }
+}
+
+
+// Old price
+
+.old-price {
+    .price {
+        color: $alert-colour;
+        text-decoration:line-through;
+    }
+}
+
+
+// Special price
+
+.special-price {
+    .price-label {
+        white-space: nowrap
+    }
+
+    .price {
+    }
+}
+
+
+// MSRP Price
+
+.msrp-price {
+    margin-top: 0;
+}
+
+.from-price {
+    .price {
+    }
+}
+
+
+// Final Price
+
+.final-price {
+    .price {
+        @include font-size(1.8);
+        color: #E42A24;
+    }
+}
+
+
+// VAT Label
+
+.price-box {
+    .inc-vat {
+        @include inline-block;
+        @include font-size(1.2);
+        line-height: 1;
+        color: red;
+    }
+}
+
+
+// Minimal price (as low as)
+
+.minimal-price {
+    .price-label {
+        white-space:nowrap
+    }
+}
+
+.minimal-price-link {
+    display:block;
+
+    .label {
+    }
+
+    .price {
+        font-weight: normal;
+    }
+}
+
+
+// Excluding tax
+
+.price-excluding-tax {
+    display:block
+}
+
+.price-excluding-tax .label {
+    white-space:nowrap
+}
+
+.price-excluding-tax .price {
+    font-weight:400
+}
+
+
+// Including tax
+
+.price-including-tax {
+    display:block
+}
+
+.price-including-tax .label {
+    white-space:nowrap
+}
+
+.price-including-tax .price {
+    font-weight:700
+}
+
+
+// Configured price
+
+.configured-price .price-label {
+    font-weight:700;
+    white-space:nowrap
+}
+
+.configured-price .price {
+    font-weight:700
+}
+
+.configurable-price-from-label {
+    @extend %hidden;
+}
+
+
+// Price as configured
+
+.price-as-configured {
+    .price-label {
+        @extend %hidden;
+    }
+}
+
+
+// FPT
+
+.weee {
+    display:block;
+    font-size:11px;
+    color:#444
+}
+
+.weee .price {
+    font-size:11px;
+    font-weight:400
+}
+
+
+// Excl tax (for order tables)
+
+.price-excl-tax {
+    display:block
+}
+
+.price-excl-tax .label {
+    display:block;
+    white-space:nowrap
+}
+
+.price-excl-tax .price {
+    display:block
+}
+
+
+// Incl tax (for order tables)
+
+.price-incl-tax {
+    display:block
+}
+
+.price-incl-tax .label {
+    display:block;
+    white-space:nowrap
+}
+
+.price-incl-tax .price {
+    display:block;
+    font-weight:700
+}
+
+
+// Price range
+
+.price-from .price-label {
+    font-weight:700;
+    white-space:nowrap
+}
+
+.price-to .price-label {
+    font-weight:700;
+    white-space:nowrap
+}
+
+
+// Price notice next to the options
+
+.price-notice {
+    padding-left:10px
+}
+
+.price-notice .price {
+    font-weight:700
+}
+
+
+// Price as configured
+
+.price-as-configured .price-label {
+    font-weight:700;
+    white-space:nowrap
+}
+
+
+// Tier Prices
+
+.tier-prices .price {
+    font-weight:700
+}

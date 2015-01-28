@@ -1,0 +1,157 @@
+@import "bootstrap";
+
+
+// Overrides
+
+.cms-home {
+    .col-main {
+        padding: 0;
+    }
+
+    ul {
+        list-style: none;
+        margin-left: 0;
+        padding-left: 0;
+    }
+}
+
+
+// Featured Products
+
+.grid-featured {
+    @include pie-clearfix;
+
+    li.item {
+        width: 100%;
+
+        @media screen and (max-width: 500px) {
+            padding: 0 .714285714em .714285714em; // 10 / 14
+            max-height: 250px;
+        }
+
+        @media screen and (min-width: 500px) and (max-width: 750px) {
+            @include min-height(240px);
+        }
+
+        @include breakpoint("baby-bear") {
+            @include min-height(183px);
+        }
+
+        @media screen and (min-width: 775px) {
+            @include min-height(189px);
+        }
+
+        @media screen and (min-width: 860px) {
+            @include min-height(215px);
+        }
+
+        @include breakpoint("mama-bear") {
+            @include min-height(250px);
+        }
+    }
+
+    .product-image {
+        margin-bottom: .214285714em; // 3 / 14
+
+        @media screen and (min-width: 420px) {
+            margin-bottom: .428571429em; // 6 / 14
+        }
+    }
+
+    .price-box {
+        width: 20%;
+    }
+}
+
+
+// Hair Styling You Love
+
+.row-styling-you-love {
+    .highlight {
+        color: $orange;
+    }
+
+    .row-title:after {
+        background-color: $orange;
+    }
+}
+
+
+// Beauty You Need
+
+.row-beauty-you-need {
+    .highlight {
+        color: $hotPink;
+    }
+
+    .row-title:after {
+        background-color: $hotPink;
+    }
+}
+
+
+// Salon Must Haves
+
+.row-must-haves {
+
+    .one-half {
+        // Override the default grid behaviour and float the promos for tablet sized screens
+
+        @include breakpoint("baby-bear") {
+            width:  50%;
+            float: left;
+        }
+    }
+
+    .highlight {
+        color: $orange;
+    }
+
+    .logo-inline {
+        @include inline-block;
+        @include replace-text-with-dimensions("logo-blk-inline-mob.png", 0, 0);
+        @include image-2x("logo-blk-inline-2x.png", 102px, 12px);
+        height: 12px;
+        vertical-align: top;
+        margin-right: .25em;
+
+        @include breakpoint("baby-bear") {
+            @include replace-text-with-dimensions("logo-blk-inline.png", 0, 0);
+            @include image-2x("logo-blk-inline-2x.png", 140px, 24px);
+            height: 24px;
+            vertical-align: middle;
+        }
+    }
+}
+
+
+// Promotional Grid
+
+.promo-grid {
+
+    // Use display:table for columns/rows so image promos always align to top of grid
+
+    .row {
+        width: 100%;
+        display: table;
+    }
+
+    .col {
+        width: 50%;
+        display: table-cell;
+        vertical-align: top;
+        float: none;
+
+        @include breakpoint("mama-bear") {
+            height: 250px;
+        }
+    }
+
+    .products-grid {
+        height: 100%;
+    }
+
+    .item {
+        height: 100%;
+    }
+}

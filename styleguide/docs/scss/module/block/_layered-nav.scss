@@ -1,0 +1,315 @@
+.js .block-layered-nav {
+    margin-bottom: 0;
+
+    .narrow-by-list {
+        margin-bottom: 0;
+        @include font-size(1.4);
+
+        @media only screen and (max-width: 750px) {
+            // Hide initially, then toggle with JS for mobile screens only
+            overflow: hidden;
+            max-height: 0;
+
+            &.active {
+                max-height: 200em;
+                padding-bottom:1em;
+            }
+        }
+    }
+
+    .block-title {
+        @extend %hidden;
+    }
+
+    .filter-title {
+        clear: both;
+        display: block;
+        text-transform: uppercase;
+        color: $orange;
+        padding: 0;
+
+        @media only screen and (max-width: 750px) {
+            // Max Width: 750
+            text-align: center;
+            border-bottom: 1px solid white;
+            line-height: 35px;
+            color: $black;
+            display: block;
+            font-family: $swiss-roman;
+        }
+
+        @include breakpoint("baby-bear") {
+            font-family: $swiss-bold;
+            line-height: 1.857142857; // 26 / 14
+            border: 0;
+        }
+
+        // Hide '+' and '-'' utilised from accordion to full SCSS
+
+        &:before {
+            @extend %hidden;
+        }
+
+        // Active title styles when they have been pressed
+
+        &.active {
+            @media screen and (max-width: 750px) {
+                border-bottom: 1px solid #F1F1F1;
+            }
+
+            background: #fff;
+            color: $orange;
+        }
+    }
+
+
+    // Mobile Panel Styles
+
+    dd {
+        padding: 0;
+
+        @media only screen and (max-width: 750px) {
+            // Max Width: 750
+            background: #fff;
+            text-align: center;
+            border-bottom: none;
+        }
+
+        @include breakpoint("baby-bear") {
+            padding-bottom: 2.571428571em; // 36 / 14
+            line-height: 1.857142857; // 26 / 14
+        }
+
+        &.active {
+            padding: 0;
+            border-bottom: none;
+
+            @include breakpoint("baby-bear") {
+                padding-bottom: 2.571428571em; // 36 / 14
+            }
+        }
+
+        li {
+            @media only screen and (max-width: 750px) {
+                // Max width: 750px
+                border-bottom: 1px solid #F1F1F1;
+                line-height: 35px;
+            }
+
+
+            // Underline filter link label only, not the count
+
+            .filter-label {
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+
+            a {
+                display: block;
+
+                @include breakpoint("baby-bear") {
+                    display: inline;
+                }
+
+                &:hover {
+                    @media only screen and (max-width: 750px) {
+                    // Max width: 750px
+                        background: black;
+                        color: white;
+                    }
+                }
+            }
+        }
+
+        ol {
+            margin-bottom: 0;
+        }
+    }
+
+    a {
+        color: $black;
+        text-decoration: none;
+    }
+
+    .btn-remove {
+        @include pie-clearfix;
+        text-transform: uppercase;
+        @include font-size(1.2);
+        @include inline-block;
+        line-height: 1.666666667; // 20 / 12
+
+        &:after {
+            content: '';
+            @include inline-block;
+            margin-left: 6px;
+            @include replace-text-with-dimensions("filter-remove.png", 0, 0);
+            @include image-2x("filter-remove-2x.png", 9px, 9px);
+            margin-top: -3px;
+        }
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    .btn-clear-all {
+        font-family: $swiss-bold;
+        margin-top: 10px;
+    }
+
+
+    // Filter / Refine Results title styles
+
+    .block-subtitle {
+        @include font-size(2.3);
+        text-transform: uppercase;
+        font-family: $swiss-thin;
+
+        @include breakpoint("baby-bear") {
+            @include font-size(4.2);
+            margin: 0 0 .833333333em; // 35 / 42
+            color: #b9b9b9;
+        }
+    }
+
+
+    // Refine Results Title Only
+    // Displays as a button on phone-sized screens
+
+    .title-refine {
+        @media only screen and (max-width: 750px) {
+            // Max Width:  750
+            @include font-size(1.4);
+            line-height: 40px;
+            background: $black;
+            color: white;
+            cursor: pointer;
+            padding: 0 10px;
+            font-family: $swiss-roman;
+            position: relative;
+            margin-bottom: 20px;
+
+            &:after {
+                content: '';
+                position: absolute;
+                right: 10px;
+                top: 10px;
+                @include replace-text-with-dimensions("refine-plus.png", 0, 0);
+                @include image-2x("refine-plus-2x.png", 17px, 17px);
+            }
+
+            &.active {
+                margin-bottom: 0;
+                &:after {
+                    @include replace-text-with-dimensions("refine-minus.png", 0, 0);
+                    @include image-2x("refine-minus-2x.png", 17px, 17px);
+                }
+            }
+        }
+    }
+
+
+    // Currently Filtering By...
+
+    .currently {
+        @include pie-clearfix;
+        background: #fff;
+        padding: 20px;
+        margin-bottom: 20px;
+
+        @include breakpoint("baby-bear") {
+            border-bottom: 1px solid $mediumGrey;
+            margin-bottom: 3.571428571em; // 50 / 14
+            padding: 0 1.428571429em 2.857142857em; // 20, 40 / 14
+        }
+
+        ol {
+            margin-bottom: 0;
+            @include pie-clearfix;
+        }
+
+        li {
+            position: relative;
+            margin-bottom: .5em;
+
+            .btn-remove {
+                position: absolute;
+                right: 0;
+                top: 9px;
+
+                @include breakpoint("baby-bear") {
+                    top: 3px;
+                }
+            }
+        }
+
+        .block-subtitle {
+            @media only screen and (max-width: 750px) {
+                margin-bottom: 10px;
+                @include font-size(3);
+                color: #b9b9b9;
+            }
+        }
+
+        .filter-title {
+            color: $orange;
+            text-align: left;
+        }
+    }
+
+
+    // Show More/Less Toggle
+
+    .toggle-view {
+        font-family: $swiss-roman;
+        text-transform: uppercase;
+        line-height: 35px;
+        background: white;
+
+        @include breakpoint("baby-bear") {
+            @include font-size(1.2);
+            font-family: $swiss-bold;
+            line-height: 26px;
+            margin-top: 6px;
+        }
+
+        .filter-toggle {
+            border: none;
+            outline: none;
+            line-height: 35px;
+            background: white;
+
+            &:hover,
+            &:focus {
+                background: white;
+                color: $black;
+            }
+
+
+            @include breakpoint("baby-bear") {
+                line-height: 1;
+            }
+        }
+
+        .symbol {
+            @media only screen and (max-width: 750px) {
+                display: none;
+            }
+
+            @include inline-block;
+            margin-right: 2px;
+            margin-top: -2px;
+        }
+
+        .symbol-more {
+            @include replace-text-with-dimensions("show-more-plus.png", center);
+            @include image-2x("show-more-plus-2x.png", 9px, 9px);
+        }
+
+        .symbol-less {
+            @include replace-text-with-dimensions("show-more-minus.png", center);
+            @include image-2x("show-more-minus-2x.png", 9px, 9px);
+        }
+    }
+}

@@ -1,0 +1,32 @@
+/**
+ *
+ *  Browser upgrade message for users with browsers that are
+ *  Internet Explorer 7 or under
+ *
+ */
+
+
+.ie_7_lower_advice {
+    background:green;
+    height:0;
+    overflow:hidden
+}
+
+.ie_7_lower_advice div {
+    width:960px;
+    margin:0 auto;
+    padding:10px 0;
+    text-align: center;
+}
+
+.ie_7_lower_advice p,
+.ie_7_lower_advice p a {
+    font-size:12px;
+    line-height:20px;
+    color:#fff;
+    margin:0
+}
+
+.ie_7_lower_advice p a {
+    font-weight:700
+}

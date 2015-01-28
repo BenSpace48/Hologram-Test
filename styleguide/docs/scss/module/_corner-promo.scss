@@ -1,0 +1,16 @@
+.product-corner-promo {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    z-index: 1;
+
+    @media only screen and (max-width: 500px) {
+        width: 110px;
+        height: 110px;
+    }
+
+    @include breakpoint("baby-bear") {
+        top: 0;
+        right: 0;
+    }
+}

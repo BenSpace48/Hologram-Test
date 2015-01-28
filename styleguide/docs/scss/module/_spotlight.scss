@@ -1,0 +1,16 @@
+// Product Spotlight
+
+.spotlight {
+    clear: both;
+    display: block;
+    color: #767676;
+
+    .for {
+        font-style: italic;
+        margin-right: 3px;
+    }
+
+    @media screen and (max-width: 750px) {
+        padding-left: .909090909em; // 10 / 11
+    }
+}

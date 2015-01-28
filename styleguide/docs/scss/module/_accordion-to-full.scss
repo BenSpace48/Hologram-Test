@@ -1,0 +1,92 @@
+// Accordion to full
+
+.tab {
+    text-transform: uppercase;
+    border-bottom: 1px solid #E1E1E1;
+    margin: 0;
+    position: relative;
+    outline: 0;
+    cursor: pointer;
+    padding: 14px 0;
+
+
+    &:before {
+        content: '';
+        float: left;
+        @include replace-text-with-dimensions("accordion-more.png", 0, 0);
+        @include image-2x("accordion-more-2x.png", 19px, 19px);
+        width: 19px;
+        height: 19px;
+        margin-left: 16px;
+        margin-right: 30px;
+
+        @include breakpoint("baby-bear") {
+            display: none;
+        }
+    }
+
+    &.active {
+        border-bottom: 0;
+
+        &:before {
+            @include replace-text-with-dimensions("accordion-less.png", 0, 0);
+            @include image-2x("accordion-less-2x.png", 19px, 19px);
+        }
+    }
+}
+
+.panel {
+    overflow: hidden;
+
+    a:link,
+    a:visited {
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+}
+
+.js .panel {
+    max-height: 0;
+}
+
+.js .panel.active {
+    max-height: 30em;
+    padding: 0 4.571428571em 1.142857143em; // 16, 64 / 14
+    border-bottom: 1px solid #E1E1E1;
+}
+
+
+@include breakpoint("baby-bear") {
+    .tab {
+        cursor: default;
+        padding-left: 0;
+        padding-bottom: 0;
+        border-bottom: 0;
+        line-height: 1;
+    }
+
+    .tab.active {
+        background: none;
+    }
+
+    .tab:after, .tab.active:after {
+        content: "";
+        display: none;
+    }
+
+    .js .panel,
+    .js .panel.active {
+        max-height: none;
+        padding: 0;
+        border-bottom: 0;
+    }
+}
+
+.lt-ie9 .tab {
+    &:before {
+        display: none;
+    }
+}

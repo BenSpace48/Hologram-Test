@@ -1,0 +1,86 @@
+// Mini form Login
+
+.block-login {
+    display: none;
+    clear: both;
+    background: $lightGrey;
+    padding: 1.428571429em;
+
+    .block-title {
+        @include font-size(1.5);
+        color: $black;
+        padding-top: 0;
+    }
+
+    .input-field {
+        width: 100%;
+        max-width: 28.571428571em; // 400 / 14
+        padding: .571428571em;
+        background: #fff;
+        margin-bottom: .714285714em; // 10 / 14
+        @include pie-clearfix;
+    }
+
+    label {
+        @extend %hidden;
+    }
+
+    .input-text {
+        background: #fff;
+        float: left;
+        height: 2.142857143em; // 30 / 14
+        width: 100%;
+        outline: none;
+        font-family: 'Swiss721BT-Roman', Arial, Helvetica, sans-serif;
+    }
+
+
+    // Target Password Field Only
+
+    .mini-password {
+        width: 60%;
+    }
+
+    .actions {
+        clear: none;
+        float: right;
+    }
+
+
+    // Login Option Links
+
+    .login-options {
+        @include font-size(1.2);
+        padding-top: .5em;
+        margin: 0;
+        clear: both;
+        width: 100%;
+        max-width: 33.333333333; // 400 / 12
+
+        li {
+            @include inline-block;
+            @include font-size(1.2);
+
+            &:after {
+                content: '/';
+                margin: 0 .454545455em; // 5 / 12
+            }
+
+            &:last-child {
+                &:after {
+                    content: '';
+                }
+            }
+        }
+
+        a {
+            color: $black;
+            text-decoration: underline;
+            text-transform: uppercase;
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+}

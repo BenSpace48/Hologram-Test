@@ -1,0 +1,184 @@
+.data-table {
+    width:100%;
+    @include font-size(1.2);
+
+    th {
+        padding:0.5em 1em;
+        border-bottom:1px solid $lightGrey;
+        border-right:1px solid $lightGrey;
+        white-space:nowrap;
+
+        .tax-flag {
+            white-space:nowrap;
+            font-weight:normal;
+        }
+
+        &:last-child {
+            border-right: none;
+        }
+    }
+
+    td {
+        padding:0.5em 1em;
+        border-right:1px solid $lightGrey;
+
+        &.last {
+            border-right: 0;
+        }
+    }
+
+    thead {
+        font-family: $swiss-bold;
+    }
+
+    tbody {
+
+        .even {
+            background-color: $lightGrey;
+        }
+    }
+
+    tfoot {
+    }
+
+    tr.first {
+    }
+
+    tr.last {
+    }
+
+    tr.odd {
+    }
+
+    tr.even {
+        background-color:#f6f6f6;
+    }
+
+    td.label,
+    th.label {
+        font-weight:bold;
+        background-color:#f6f6f6;
+    }
+
+    td.value {
+    }
+}
+
+#shopping-cart-table {
+	@media only screen and (max-width: 800px) {
+		table, thead, tbody, th, td, tr {
+			display: block;
+		}
+
+		thead tr {
+			position: absolute;
+			top: -9999px;
+			left: -9999px;
+		}
+
+		tr { border: none; }
+
+		td {
+			border: none;
+			border-bottom: 1px solid #eee;
+			position: relative;
+			padding-left: 50%;
+
+			span {
+				color: #000;
+			}
+
+			.product-name {
+				color: #000;
+			}
+		}
+
+		td:before {
+			position: absolute;
+			top: 6px;
+			left: 6px;
+			width: 45%;
+			padding-right: 10px;
+			white-space: nowrap;
+		}
+
+		/*
+		Label the data
+		*/
+		td:nth-of-type(1):before { content: ""; }
+		td:nth-of-type(2):before { content: "PRODUCT NAME"; color: #f06803; text-transform: uppercase; font-weight: 800 !important; float: right;}
+		td:nth-of-type(3):before { content: "UNIT PRICE"; color: #f06803; text-transform: uppercase; font-weight: 800 !important; float: right;}
+		td:nth-of-type(4):before { content: "QUANTITY"; color: #f06803; text-transform: uppercase; font-weight: 800 !important; float: right;}
+		td:nth-of-type(5):before { content: "SUBTOTAL"; color: #f06803; text-transform: uppercase; font-weight: 800 !important; float: right;}
+
+		.product-image{
+			float: none !important;
+		}
+	}
+}
+
+
+
+
+
+/*
+.stacktable {
+    width: 100%;
+    @include font-size(1.2);
+
+    .st-head-row {
+        padding: 2em 0 1em 0;
+        font-family: $swiss-bold;
+        color: #000;
+    }
+
+    .st-head-row.st-head-row-main {
+        padding-top: 0;
+    }
+
+    .st-key {
+        width: 30%;
+        text-align: right;
+        padding: 0.5em;
+        border: 1px solid $lightGrey;
+        border-left: none;
+        font-family: $swiss-bold;
+        color: #000;
+    }
+
+    .st-val {
+        width: 75%;
+        padding: 0.5em;
+        border-bottom: 1px solid $lightGrey;
+        border-top: 1px solid $lightGrey;
+    }
+
+    textarea {
+        width: 100%;
+        padding: 0.5em;
+        @include font-size(1.2);
+    }
+}
+
+
+/* RESPONSIVE table */
+
+/*
+.stacktable.large-only {
+    display: table;
+}
+
+.small-only {
+    display: none;
+}
+
+@media only screen and (max-width: 800px) {
+    .large-only {
+        display: none;
+    }
+
+    .stacktable.small-only {
+        display: table;
+    }
+}
+*/

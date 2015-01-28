@@ -1,0 +1,23 @@
+@include font-face("Swiss721BT-Light",
+         font-files("29B170_0_0.woff", "29B170_0_0.ttf"),
+                    "29B170_0_0.eot");
+
+@include font-face("Swiss721BT-Roman",
+         font-files("29B170_1_0.woff", "29B170_1_0.ttf"),
+                    "29B170_1_0.eot");
+
+@include font-face("Swiss721BT-Bold",
+         font-files("29B170_2_0.woff", "29B170_2_0.ttf"),
+                    "29B170_2_0.eot");
+
+@include font-face("Swiss721BT-Thin",
+         font-files("29B170_3_0.woff", "29B170_3_0.ttf"),
+                    "29B170_3_0.eot");
+
+
+// Global variables for font references
+
+$swiss-light: 'Swiss721BT-Light', Arial, Helvetica, sans-serif;
+$swiss-thin: 'Swiss721BT-Thin', Arial, Helvetica, sans-serif;
+$swiss-roman: 'Swiss721BT-Roman', Arial, Helvetica, sans-serif;
+$swiss-bold: 'Swiss721BT-Bold', Arial, Helvetica, sans-serif;

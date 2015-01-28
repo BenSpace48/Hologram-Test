@@ -1,0 +1,57 @@
+// Global Roundel Styles - Applies to all roundels across site
+
+.offer-roundel {
+    @media only screen and (max-width: 750px) {
+        display: none;
+    }
+
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 80px;
+    height: 80px;
+    text-align: center;
+}
+
+// TODO: Move to product.scss
+
+.catalog-product-view {
+    .product-img-box {
+        .offer-roundel {
+
+        }
+    }
+}
+
+
+// TODO: Move to category.scss
+
+.catalog-category-view {
+    .offer-roundel {
+        width: 40px;
+        height: 40px;
+
+        @include breakpoint("mama-bear") {
+            width: 60px;
+            height: 60px;
+        }
+    }
+
+    .item.first {
+        .offer-roundel {
+            width: 80px;
+            height: 80px;
+        }
+    }
+}
+
+
+// TODO: Move to product-upsell.scss
+
+.box-up-sell {
+    .offer-roundel {
+        width: 60px;
+        height: 60px;
+    }
+}

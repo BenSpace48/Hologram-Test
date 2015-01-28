@@ -1,0 +1,87 @@
+/*doc
+---
+title: Icons
+name: Icons
+category: Basics
+---
+
+```html_example
+
+<div class="icon-basket"></div>
+<div class="icon-account"></div>
+<div class="icon-youtube"></div>
+<div class="icon-facebook"></div>
+<div class="icon-twitter"></div>
+
+```
+
+<p>To use these icons just add the class to the relevent div, e.g:</p>
+
+<p>A full list of icons can be seen in <span class="orange">RegisShop/skin/frontend/enterprise/shopRegis/scss/_icons.scss</span></p>
+*/
+
+
+@include font-face("Shop-Regis-Icons",
+         font-files("shop-regis-icons.woff", "shop-regis-icons.ttf", "shop-regis-icons.svg"),
+                    "shop-regis-icons.eot");
+
+[class^="icon-"], [class*=" icon-"] {
+    font-family: 'Shop-Regis-Icons';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    @include inline-block;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-basket:before {
+    content: "\e600";
+}
+.icon-youtube:before {
+    content: "\e601";
+}
+.icon-facebook:before {
+    content: "\e602";
+}
+.icon-twitter:before {
+    content: "\e603";
+}
+.icon-search:before {
+    content: "\e604";
+}
+.icon-pinterest:before {
+    content: "\e605";
+}
+.icon-pin-full:before {
+    content: "\e606";
+}
+.icon-pin-empty:before {
+    content: "\e607";
+}
+.icon-phone:before {
+    content: "\e608";
+}
+.icon-menu:before {
+    content: "\e609";
+}
+.icon-home:before {
+    content: "\e60a";
+}
+.icon-gplus:before {
+    content: "\e60b";
+}
+.icon-email:before {
+    content: "\e60c";
+}
+.icon-edit:before {
+    content: "\e60d";
+}
+.icon-account:before {
+    content: "\e60e";
+}

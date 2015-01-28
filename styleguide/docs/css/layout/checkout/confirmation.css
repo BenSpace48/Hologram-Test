@@ -1,0 +1,885 @@
+/*
+*	Site Wide Defaults
+*/
+/*doc
+---
+title: Variables
+name: variables
+category: Basics
+---
+
+Instead of remembering or copy/pasting the colour codes we use variables.
+
+```
+$orange: #f06803;      // Set the variable
+
+.variable-element {
+    color: $orange;    // Use the variable
+}
+
+<div class="variable-element">This is some orange text</div>
+
+```
+
+<div class="variable-element">This is some orange text</div>
+
+A full list of variables can be seen in <span class="orange">RegisShop/skin/frontend/enterprise/shopRegis/scss/_variables.scss</span>
+
+*/
+/*
+ *  Global Variables
+ */
+/*doc
+
+
+---
+title: Font size
+name: font-size
+category: Mixins
+---
+
+These mixins are used to keep your code DRY (Don't repeat yourself) and save yourself typing out prefixes and doing repetative calculations
+
+```
+<div class="my-element"></div>
+
+.my-element {
+    @include font-size(2);       // Compiles to 20px which is 2rem
+    @include font-size(1.5);     // Compiles to 15px which is 1.5rem
+}
+```
+
+<p class="font-size-example-2">This is font-size(2)</p>
+<p class="font-size-example-1-5">This is font-size(1.5)</p>
+
+*/
+@font-face {
+  font-family: "Swiss721BT-Light";
+  src: url('../../../fonts/29B170_0_0.eot?1414400187');
+  src: url('../../../fonts/29B170_0_0.eot?&1414400187#iefix') format('embedded-opentype'), url('../../../fonts/29B170_0_0.woff?1414400187') format('woff'), url('../../../fonts/29B170_0_0.ttf?1414400187') format('truetype'); }
+@font-face {
+  font-family: "Swiss721BT-Roman";
+  src: url('../../../fonts/29B170_1_0.eot?1414400187');
+  src: url('../../../fonts/29B170_1_0.eot?&1414400187#iefix') format('embedded-opentype'), url('../../../fonts/29B170_1_0.woff?1414400187') format('woff'), url('../../../fonts/29B170_1_0.ttf?1414400187') format('truetype'); }
+@font-face {
+  font-family: "Swiss721BT-Bold";
+  src: url('../../../fonts/29B170_2_0.eot?1414400187');
+  src: url('../../../fonts/29B170_2_0.eot?&1414400187#iefix') format('embedded-opentype'), url('../../../fonts/29B170_2_0.woff?1414400187') format('woff'), url('../../../fonts/29B170_2_0.ttf?1414400187') format('truetype'); }
+@font-face {
+  font-family: "Swiss721BT-Thin";
+  src: url('../../../fonts/29B170_3_0.eot?1414400187');
+  src: url('../../../fonts/29B170_3_0.eot?&1414400187#iefix') format('embedded-opentype'), url('../../../fonts/29B170_3_0.woff?1414400187') format('woff'), url('../../../fonts/29B170_3_0.ttf?1414400187') format('truetype'); }
+/*doc
+---
+title: Icons
+name: Icons
+category: Basics
+---
+
+```html_example
+
+<div class="icon-basket"></div>
+<div class="icon-account"></div>
+<div class="icon-youtube"></div>
+<div class="icon-facebook"></div>
+<div class="icon-twitter"></div>
+
+```
+
+<p>To use these icons just add the class to the relevent div, e.g:</p>
+
+<p>A full list of icons can be seen in <span class="orange">RegisShop/skin/frontend/enterprise/shopRegis/scss/_icons.scss</span></p>
+*/
+@font-face {
+  font-family: "Shop-Regis-Icons";
+  src: url('../../../fonts/shop-regis-icons.eot?1414400187');
+  src: url('../../../fonts/shop-regis-icons.eot?&1414400187#iefix') format('embedded-opentype'), url('../../../fonts/shop-regis-icons.woff?1414400187') format('woff'), url('../../../fonts/shop-regis-icons.ttf?1414400187') format('truetype'), url('../../../fonts/shop-regis-icons.svg?1414400187') format('svg'); }
+/* line 28, ../../../scss/_icons.scss */
+[class^="icon-"], [class*=" icon-"] {
+  font-family: 'Shop-Regis-Icons';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+/* line 43, ../../../scss/_icons.scss */
+.icon-basket:before {
+  content: "\e600"; }
+
+/* line 46, ../../../scss/_icons.scss */
+.icon-youtube:before {
+  content: "\e601"; }
+
+/* line 49, ../../../scss/_icons.scss */
+.icon-facebook:before {
+  content: "\e602"; }
+
+/* line 52, ../../../scss/_icons.scss */
+.icon-twitter:before {
+  content: "\e603"; }
+
+/* line 55, ../../../scss/_icons.scss */
+.icon-search:before {
+  content: "\e604"; }
+
+/* line 58, ../../../scss/_icons.scss */
+.icon-pinterest:before {
+  content: "\e605"; }
+
+/* line 61, ../../../scss/_icons.scss */
+.icon-pin-full:before {
+  content: "\e606"; }
+
+/* line 64, ../../../scss/_icons.scss */
+.icon-pin-empty:before {
+  content: "\e607"; }
+
+/* line 67, ../../../scss/_icons.scss */
+.icon-phone:before {
+  content: "\e608"; }
+
+/* line 70, ../../../scss/_icons.scss */
+.icon-menu:before {
+  content: "\e609"; }
+
+/* line 73, ../../../scss/_icons.scss */
+.icon-home:before {
+  content: "\e60a"; }
+
+/* line 76, ../../../scss/_icons.scss */
+.icon-gplus:before {
+  content: "\e60b"; }
+
+/* line 79, ../../../scss/_icons.scss */
+.icon-email:before {
+  content: "\e60c"; }
+
+/* line 82, ../../../scss/_icons.scss */
+.icon-edit:before {
+  content: "\e60d"; }
+
+/* line 85, ../../../scss/_icons.scss */
+.icon-account:before {
+  content: "\e60e"; }
+
+/* line 6, ../../../scss/layout/_utilities.scss */
+.ir {
+  display: block;
+  text-indent: -999em;
+  overflow: hidden;
+  font-size: 0;
+  line-height: 0;
+  background-position: 0 0;
+  background-repeat: no-repeat; }
+
+/* line 18, ../../../scss/layout/_utilities.scss */
+.hidden,
+.modal-fast-track .ui-dialog-title {
+  display: block !important;
+  border: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  font-size: 0 !important;
+  line-height: 0 !important;
+  width: 0 !important;
+  height: 0 !important;
+  overflow: hidden !important; }
+
+/* line 31, ../../../scss/layout/_utilities.scss */
+.hide-on-mob {
+  display: none;
+  visibility: hidden; }
+  @media only screen and (min-width: 750px) {
+    /* line 31, ../../../scss/layout/_utilities.scss */
+    .hide-on-mob {
+      display: inline-block;
+      vertical-align: middle;
+      *vertical-align: auto;
+      *zoom: 1;
+      *display: inline;
+      visibility: visible; } }
+
+@media only screen and (min-width: 750px) {
+  /* line 41, ../../../scss/layout/_utilities.scss */
+  .hide-on-tablet {
+    display: none !important;
+    visibility: hidden; } }
+
+@media only screen and (min-width: 1000px) {
+  /* line 48, ../../../scss/layout/_utilities.scss */
+  .hide-on-desktop {
+    display: none !important;
+    visibility: hidden; } }
+
+/* line 55, ../../../scss/layout/_utilities.scss */
+.nobr {
+  white-space: nowrap !important; }
+
+/* line 59, ../../../scss/layout/_utilities.scss */
+.wrap {
+  white-space: normal !important; }
+
+/* line 63, ../../../scss/layout/_utilities.scss */
+.a-left {
+  text-align: left !important; }
+
+/* line 67, ../../../scss/layout/_utilities.scss */
+.a-center {
+  text-align: center !important; }
+
+/* line 71, ../../../scss/layout/_utilities.scss */
+.a-right {
+  text-align: right !important; }
+
+/* line 75, ../../../scss/layout/_utilities.scss */
+.v-top {
+  vertical-align: top; }
+
+/* line 79, ../../../scss/layout/_utilities.scss */
+.v-middle {
+  vertical-align: middle; }
+
+/* line 83, ../../../scss/layout/_utilities.scss */
+.v-fix {
+  float: left; }
+
+/* line 87, ../../../scss/layout/_utilities.scss */
+.v-fix .validation-advice {
+  display: block;
+  width: 12em;
+  margin-right: -12em;
+  position: relative; }
+
+/* line 94, ../../../scss/layout/_utilities.scss */
+.f-left,
+.left {
+  float: left !important; }
+
+/* line 99, ../../../scss/layout/_utilities.scss */
+.f-right,
+.right {
+  float: right !important; }
+
+/* line 104, ../../../scss/layout/_utilities.scss */
+.f-none {
+  float: none !important; }
+
+/* line 108, ../../../scss/layout/_utilities.scss */
+.f-fix {
+  float: left;
+  width: 100%; }
+
+/* line 113, ../../../scss/layout/_utilities.scss */
+.no-display {
+  display: none; }
+
+/* line 117, ../../../scss/layout/_utilities.scss */
+.no-margin {
+  margin: 0 !important; }
+
+/* line 121, ../../../scss/layout/_utilities.scss */
+.no-padding {
+  padding: 0 !important; }
+
+/* line 125, ../../../scss/layout/_utilities.scss */
+.no-bg {
+  background: none !important; }
+
+/* line 129, ../../../scss/layout/_utilities.scss */
+.links li {
+  display: inline; }
+
+/* line 133, ../../../scss/layout/_utilities.scss */
+.links li.first {
+  padding-left: 0; }
+
+/* line 137, ../../../scss/layout/_utilities.scss */
+.links li.last {
+  background: none !important;
+  padding-right: 0 !important; }
+
+/* line 142, ../../../scss/layout/_utilities.scss */
+.separator {
+  margin: 0 3px; }
+
+/* line 146, ../../../scss/layout/_utilities.scss */
+.divider {
+  clear: both;
+  display: block;
+  font-size: 0;
+  line-height: 0;
+  height: 1px;
+  margin: 10px 0;
+  background: #ddd;
+  text-indent: -999em;
+  overflow: hidden; }
+
+/* line 158, ../../../scss/layout/_utilities.scss */
+.window-overlay {
+  background: rgba(0, 0, 0, 0.35);
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 990; }
+
+/* line 174, ../../../scss/layout/_utilities.scss */
+.media {
+  *zoom: 1;
+  position: relative; }
+  /* line 38, ../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/utilities/general/_clearfix.scss */
+  .media:after {
+    content: "";
+    display: table;
+    clear: both; }
+  /* line 178, ../../../scss/layout/_utilities.scss */
+  .media .bd {
+    overflow: hidden;
+    _overflow: visible;
+    zoom: 1; }
+  /* line 184, ../../../scss/layout/_utilities.scss */
+  .media .img {
+    position: relative;
+    float: left;
+    margin-right: 10px; }
+    /* line 189, ../../../scss/layout/_utilities.scss */
+    .media .img > img {
+      display: block; }
+  /* line 194, ../../../scss/layout/_utilities.scss */
+  .media .imgExt {
+    position: relative;
+    float: right;
+    margin-left: 10px; }
+    /* line 199, ../../../scss/layout/_utilities.scss */
+    .media .imgExt > img {
+      display: block; }
+
+/*
+*   Default Global Button Styles
+*   Don't edit these styles - use the mixin defined below to extend the styles to create the button theme
+*
+*/
+/* line 7, ../../../scss/module/_buttons.scss */
+.button,
+button {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  background: #f06803;
+  line-height: 2.142857143;
+  padding: 0 1.285714286em;
+  font-family: 'Swiss721BT-Light', Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-decoration: none; }
+  /* line 21, ../../../scss/module/_buttons.scss */
+  .button:hover,
+  button:hover {
+    background: #000; }
+
+/* line 46, ../../../scss/module/_buttons.scss */
+.black {
+  background-color: #000;
+  color: #fff; }
+  /* line 49, ../../../scss/module/_buttons.scss */
+  .black:hover {
+    background: #f06803;
+    color: #fff; }
+
+/* line 55, ../../../scss/module/_buttons.scss */
+.lgrey {
+  background-color: #e5e5e5;
+  color: #fff; }
+
+/* line 59, ../../../scss/module/_buttons.scss */
+.mgrey {
+  background-color: #dcdcdc;
+  color: #fff; }
+
+/* line 63, ../../../scss/module/_buttons.scss */
+.dgrey {
+  background-color: #888888;
+  color: #fff; }
+
+/* line 67, ../../../scss/module/_buttons.scss */
+.hpink {
+  background-color: #fff;
+  color: #ed1465; }
+
+/* line 4, ../../../scss/layout/checkout/_header.scss */
+.checkout-onepage-index .header,
+.checkout-onepage-success .header {
+  border-bottom: #e5e5e5 solid 1px; }
+  @media only screen and (min-width: 1000px) {
+    /* line 4, ../../../scss/layout/checkout/_header.scss */
+    .checkout-onepage-index .header,
+    .checkout-onepage-success .header {
+      padding-bottom: 2em; } }
+  /* line 12, ../../../scss/layout/checkout/_header.scss */
+  .checkout-onepage-index .header .thwate,
+  .checkout-onepage-success .header .thwate {
+    float: right; }
+
+/* line 1, ../../../scss/layout/checkout/_checkout-progress.scss */
+.progressBar {
+  border-bottom: 1px solid lightGrey;
+  clear: both;
+  *zoom: 1;
+  padding: 1em 1.5em 2em 1.5em; }
+  /* line 38, ../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/utilities/general/_clearfix.scss */
+  .progressBar:after {
+    content: "";
+    display: table;
+    clear: both; }
+  /* line 7, ../../../scss/layout/checkout/_checkout-progress.scss */
+  .progressBar .steps {
+    width: 650px;
+    margin: 0 20px 0 0;
+    *zoom: 1; }
+    /* line 38, ../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/utilities/general/_clearfix.scss */
+    .progressBar .steps:after {
+      content: "";
+      display: table;
+      clear: both; }
+  /* line 13, ../../../scss/layout/checkout/_checkout-progress.scss */
+  .progressBar a {
+    color: #e5e5e5;
+    text-decoration: none;
+    cursor: default; }
+
+/* line 21, ../../../scss/layout/checkout/_checkout-progress.scss */
+#checkout-steps li {
+  font-size: 13px;
+  font-size: 1.3rem;
+  line-height: 3.30769230769231;
+  display: block;
+  color: #e5e5e5;
+  text-decoration: none;
+  float: left;
+  padding-right: 2.8em;
+  text-transform: uppercase; }
+  @media screen and (max-width: 750px) {
+    /* line 21, ../../../scss/layout/checkout/_checkout-progress.scss */
+    #checkout-steps li {
+      width: 100%; } }
+  @media only screen and (min-width: 1000px) {
+    /* line 21, ../../../scss/layout/checkout/_checkout-progress.scss */
+    #checkout-steps li {
+      padding-right: 5.5em; } }
+  /* line 39, ../../../scss/layout/checkout/_checkout-progress.scss */
+  #checkout-steps li .num {
+    background: #e5e5e5;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    font-size: 22px;
+    font-size: 2.2rem;
+    line-height: 1;
+    padding: 0.5em 0.8em;
+    font-family: "Swiss721BT-Thin", Arial, Helvetica, sans-serif;
+    margin: 0.5em 0.5em 0 0;
+    display: inline-block; }
+    @media only screen and (min-width: 1000px) {
+      /* line 39, ../../../scss/layout/checkout/_checkout-progress.scss */
+      #checkout-steps li .num {
+        font-size: 28px;
+        font-size: 2.8rem; } }
+    /* line 55, ../../../scss/layout/checkout/_checkout-progress.scss */
+    #checkout-steps li .num:after {
+      content: "";
+      display: block;
+      width: 10px;
+      height: 10px;
+      position: absolute;
+      top: 17px;
+      right: -5px;
+      background: #e5e5e5;
+      -moz-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      -webkit-transform: rotate(45deg);
+      transform: rotate(45deg); }
+      @media only screen and (min-width: 1000px) {
+        /* line 55, ../../../scss/layout/checkout/_checkout-progress.scss */
+        #checkout-steps li .num:after {
+          top: 23px; } }
+/* line 74, ../../../scss/layout/checkout/_checkout-progress.scss */
+#checkout-steps #step5 {
+  padding-right: 0; }
+/* line 78, ../../../scss/layout/checkout/_checkout-progress.scss */
+#checkout-steps .current {
+  color: #f06803; }
+  /* line 81, ../../../scss/layout/checkout/_checkout-progress.scss */
+  #checkout-steps .current .num {
+    background-color: #f06803;
+    color: #fff; }
+    /* line 85, ../../../scss/layout/checkout/_checkout-progress.scss */
+    #checkout-steps .current .num:after {
+      background-color: #f06803; }
+/* line 92, ../../../scss/layout/checkout/_checkout-progress.scss */
+#checkout-steps .complete {
+  color: #000; }
+  /* line 95, ../../../scss/layout/checkout/_checkout-progress.scss */
+  #checkout-steps .complete a {
+    color: #000; }
+  /* line 99, ../../../scss/layout/checkout/_checkout-progress.scss */
+  #checkout-steps .complete .num {
+    background-color: #000;
+    color: #fff; }
+    /* line 103, ../../../scss/layout/checkout/_checkout-progress.scss */
+    #checkout-steps .complete .num:after {
+      background-color: #000; }
+
+/* line 5, ../../../scss/layout/checkout/confirmation.scss */
+.main {
+  line-height: 1.5;
+  padding: 0 30px; }
+
+/* line 10, ../../../scss/layout/checkout/confirmation.scss */
+.headline {
+  font-size: 26px;
+  font-size: 2.6rem;
+  letter-spacing: -0.05em;
+  color: #505050;
+  margin: 0; }
+
+/* line 17, ../../../scss/layout/checkout/confirmation.scss */
+.alert {
+  color: red; }
+
+/* line 21, ../../../scss/layout/checkout/confirmation.scss */
+.header-subtext {
+  font-size: 14px;
+  font-size: 1.4rem;
+  margin-bottom: 40px;
+  text-align: center; }
+
+/* line 27, ../../../scss/layout/checkout/confirmation.scss */
+.order-actions {
+  width: 460px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative; }
+
+/* line 34, ../../../scss/layout/checkout/confirmation.scss */
+.order-details {
+  background: #F4F4F4;
+  padding: 13px 20px;
+  margin-bottom: 20px;
+  position: relative; }
+  /* line 40, ../../../scss/layout/checkout/confirmation.scss */
+  .order-details .order-number {
+    font-size: 60px;
+    font-size: 6rem;
+    font-weight: bold;
+    position: relative;
+    z-index: 100; }
+    /* line 46, ../../../scss/layout/checkout/confirmation.scss */
+    .order-details .order-number + p {
+      margin-top: 0; }
+
+/* line 52, ../../../scss/layout/checkout/confirmation.scss */
+.thankyou-links {
+  *zoom: 1;
+  width: 424px;
+  margin: 0 auto;
+  margin-top: -150px;
+  margin-bottom: 110px;
+  position: relative; }
+  /* line 22, ../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/utilities/general/_clearfix.scss */
+  .thankyou-links:after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    clear: both;
+    overflow: hidden;
+    visibility: hidden; }
+  /* line 60, ../../../scss/layout/checkout/confirmation.scss */
+  .thankyou-links a {
+    font-weight: bold;
+    height: 53px; }
+    /* line 64, ../../../scss/layout/checkout/confirmation.scss */
+    .thankyou-links a:hover {
+      text-decoration: none; }
+  /* line 69, ../../../scss/layout/checkout/confirmation.scss */
+  .thankyou-links .icon {
+    display: block;
+    margin: 0 auto 4px;
+    width: 33px;
+    height: 33px;
+    background-image: url("../../../images/theme/thankyou-links.png"); }
+  /* line 78, ../../../scss/layout/checkout/confirmation.scss */
+  .thankyou-links .back-home .icon {
+    height: 30px;
+    background-position: -34px -1px; }
+  /* line 84, ../../../scss/layout/checkout/confirmation.scss */
+  .thankyou-links .back-home:hover .icon {
+    background-position: -34px -36px; }
+  /* line 91, ../../../scss/layout/checkout/confirmation.scss */
+  .thankyou-links .print-order .icon {
+    background-position: -1px -1px; }
+  /* line 96, ../../../scss/layout/checkout/confirmation.scss */
+  .thankyou-links .print-order:hover .icon {
+    background-position: -1px -36px; }
+
+/* line 103, ../../../scss/layout/checkout/confirmation.scss */
+.what-next {
+  padding: 0 15px; }
+  /* line 106, ../../../scss/layout/checkout/confirmation.scss */
+  .what-next .col-1,
+  .what-next .col-2 {
+    width: 430px; }
+  /* line 111, ../../../scss/layout/checkout/confirmation.scss */
+  .what-next li {
+    background: url("../../../images/theme/shadow-left.png") no-repeat bottom left;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    height: 120px; }
+    /* line 117, ../../../scss/layout/checkout/confirmation.scss */
+    .what-next li h4 {
+      font-size: 12px;
+      font-size: 1.2rem;
+      margin: 10px 0; }
+  /* line 123, ../../../scss/layout/checkout/confirmation.scss */
+  .what-next .bd {
+    padding: 10px;
+    width: 210px;
+    line-height: 1.5; }
+  /* line 129, ../../../scss/layout/checkout/confirmation.scss */
+  .what-next .img {
+    width: 180px;
+    height: 100px;
+    margin: 10px; }
+
+/* line 136, ../../../scss/layout/checkout/confirmation.scss */
+.collection-centre {
+  *zoom: 1;
+  width: 835px;
+  padding: 20px 20px 25px;
+  margin: 0 auto 30px;
+  background: #f9f9f9 url("../../../images/theme/shadow-full.jpg") no-repeat bottom right; }
+  /* line 22, ../../../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/utilities/general/_clearfix.scss */
+  .collection-centre:after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    clear: both;
+    overflow: hidden;
+    visibility: hidden; }
+  /* line 143, ../../../scss/layout/checkout/confirmation.scss */
+  .collection-centre .location-pin {
+    min-height: 120px; }
+  /* line 147, ../../../scss/layout/checkout/confirmation.scss */
+  .collection-centre h3 {
+    margin-top: 0; }
+  /* line 151, ../../../scss/layout/checkout/confirmation.scss */
+  .collection-centre address {
+    font-size: 14px;
+    font-size: 1.4rem;
+    line-height: 1.714285714;
+    width: 180px;
+    margin-bottom: 0; }
+  /* line 160, ../../../scss/layout/checkout/confirmation.scss */
+  .collection-centre .get-directions b {
+    display: block;
+    padding-top: 3px; }
+  /* line 166, ../../../scss/layout/checkout/confirmation.scss */
+  .collection-centre .collection-locations {
+    width: 570px; }
+    /* line 169, ../../../scss/layout/checkout/confirmation.scss */
+    .collection-centre .collection-locations .bd {
+      width: 370px; }
+    /* line 173, ../../../scss/layout/checkout/confirmation.scss */
+    .collection-centre .collection-locations .imgExt {
+      margin: 0; }
+
+/* line 182, ../../../scss/layout/checkout/confirmation.scss */
+.ui-widget-overlay {
+  background: rgba(0, 0, 0, 0.5); }
+
+/* line 186, ../../../scss/layout/checkout/confirmation.scss */
+.ui-dialog {
+  -moz-box-shadow: rgba(0, 0, 0, 0.5) 0 0 10px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.5) 0 0 10px;
+  box-shadow: rgba(0, 0, 0, 0.5) 0 0 10px;
+  border: none; }
+
+/* line 191, ../../../scss/layout/checkout/confirmation.scss */
+.modal-fast-track {
+  background: #fff; }
+  /* line 194, ../../../scss/layout/checkout/confirmation.scss */
+  .modal-fast-track p:last-child {
+    margin-bottom: 0; }
+  /* line 198, ../../../scss/layout/checkout/confirmation.scss */
+  .modal-fast-track img {
+    margin: 0 auto;
+    display: block; }
+  /* line 203, ../../../scss/layout/checkout/confirmation.scss */
+  .modal-fast-track .ui-dialog-titlebar {
+    background: #fff;
+    padding: 30px 30px 0; }
+  /* line 208, ../../../scss/layout/checkout/confirmation.scss */
+  .modal-fast-track .ui-dialog-titlebar-close {
+    width: 30px;
+    height: 30px;
+    line-height: 1;
+    text-align: center;
+    background: black;
+    top: 10px;
+    right: 10px;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    border-radius: 0; }
+  /* line 219, ../../../scss/layout/checkout/confirmation.scss */
+  .modal-fast-track .ui-dialog-content {
+    padding: 0 30px 30px;
+    font-size: 13px;
+    font-size: 1.3rem;
+    line-height: 1.846153846;
+    text-align: center; }
+  /* line 230, ../../../scss/layout/checkout/confirmation.scss */
+  .modal-fast-track .ui-button-text {
+    outline: 1px solid red;
+    text-indent: 0;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    font-size: 1.4rem;
+    text-align: center;
+    padding: 0; }
+  /* line 241, ../../../scss/layout/checkout/confirmation.scss */
+  .modal-fast-track .fast-track-num {
+    display: block;
+    letter-spacing: -3px;
+    font-size: 52px;
+    font-size: 5.2rem;
+    line-height: 1; }
+  /* line 248, ../../../scss/layout/checkout/confirmation.scss */
+  .modal-fast-track .order-details {
+    font-size: 16px;
+    font-size: 1.6rem;
+    font-weight: bold;
+    padding: 5px 10px; }
+
+/* line 256, ../../../scss/layout/checkout/confirmation.scss */
+.note {
+  font-size: 16px;
+  font-size: 1.6rem; }
+
+/* line 260, ../../../scss/layout/checkout/confirmation.scss */
+.track-order {
+  font-size: 16px;
+  font-size: 1.6rem; }
+
+/* line 267, ../../../scss/layout/checkout/confirmation.scss */
+.collection-items {
+  padding: 0; }
+
+/* line 271, ../../../scss/layout/checkout/confirmation.scss */
+.title-you-will-need {
+  margin-bottom: 30px; }
+
+/* line 275, ../../../scss/layout/checkout/confirmation.scss */
+.fast-track-info {
+  padding-top: 30px; }
+  /* line 278, ../../../scss/layout/checkout/confirmation.scss */
+  .fast-track-info .img {
+    margin-right: 20px;
+    width: 300px;
+    height: 300px; }
+    /* line 283, ../../../scss/layout/checkout/confirmation.scss */
+    .fast-track-info .img img {
+      width: 100%; }
+  /* line 288, ../../../scss/layout/checkout/confirmation.scss */
+  .fast-track-info .bd {
+    width: 575px;
+    line-height: 1.666667; }
+    /* line 292, ../../../scss/layout/checkout/confirmation.scss */
+    .fast-track-info .bd p {
+      margin: 0 0 20px; }
+
+/* line 2, ../../../scss/layout/checkout/_footer.scss */
+.footer.checkout .wrap {
+  padding: 2em 0;
+  border-top: #e5e5e5 solid 1px; }
+  @media only screen and (min-width: 720px) {
+    /* line 2, ../../../scss/layout/checkout/_footer.scss */
+    .footer.checkout .wrap {
+      padding: 3em 0; } }
+  /* line 10, ../../../scss/layout/checkout/_footer.scss */
+  .footer.checkout .wrap .col-title {
+    margin: 1em 0;
+    padding: 0;
+    text-align: center;
+    float: left;
+    font-size: 14px;
+    font-size: 1.4rem;
+    font-family: "Swiss721BT-Roman", Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0.6em 1.5em 0.6em 1em; }
+  /* line 21, ../../../scss/layout/checkout/_footer.scss */
+  .footer.checkout .wrap .payment-methods {
+    float: left;
+    text-align: center;
+    text-indent: -1999px;
+    overflow: hidden;
+    width: 165px;
+    height: 35px;
+    text-indent: -119988px;
+    overflow: hidden;
+    text-align: left;
+    text-transform: capitalize;
+    background-image: url('../../../img/payment-methods.jpg?1414400187');
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    width: 176px;
+    height: 35px;
+    text-align: left;
+    padding-right: 2em; }
+    @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
+      /* line 21, ../../../scss/layout/checkout/_footer.scss */
+      .footer.checkout .wrap .payment-methods {
+        background-image: url('../../../img/payment-methods-2x.jpg?1414400187');
+        background-size: 165px 35px; } }
+    @media screen and (max-width: 720px) {
+      /* line 21, ../../../scss/layout/checkout/_footer.scss */
+      .footer.checkout .wrap .payment-methods {
+        margin-bottom: 1em; } }
+    /* line 37, ../../../scss/layout/checkout/_footer.scss */
+    .footer.checkout .wrap .payment-methods img {
+      margin: 0 auto; }
+  /* line 42, ../../../scss/layout/checkout/_footer.scss */
+  .footer.checkout .wrap .payment-methods.verified {
+    width: 132px;
+    text-indent: -119988px;
+    overflow: hidden;
+    text-align: left;
+    text-transform: capitalize;
+    background-image: url('../../../img/verified.png?1414400187');
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    width: 132px;
+    height: 35px; }
+    @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
+      /* line 42, ../../../scss/layout/checkout/_footer.scss */
+      .footer.checkout .wrap .payment-methods.verified {
+        background-image: url('../../../img/verified-2x.png?1414400187');
+        background-size: 132px 35px; } }

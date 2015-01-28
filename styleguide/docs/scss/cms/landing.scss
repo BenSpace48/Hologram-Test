@@ -1,0 +1,172 @@
+@import "mixins";
+
+.cms-landing {
+    // Defaults
+    ul {
+        list-style: none;
+        margin-left: 0;
+        padding-left: 0;
+    }
+    .col-main {
+        padding: 0;
+    }
+    .to-lower-case {
+        text-transform: lowercase;
+    }
+    .row .row-title:after {
+        background-color: #000;
+    }
+    // Carousel + Products
+    .flexslider {
+        img {
+            width: 100%;
+        }
+        & + .row a {
+            position: relative;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: block;
+            > .name {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                background-color: #000;
+                padding: 5px 10px;
+                color: #fff;
+                text-transform: uppercase;
+            }
+        }
+    }
+    // Best Sellers
+    .best-sellers {
+        > li {
+            float: left;
+            width: 25%;
+            border-top: 1px solid #d9d9d9;
+            border-left: 1px solid #d9d9d9;
+            border-bottom: 1px solid #d9d9d9;
+            &:last-child {
+                border-right: 1px solid #d9d9d9;
+            }
+            // Dont group with above, or it will break IE8 best sellers
+            &.lastChild {
+                border-right: 1px solid #d9d9d9;
+            }
+            ul {
+                list-style-type: none;
+            }
+        }
+        .product-name {
+            position: absolute;
+            bottom: 1em;
+            left: 1em;
+            width: 68%;
+        }
+        .price-box {
+            position: absolute;
+            bottom: 1em;
+            right: 1em;
+            width: 20%;
+        }
+        @include breakpoint(mini-bear) {
+            > li {
+                width: 50%;
+                border: 1px solid #d9d9d9;
+                &:nth-child(1),
+                &:nth-child(2) {
+                    border-bottom: none;
+                }
+                &:nth-child(2),
+                &:nth-child(4) {
+                    border-left: none;
+                }
+                // IE8 DO NOT TOUCH
+                &.secondChild,
+                &.lastChild {
+                    border-left: none;
+                }
+                &.firstChild,
+                &.secondChild {
+                    border-bottom: none;
+                }
+            }
+        }
+    }
+    // RE:EDIT
+    .re-edit {
+        li {
+            float: left;
+            width: 50%;
+        }
+        a {
+            position: relative;
+            top: 0;
+            left: 0;
+            display: block;
+        }
+        img {
+            max-width: 100%;
+            width: 100%;
+        }
+        .title {
+            background-color: #000;
+            bottom: 0;
+            color: #fff;
+            display: inline-block;
+            padding: 5px 10px;
+            position: absolute;
+            right: 0;
+            text-transform: uppercase;
+        }
+        @include breakpoint(mini-bear) {
+            li {
+                width: 100%;
+                float: none;
+                margin-bottom: 10px;
+            }
+        }
+    }
+    // About the brand
+    .about-the-brand {
+        img {
+            display: block;
+            margin: 0 auto 1.458333333em;
+        }
+        p,
+        a {
+            color: #000;
+        }
+        @include breakpoint(mini-bear) {
+            margin: 0 15px;
+            
+            img {
+                margin: 30px auto;
+            }
+        }
+
+        // IE 9, doesn't support rems
+        p {
+            @include font-size(1.4);
+        }
+    }
+    .products,
+    .best-sellers,
+    .re-edit {
+        img {
+            width: 100%;
+        }
+    }
+    @include breakpoint(mini-bear) {
+        .col-main {
+            .std {
+                margin: 0 auto;
+                width: 98%;
+            }
+        }
+    }
+
+    .footer-container {
+        margin-top: 1.458333333em;
+    }
+}

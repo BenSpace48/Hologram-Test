@@ -1,0 +1,123 @@
+<!doctype html>
+<html>
+<head>
+    <title>ShopRegis Styleguide</title>
+    <link rel="stylesheet" href="css/styleguide.css">
+    <link rel="stylesheet" href="css/local.css">
+    <link rel="stylesheet" href="css/styleguide-examples.css">
+
+    <script type="text/javascript" src="js/js/scriptaculous/slider.js"></script>
+    <script type="text/javascript" src="js/js/jquery/jquery.noConflict.js"></script>
+    <script type="text/javascript" src="js/js/scripts.js"></script>
+    <script type="text/javascript" src="js/customselect.js"></script>
+    <script type="text/javascript" src="js/accordiontofull.js"></script>
+    <script type="text/javascript" src="js/global.js"></script>
+    <script type="text/javascript" src="js/libs/jquery.flexslider.js"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <div>
+            <nav>
+                <ul>
+                    
+                    <li><a href="mixins.html">Mixins</a></li>
+                    
+                    <li><a href="messages.html">Messages</a></li>
+                    
+                    <li><a href="basics.html">Basics</a></li>
+                    
+                    <li><a href="base_css.html">Base CSS</a></li>
+                    
+                    <li><a href="sliders.html">Sliders</a></li>
+                    
+                </ul>
+            </nav>
+            
+            <div class="styleguide-title">
+                <h1>ShopRegis Styleguide</h1>
+            </div><!-- end styleguide-title -->
+            <section class="content">
+                <ul class="categories">
+                    
+                    <li><a href="#Sliders">Home page slider</a></li>
+                    
+                </ul>
+<h1 id="Sliders" class="styleguide">Home page slider</h1>
+<p class="styleguide">We use Flexslider as the main carousel. Official documentation can be viewed <a class="styleguide" href="http://www.woothemes.com/flexslider/" title="http://www.woothemes.com/flexslider/">here</a></p><p class="styleguide">File location: <code class="styleguide">RegisShop/skin/frontend/enterprise/shopRegis/scss/module/_flexslider.scss</code></p><div class="codeExample">
+  <div class="exampleOutput">
+    <div class="flexslider">
+    <ul class="slides">
+        <li>
+            <img src="http://www.regissalons.co.uk/shop/media/wysiwyg/5.clearance.jpg" alt="Alt tag here">
+        </li>
+        <li>
+            <img src="http://www.regissalons.co.uk/shop/media/wysiwyg/Regis_Carousel_MO_090115_1000x500.jpg" alt="Alt tag here">
+        </li>
+        <li>
+            <img src="http://www.regissalons.co.uk/shop/media/wysiwyg/Regis_Carousel_DL_080115_1000x500.jpg" alt="Alt tag here">
+        </li>
+    </ul>
+</div>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flexslider"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"slides"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;li&gt;</span>
+            <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"http://www.regissalons.co.uk/shop/media/wysiwyg/5.clearance.jpg"</span> <span class="na">alt=</span><span class="s">"Alt tag here"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;</span>
+            <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"http://www.regissalons.co.uk/shop/media/wysiwyg/Regis_Carousel_MO_090115_1000x500.jpg"</span> <span class="na">alt=</span><span class="s">"Alt tag here"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;</span>
+            <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"http://www.regissalons.co.uk/shop/media/wysiwyg/Regis_Carousel_DL_080115_1000x500.jpg"</span> <span class="na">alt=</span><span class="s">"Alt tag here"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;/ul&gt;</span>
+<span class="nt">&lt;/div&gt;</span></pre>
+    </div>
+  </div>
+</div>
+
+<h2>JS Markup</h2>
+<div class="codeExample">
+  <div class="exampleOutput">
+    
+<script>
+    jQuery(function($) {
+        $('.flexslider').flexslider({
+        animation: "slide",
+        animationLoop: true,
+        itemWidth: 1000,
+        minItems: 1,
+        maxItems: 2,
+        controlNav: false,
+        touch: false
+        });
+    });
+</script>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;script&gt;</span>
+    <span class="nx">jQuery</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">$</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">$</span><span class="p">(</span><span class="s1">'.flexslider'</span><span class="p">).</span><span class="nx">flexslider</span><span class="p">({</span>
+        <span class="na">animation</span><span class="p">:</span> <span class="s2">"slide"</span><span class="p">,</span>
+        <span class="na">animationLoop</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+        <span class="na">itemWidth</span><span class="p">:</span> <span class="mi">1000</span><span class="p">,</span>
+        <span class="na">minItems</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="na">maxItems</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+        <span class="na">controlNav</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+        <span class="na">touch</span><span class="p">:</span> <span class="kc">false</span>
+        <span class="p">});</span>
+    <span class="p">});</span>
+<span class="nt">&lt;/script&gt;</span></pre>
+    </div>
+  </div>
+</div>
+        </section>
+        </div>
+    </div><!--end wrapper -->
+</body>
+</html>
