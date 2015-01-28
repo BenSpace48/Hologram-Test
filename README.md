@@ -4,11 +4,11 @@ Like a wiki, but for a project's code/styles :)
 
 [Example here](http://bencrook.co.uk/hologram)
 
-With some of our projects being so large it can be near impossible to keep track of how everything should be done, which code to use, how to implement modules, which mixins to use, where a certain file should go etc. etc. Not to mention that every developer has a different way of doing things which can lead to duplicates and unnecessary modules.
+With some of our projects being so large it can be near impossible to keep track of how everything should be done, which code to use, how to implement modules, which mixins to use, where a certain file should go etc. etc. Most of our projects have different ways of doing things this can help prevent confusion. For example - carousels, icons, font-sizes, buttons, breakpoints, mixins, some sites use rems, some use px, some don't even have mixins. Instead of rooting through the scss files to find out you can simply just look at the styleguide.
 
 This is a styleguide/code guide generator using Hologram, all we need to do is add a few comments in the SCSS files and it will automatically generate a styleguide for us. This will enable us to look at the styleguide and see how a certain feature should be implemented, this can save duplicated features and several different methods for one fix. If you haven't worked on a certain feature/project you need to familiarise yourself with it, this can majorly help with that.
 
-I looked into styleguides after finding out we had one site with around 6 different modal frameworks implemented instead of just 1 as standard, having a styleguide/code guide would of prevented this. Also as most of our projects have different ways of doing things this can help prevent confusion. For example - carousels, icons, font-sizes, buttons, breakpoints, mixins, some sites use rems, some use px, some don't even have mixins. Instead of rooting through the scss files to find out you can simply just look at the styleguide.
+I looked into styleguides after finding out we had one site with around 6 different modal frameworks implemented instead of just 1 as standard, having a styleguide/code guide would of prevented this.
 
 ## Requirements
 
