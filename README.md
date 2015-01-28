@@ -26,15 +26,14 @@ name: Icons        // The name of the section you're documenting
 category: Basics   // The category/page it is relevent to
 ---
 
-```html_example    // Adding html_example here tells Hologram to render the HTML on the page, without this it will just display the code (you can still enter the HTML manually underneath to display it)
+\`\`\`html_example    // Adding html_example here tells Hologram to render the HTML on the page, without this it will just display the code (you can still enter the HTML manually underneath to display it)
 
 <div class="icon-basket"></div>
 <div class="icon-account"></div>
 <div class="icon-youtube"></div>
 <div class="icon-facebook"></div>
 <div class="icon-twitter"></div>
-```
-```
+\`\`\`
 To use these icons just add the class to the relevent div, e.g:
 
 A full list of icons can be seen in <span class="orange">RegisShop/skin/frontend/enterprise/shopRegis/scss/_icons.scss</span>
