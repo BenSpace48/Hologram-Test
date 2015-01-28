@@ -55,7 +55,7 @@ To generate the styleguide just run `hologram` in the terminal/Cmd line (from th
 
 ## Example
 
-To see a small example download this repo and view styleguide > docs > index.html in your browser. The links on the left are different categories/pages, with links to the subsections at the top where relevent.
+To see a small example [click here](http://bencrook.co.uk/hologram) or download this repo and view styleguide > docs > index.html in your browser. The links on the left are different categories/pages, with links to the subsections at the top where relevent.
 
 ![example](full-example.png)
 
