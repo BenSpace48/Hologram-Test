@@ -4,7 +4,7 @@ Like a wiki, but for a project's code/styles :)
 
 [Example here](http://bencrook.co.uk/hologram) based on ShopRegis
 
-The stylesheets directory should be placed in the themes directory.
+*The stylesheets directory should be placed in the themes directory.*
 
 With some of our projects being so large it can be near impossible to keep track of how everything should be done, which code to use, how to implement modules, which mixins to use, where a certain file should go etc. etc. Most of our projects have different ways of doing things this can help prevent confusion. For example - carousels, icons, font-sizes, buttons, breakpoints, mixins, some sites use rems, some use px, some don't even have mixins. Instead of rooting through the scss files to find out you can simply just look at the styleguide.
 
