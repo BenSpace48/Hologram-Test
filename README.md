@@ -2,15 +2,15 @@
 
 Like a wiki, but for a project's code/styles :)
 
-[Example here](http://bencrook.co.uk/hologram) based on ShopRegis
+[Example here](http://bencrook.co.uk/hologram)
 
-**The stylesheets directory should be placed in the theme directory. E.g RegisShop/skin/frontend/enterprise/shopRegis/styleguide**
+**The stylesheets directory should be placed in the theme directory. E.g skin/frontend/enterprise/THEMENAME/styleguide**
 
 With some of our projects being so large it can be near impossible to keep track of how everything should be done such as which mixins to use, carousels, icons, font-sizes, buttons, breakpoints, mixins, some sites use rems, some use px, some don't even have mixins and the list goes on. Instead of rooting through the scss files to find out you can simply just look at the styleguide.
 
 This is a styleguide/code guide generator using Hologram, all we need to do is add a few comments in the SCSS files and it will automatically generate a styleguide for us. This will enable us to look at the styleguide and see how a certain feature should be implemented, this can save duplicated features and several different methods for one fix. If you haven't worked on a certain feature/project you need to familiarise yourself with it, this can majorly help with that.
 
-I looked into styleguides after finding out we had one site with around 6 different modal frameworks implemented instead of just 1 as standard, having a styleguide/code guide would of prevented this.
+I looked into styleguides after finding one site with around 6 different modal frameworks implemented instead of just 1 as standard, having a styleguide/code guide could have prevented this.
 
 ## Requirements
 
@@ -40,7 +40,7 @@ category: Basics   // The category/page it is relevent to
 ` ` `
 To use these icons just add the class to the relevent div, e.g:
 
-A full list of icons can be seen in <span class="orange">RegisShop/skin/frontend/enterprise/shopRegis/scss/_icons.scss</span>
+A full list of icons can be seen in <span class="orange">skin/frontend/enterprise/shopRegis/scss/_icons.scss</span>
 */
 ```
 
