@@ -64,10 +64,6 @@ To see a small example [click here](http://bencrook.co.uk/hologram) or download 
 
 There is hardly any configuration required, the directories are specified in hologram_config.yml and the css links are added in _header.html, that's it.
 
-## Notes
-
-I'm happy to keep the styleguides up to date.
-
 
 
 
