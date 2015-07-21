@@ -6,7 +6,7 @@ Like a wiki, but for a project's code/styles :)
 
 **The stylesheets directory should be placed in the theme directory. E.g RegisShop/skin/frontend/enterprise/shopRegis/styleguide**
 
-With some of our projects being so large it can be near impossible to keep track of how everything should be done, which code to use, how to implement modules, which mixins to use, where a certain file should go etc. etc. Most of our projects have different ways of doing things this can help prevent confusion. For example - carousels, icons, font-sizes, buttons, breakpoints, mixins, some sites use rems, some use px, some don't even have mixins. Instead of rooting through the scss files to find out you can simply just look at the styleguide.
+With some of our projects being so large it can be near impossible to keep track of how everything should be done such as which mixins to use, carousels, icons, font-sizes, buttons, breakpoints, mixins, some sites use rems, some use px, some don't even have mixins and the list goes on. Instead of rooting through the scss files to find out you can simply just look at the styleguide.
 
 This is a styleguide/code guide generator using Hologram, all we need to do is add a few comments in the SCSS files and it will automatically generate a styleguide for us. This will enable us to look at the styleguide and see how a certain feature should be implemented, this can save duplicated features and several different methods for one fix. If you haven't worked on a certain feature/project you need to familiarise yourself with it, this can majorly help with that.
 
